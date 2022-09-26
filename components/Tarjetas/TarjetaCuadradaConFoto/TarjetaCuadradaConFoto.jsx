@@ -1,5 +1,6 @@
 import React from "react";
 
 export const TarjetaCuadradaConFoto = () => {
-  return <div>TarjetaCuadradaConFoto</div>;
+  return <div>TarjetaCuadradaConFoto test</div>;
 };
+
