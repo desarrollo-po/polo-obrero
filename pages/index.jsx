@@ -22,9 +22,11 @@ export default function Home({ subDestacadas2, notas3Principales }) {
       <main>
         <MainContainer>
           <h1>Página demo taller Polo Obrero</h1>
-          {notas3Principales.edges.map((item) => (
-            <li>{item.node.title}</li>
-          ))}
+          <ul>
+            {notas3Principales.edges.map((item) => (
+              <li>{item.node.title}</li>
+            ))}
+          </ul>
           {/* <ul>
             {posts.map((post) => (
               <li key={post.id}>
