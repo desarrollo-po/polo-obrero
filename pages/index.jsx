@@ -3,10 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import { WORDPRESS_API_POSTS, WORDPRESS_API_URL } from "../constants";
+import { getPostsRegion2Subdestacados } from "../services/queries/PostsRegion2Subdestacados";
+import { getPostsRegion3Principales } from "../services/queries/PostsRegion3Principales";
 import styles from "../styles/Home.module.css";
 
-export default function Home({ posts }) {
-  console.log("🚀 ~ file: index.js ~ line 6 ~ Home ~ posts", posts);
+export default function Home({ subDestacadas2, notas3Principales }) {
+  console.log(
+    "🚀 ~ file: index.js ~ line 6 ~ Home ~ posgdgdsts",
+    notas3Principales.edges
+  );
   return (
     <>
       <Head>
@@ -17,7 +22,10 @@ export default function Home({ posts }) {
       <main>
         <MainContainer>
           <h1>Página demo Polo Obrero</h1>
-          <ul>
+          {notas3Principales.edges.map((item) => (
+            <li>{item.node.title}</li>
+          ))}
+          {/* <ul>
             {posts.map((post) => (
               <li key={post.id}>
                 <Link href={`/notas/${post.slug}`}>
@@ -25,7 +33,7 @@ export default function Home({ posts }) {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </MainContainer>
       </main>
     </>
@@ -33,12 +41,20 @@ export default function Home({ posts }) {
 }
 
 export async function getServerSideProps() {
-  "https://admin.prensaobrera.com/wp-json/wp/v2/posts";
-  const res = await fetch(WORDPRESS_API_URL + WORDPRESS_API_POSTS);
-  const posts = await res.json();
+  // const res = await fetch(WORDPRESS_API_URL + WORDPRESS_API_POSTS);
+  // const posts = await res.json();
+  // return {
+  //   props: {
+  //     posts,
+  //   },
+  // };
+
+  const subDestacadas2 = await getPostsRegion2Subdestacados();
+  const notas3Principales = await getPostsRegion3Principales();
   return {
     props: {
-      posts,
+      subDestacadas2: subDestacadas2.posts,
+      notas3Principales: notas3Principales.posts,
     },
   };
 }
