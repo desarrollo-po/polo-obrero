@@ -20,7 +20,7 @@ export default function Home({ posts }) {
           <ul>
             {posts.map((post) => (
               <li key={post.id}>
-                <Link href={`/notas/${post.id}`}>
+                <Link href={`/notas/${post.slug}`}>
                   <a>{post.title.rendered}</a>
                 </Link>
               </li>
@@ -33,8 +33,7 @@ export default function Home({ posts }) {
 }
 
 export async function getServerSideProps() {
-  // Todo: Filtrar api para traer solo los datos necesarios
-  // "https://admin.prensaobrera.com/wp-json/wp/v2/posts"
+  "https://admin.prensaobrera.com/wp-json/wp/v2/posts";
   const res = await fetch(WORDPRESS_API_URL + WORDPRESS_API_POSTS);
   const posts = await res.json();
   return {
