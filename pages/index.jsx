@@ -21,7 +21,7 @@ export default function Home({ subDestacadas2, notas3Principales }) {
       </Head>
       <main>
         <MainContainer>
-          <h1>Página demo Polo Obrero</h1>
+          <h1>Página demo taller Polo Obrero</h1>
           {notas3Principales.edges.map((item) => (
             <li>{item.node.title}</li>
           ))}
