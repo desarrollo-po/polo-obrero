@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import MainContainer from "../../../components/Containers/MainContainer/MainContainer";
+import { WORDPRESS_API_POSTS, WORDPRESS_API_URL } from "../../../constants";
 import styles from "./nota.module.scss";
 
 const index = ({ post }) => {
@@ -39,10 +40,7 @@ const index = ({ post }) => {
 export default index;
 
 export async function getStaticPaths() {
-  const res = await fetch(
-    process.env.NEXT_PUBLIC_WORDPRESS_API_URL +
-      process.env.NEXT_PUBLIC_WORDPRESS_API_POSTS
-  );
+  const res = await fetch(WORDPRESS_API_URL + WORDPRESS_API_POSTS);
   const posts = await res.json();
   const paths = posts.map((post) => ({
     params: { id: `${post.id}` },
@@ -55,12 +53,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const id = params.id;
+  // "https://admin.prensaobrera.com/wp-json/wp/v2/posts/${id}?_embed"
   const res = await fetch(
-    process.env.NEXT_PUBLIC_WORDPRESS_API_URL +
-      process.env.NEXT_PUBLIC_WORDPRESS_API_POSTS +
-      "/" +
-      id +
-      "?_embed"
+    WORDPRESS_API_URL + WORDPRESS_API_POSTS + "/" + id + "?_embed"
   );
   const post = await res.json();
   return {

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
+import { WORDPRESS_API_POSTS, WORDPRESS_API_URL } from "../constants";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ posts }) {
@@ -33,10 +34,8 @@ export default function Home({ posts }) {
 
 export async function getServerSideProps() {
   // Todo: Filtrar api para traer solo los datos necesarios
-  const res = await fetch(
-    process.env.NEXT_PUBLIC_WORDPRESS_API_URL +
-      process.env.NEXT_PUBLIC_WORDPRESS_API_POSTS
-  );
+  // "https://admin.prensaobrera.com/wp-json/wp/v2/posts"
+  const res = await fetch(WORDPRESS_API_URL + WORDPRESS_API_POSTS);
   const posts = await res.json();
   return {
     props: {
