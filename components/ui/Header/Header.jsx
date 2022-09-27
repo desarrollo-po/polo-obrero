@@ -9,7 +9,7 @@ export const Header = () => {
       <header className={styles.header}>
         <MainContainer>
           <Link href="/">
-            <a>Inicio</a>
+            <a>Inicio Fede</a>
           </Link>
         </MainContainer>
       </header>
