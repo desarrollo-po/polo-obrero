@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import { WORDPRESS_API_POSTS, WORDPRESS_API_URL } from "../constants";
+import { getPostsByRegion } from "../services/queries/PostsByRegion";
 import { getPostsRegion2Subdestacados } from "../services/queries/PostsRegion2Subdestacados";
 import { getPostsRegion3Principales } from "../services/queries/PostsRegion3Principales";
 import styles from "../styles/Home.module.css";
@@ -27,15 +28,11 @@ export default function Home({ subDestacadas2, notas3Principales }) {
               <li>{item.node.title}</li>
             ))}
           </ul>
-          {/* <ul>
-            {posts.map((post) => (
-              <li key={post.id}>
-                <Link href={`/notas/${post.slug}`}>
-                  <a>{post.title.rendered}</a>
-                </Link>
-              </li>
+          <ul>
+            {subDestacadas2.edges.map((item) => (
+              <li>{item.node.title}</li>
             ))}
-          </ul> */}
+          </ul>
         </MainContainer>
       </main>
     </>
@@ -43,16 +40,8 @@ export default function Home({ subDestacadas2, notas3Principales }) {
 }
 
 export async function getServerSideProps() {
-  // const res = await fetch(WORDPRESS_API_URL + WORDPRESS_API_POSTS);
-  // const posts = await res.json();
-  // return {
-  //   props: {
-  //     posts,
-  //   },
-  // };
-
-  const subDestacadas2 = await getPostsRegion2Subdestacados();
-  const notas3Principales = await getPostsRegion3Principales();
+  const subDestacadas2 = await getPostsByRegion("2-sub-destacado-4", 5);
+  const notas3Principales = await getPostsByRegion("3-notas-principales", 2);
   return {
     props: {
       subDestacadas2: subDestacadas2.posts,
