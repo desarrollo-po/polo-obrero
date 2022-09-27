@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
+import { CuadriculaSinImagen } from "../components/Regiones/CuadriculaSinImagen/CuadriculaSinImagen";
 import { WORDPRESS_API_POSTS, WORDPRESS_API_URL } from "../constants";
 import { getPostsByRegion } from "../services/queries/PostsByRegion";
 import styles from "../styles/Home.module.css";
@@ -47,11 +48,9 @@ export default function Home({
               <li>{item.node.title}</li>
             ))}
           </ul>
-          <ul>
-            {cuadriculaSinImagen.edges.map((item) => (
-              <li>{item.node.title}</li>
-            ))}
-          </ul>
+          <CuadriculaSinImagen
+          cuadriculaSinImagen={cuadriculaSinImagen}
+          />
         </MainContainer>
       </main>
     </>
