@@ -1,13 +1,12 @@
-import React from 'react'
+import React from "react";
 
 export const CuadriculaSinImagen = ({ cuadriculaSinImagen }) => {
-    console.log(cuadriculaSinImagen);
-    return (
-        <ul>
-            AKSFKSF
-            {cuadriculaSinImagen.edges.map((item) => (
-            <li>{item.node.title}</li>
-            ))}
-        </ul>
-    )
-}
+  console.log(cuadriculaSinImagen);
+  return (
+    <ul>
+      {cuadriculaSinImagen.edges.map((item) => (
+        <li>{item.node.title}</li>
+      ))}
+    </ul>
+  );
+};
