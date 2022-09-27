@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import { SubDestacadas2 } from "../components/Regiones/SubDestacadas2/subDestacadas2";
+import { CuadriculaSinImagen } from "../components/Regiones/CuadriculaSinImagen/CuadriculaSinImagen";
 import { WORDPRESS_API_POSTS, WORDPRESS_API_URL } from "../constants";
 import { getPostsByRegion } from "../services/queries/PostsByRegion";
 import styles from "../styles/Home.module.css";
@@ -38,6 +39,14 @@ export default function Home({
             ))}
           </ul>
           <SubDestacadas2 subDestacadas2={subDestacadas2} />
+          <ul>
+            {notas4ConFoto.edges.map((item) => (
+              <li>{item.node.title}</li>
+            ))}
+          </ul>
+          <CuadriculaSinImagen
+          cuadriculaSinImagen={cuadriculaSinImagen}
+          />
         </MainContainer>
       </main>
     </>
