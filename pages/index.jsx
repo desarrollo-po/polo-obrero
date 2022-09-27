@@ -4,8 +4,6 @@ import Link from "next/link";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import { WORDPRESS_API_POSTS, WORDPRESS_API_URL } from "../constants";
 import { getPostsByRegion } from "../services/queries/PostsByRegion";
-import { getPostsRegion2Subdestacados } from "../services/queries/PostsRegion2Subdestacados";
-import { getPostsRegion3Principales } from "../services/queries/PostsRegion3Principales";
 import styles from "../styles/Home.module.css";
 
 export default function Home({
@@ -26,7 +24,11 @@ export default function Home({
           <h1>Página demo taller Polo Obrero</h1>
           <ul>
             {notas4SinFoto.edges.map((item) => (
-              <li>{item.node.title}</li>
+              <li>
+                <Link href={`/notas/${item.node.slug}`}>
+                  <a>{item.node.title}</a>
+                </Link>
+              </li>
             ))}
           </ul>
           <ul>
