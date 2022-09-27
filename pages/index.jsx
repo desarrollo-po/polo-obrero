@@ -2,9 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
+import { RegionNotas4SinFoto } from "../components/Regiones/regionNotas4SinFoto/regionNotas4SinFoto";
 import { WORDPRESS_API_POSTS, WORDPRESS_API_URL } from "../constants";
 import { getPostsByRegion } from "../services/queries/PostsByRegion";
 import styles from "../styles/Home.module.css";
+
+
 
 export default function Home({
   subDestacadas2,
@@ -23,15 +26,7 @@ export default function Home({
       <main>
         <MainContainer>
           <h1>Página demo taller Polo Obrero</h1>
-          <ul>
-            {notas4SinFoto.edges.map((item) => (
-              <li>
-                <Link href={`/notas/${item.node.slug}`}>
-                  <a>{item.node.title}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <RegionNotas4SinFoto notas4SinFoto={notas4SinFoto} />
           <ul>
             {notas3Principales.edges.map((item) => (
               <li>{item.node.title}</li>
