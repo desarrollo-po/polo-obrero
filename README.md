@@ -35,7 +35,7 @@ const autores = filterAutor[0].map((autor) => autor.name);
 
 ## Flujo de trabajo
 
-```SCRUM
+```bash
 Antes de empezar un branch nuevo hacer un “git pull origin NOMBRE”
 
 para crear un branch:
