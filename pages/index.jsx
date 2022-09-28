@@ -14,9 +14,8 @@ export default function Home({
   subDestacadas2,
   notas3Principales,
   notas4SinFoto,
-  notas4ConFoto,
-  cuadriculaSinImagen,
 }) {
+  console.log(notas4SinFoto);
   return (
     <>
       <Head>
@@ -41,7 +40,16 @@ export default function Home({
             {notas3Principales.edges.map((item) => (
               <li>{item.node.title}</li>
             ))}
+<<<<<<< HEAD
           </ul> */}
+=======
+          </ul>
+          <ul>
+            {subDestacadas2.edges.map((item) => (
+              <li>{item.node.title}</li>
+            ))}
+          </ul>
+>>>>>>> parent of 780c5c9 (agrego mas regiones)
         </MainContainer>
       </main>
     </>
@@ -52,18 +60,19 @@ export async function getServerSideProps() {
   const subDestacadas2 = await getPostsByRegion("2-sub-destacado-4", 5);
   const notas3Principales = await getPostsByRegion("3-notas-principales", 2);
   const notas4SinFoto = await getPostsByRegion("4-columas-sin-texto", 4);
+<<<<<<< HEAD
   const notas4ConFoto = await getPostsByRegion("notas-4-con-foto", 4);
   const cuadriculaSinImagen = await getPostsByRegion(
     "cuadricula-sin-imagen",
     4
   );
+=======
+>>>>>>> parent of 780c5c9 (agrego mas regiones)
   return {
     props: {
       subDestacadas2: subDestacadas2.posts,
       notas3Principales: notas3Principales.posts,
       notas4SinFoto: notas4SinFoto.posts,
-      notas4ConFoto: notas4ConFoto.posts,
-      cuadriculaSinImagen: cuadriculaSinImagen.posts,
     },
   };
 }
