@@ -1,5 +1,6 @@
 import { gql } from "@apollo/client";
 import { client } from "../../pages/_app";
+import { tarjetaNota } from "../models/tarjetaNota";
 
 export async function getPostsByRegion(region, notas) {
   const { data } = await client.query({
@@ -19,8 +20,7 @@ export async function getPostsByRegion(region, notas) {
         ) {
           edges {
             node {
-              slug
-              title
+              ${tarjetaNota}
             }
           }
         }
