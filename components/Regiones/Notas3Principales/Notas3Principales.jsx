@@ -5,18 +5,31 @@ import styles from "./notas3Principales.module.scss";
 
 export const Notas3Principales = ({ notas3Principales }) => {
   console.log("notas3Principales", notas3Principales);
+
   return (
     <section className={styles.notas3Principales}>
-      {notas3Principales.edges.map((item) => (
-        <TarjetaGrandeConFoto
-          key={item.node.id}
-          titulo={item.node.title}
-          imagen={item.node.featuredImage.node.sourceUrl}
-          slug={item.node.slug}
-          volanta={item.node.campos.volanta}
-          descripcionDestacado={item.node.campos.descripcionDestacado}
-        />
-      ))}
+      {notas3Principales.edges.map(
+        ({
+          node: {
+            id,
+            title,
+            slug,
+            featuredImage: {
+              node: { sourceUrl },
+            },
+            campos: { volanta, descripcionDestacado },
+          },
+        }) => (
+          <TarjetaGrandeConFoto
+            key={id}
+            titulo={title}
+            imagen={sourceUrl}
+            slug={slug}
+            volanta={volanta}
+            descripcionDestacado={descripcionDestacado}
+          />
+        )
+      )}
     </section>
   );
 };
