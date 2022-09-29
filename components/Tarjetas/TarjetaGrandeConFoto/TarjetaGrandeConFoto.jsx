@@ -15,7 +15,7 @@ export const TarjetaGrandeConFoto = ({
       <article className={styles.tarjetaGrandeConFoto}>
         {volanta?.length > 0 ? (
           <div className={styles.volanta}>
-            <span>{volanta}</span>
+            <span>{volanta.toUpperCase()}</span>
           </div>
         ) : (
           !volanta
