@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
-import { SubDestacadas2 } from "../components/Regiones/SubDestacadas2/subDestacadas2";
+import { SubDestacadas2 } from "../components/Regiones/SubDestacadas2/SubDestacadas2";
 import { CuadriculaSinImagen } from "../components/Regiones/CuadriculaSinImagen/CuadriculaSinImagen";
 import { Notas4SinFoto } from "../components/Regiones/Notas4SinFoto/notas4SinFoto";
 import { Notas4ConFoto } from "../components/Regiones/Notas4ConFoto/notas4ConFoto";
@@ -49,8 +49,8 @@ export default function Home({
 }
 
 export async function getServerSideProps() {
-  const subDestacadas2 = await getPostsByRegion("2-sub-destacado-4", 5);
-  const notas3Principales = await getPostsByRegion("3-notas-principales", 2);
+  const subDestacadas2 = await getPostsByRegion("2-sub-destacado-4", 2);
+  const notas3Principales = await getPostsByRegion("3-notas-principales", 3);
   const notas4SinFoto = await getPostsByRegion("4-columas-sin-texto", 4);
   const notas4ConFoto = await getPostsByRegion("notas-4-con-foto", 4);
   const cuadriculaSinImagen = await getPostsByRegion(
