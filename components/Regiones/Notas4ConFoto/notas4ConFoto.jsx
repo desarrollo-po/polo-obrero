@@ -1,12 +1,11 @@
 import React from "react";
+import { TarjetaChicaConFoto } from "../../Tarjetas/TarjetaChicaConFoto/TarjetaChicaConFoto";
 
 export const Notas4ConFoto = ({ notas4ConFoto }) => {
   console.log(notas4ConFoto);
   return (
-    <ul>
-      {notas4ConFoto.edges.map((item) => (
-        <li>{item.node.title}</li>
-      ))}
-    </ul>
+    <>
+      <TarjetaChicaConFoto titulo={notas4ConFoto.edges[0].node.title} />
+    </>
   );
 };
