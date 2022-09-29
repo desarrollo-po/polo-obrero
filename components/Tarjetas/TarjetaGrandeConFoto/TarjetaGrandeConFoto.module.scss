@@ -1,0 +1,19 @@
+.tarjetaGrandeConFoto {
+  position: relative;
+  &:nth-child(1) {
+    grid-row: 1 / span 2;
+  }
+  picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

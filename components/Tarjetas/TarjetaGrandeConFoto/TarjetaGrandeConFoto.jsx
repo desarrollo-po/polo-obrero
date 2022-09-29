@@ -12,7 +12,7 @@ export const TarjetaGrandeConFoto = ({
   // const seccion = seccion?.length > 0 && seccion.map((item) => item.name);
   return (
     <>
-      <article>
+      <article className={styles.tarjetaGrandeConFoto}>
         <div>
           <span>{volanta}</span>
         </div>
