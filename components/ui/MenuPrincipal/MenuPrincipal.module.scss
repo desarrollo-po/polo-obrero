@@ -1,4 +1,22 @@
 .nav {
     background-color: black;
+    color: white;
+    
+    ul {
+        display: flex;
+        margin: 0;
+        max-width: 1200px;
+        margin: auto;
+        padding: 10px 20px;
+        font-weight: 600;
 
+        li {
+            list-style: none;
+            margin-right: 20px;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
 }

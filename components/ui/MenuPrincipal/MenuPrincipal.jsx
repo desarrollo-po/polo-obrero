@@ -5,10 +5,11 @@ const MenuPrincipal = () => {
 return (
     <nav className={styles.nav}>
         <ul>
-            <li>link 1</li>
-            <li>link 2</li>
-            <li>link 3</li>
-            <li>link 4</li>
+            <li>ÚLTIMAS NOTICIAS</li>
+            <li>MEDIOS</li>
+            <li>COMUNICADOS</li>
+            <li>LOCALES</li>
+            <li>CONTACTO</li>
         </ul>
     </nav>
 )
