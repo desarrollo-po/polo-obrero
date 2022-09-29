@@ -19,13 +19,8 @@ export async function getPostsBySlug(slug) {
           }
           featuredImage {
             node {
-              sourceUrl(size: POST_THUMBNAIL)
+              sourceUrl
             }
-          }
-          seo {
-            opengraphTitle
-            opengraphUrl
-            metaDesc
           }
           content
           tags {
