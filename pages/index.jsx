@@ -19,9 +19,7 @@ export default function Home({ notasSubDestacadas, notas3Principales }) {
       <MenuPrincipal />
       <main>
         <MainContainer>
-          <h1>Página demo taller Polo Obrero</h1>
           <Notas3Principales notas3Principales={notas3Principales} />
-
           <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
         </MainContainer>
       </main>
