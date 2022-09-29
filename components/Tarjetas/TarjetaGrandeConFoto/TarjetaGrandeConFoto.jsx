@@ -13,13 +13,17 @@ export const TarjetaGrandeConFoto = ({
   return (
     <>
       <article className={styles.tarjetaGrandeConFoto}>
-        <div>
-          <span>{volanta}</span>
-        </div>
+        {volanta?.length > 0 ? (
+          <div className={styles.volanta}>
+            <span>{volanta.toUpperCase()}</span>
+          </div>
+        ) : (
+          !volanta
+        )}
         <picture>
           <img src={imagen || "https://via.placeholder.com/400"} />
         </picture>
-        <div>
+        <div className={styles.data}>
           <Link href={`/notas/${slug}`}>
             <a>
               <h3>{titulo}</h3>
