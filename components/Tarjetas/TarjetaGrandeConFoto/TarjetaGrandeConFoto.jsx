@@ -1,7 +1,8 @@
+import Link from "next/link";
 import React from "react";
 import styles from "./TarjetaGrandeConFoto.module.scss";
 
-export const TarjetaGrandeConFoto = ({ titulo, imagen }) => {
+export const TarjetaGrandeConFoto = ({ titulo, imagen, slug }) => {
   // const seccion = seccion?.length > 0 && seccion.map((item) => item.name);
   return (
     <>
@@ -13,9 +14,12 @@ export const TarjetaGrandeConFoto = ({ titulo, imagen }) => {
           <img src={imagen || "https://via.placeholder.com/400"} />
         </picture>
         <div>
-          <a href="http://google.com">
-            <h3>{titulo}</h3>
-          </a>
+          <Link href={`/notas/${slug}`}>
+            <a>
+              <h3>{titulo}</h3>
+            </a>
+          </Link>
+
           <p>descripcionDestacada</p>
         </div>
       </article>

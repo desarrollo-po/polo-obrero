@@ -9,6 +9,7 @@ export const Notas3Principales = ({ notas3Principales }) => {
         <TarjetaGrandeConFoto
           titulo={item.node.title}
           imagen={item.node.featuredImage.node.sourceUrl}
+          slug={item.node.slug}
         />
       ))}
     </>
