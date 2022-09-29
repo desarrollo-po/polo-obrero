@@ -12,7 +12,7 @@ export const tarjetaNota = `
   }
   featuredImage {
     node {
-      sourceUrl(size: MEDIUM)
+      sourceUrl(size: MEDIUM_LARGE)
     }
   }
   categories {
