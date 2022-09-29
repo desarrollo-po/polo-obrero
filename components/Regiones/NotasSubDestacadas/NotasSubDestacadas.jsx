@@ -7,7 +7,13 @@ export const NotasSubDestacadas = ({ notasSubDestacadas }) => {
   return (
     <>
       {notasSubDestacadas.edges.map((item) => (
-        <TarjetaChicaConFoto titulo={item.node.title} />
+        <TarjetaChicaConFoto
+          titulo={item.node.title}
+          imagen={item.node.featuredImage.node.sourceUrl}
+          slug={item.node.slug}
+          volanta={item.node.campos.volanta}
+          descripcionDestacado={item.node.campos.descripcionDestacado}
+        />
       ))}
     </>
   );

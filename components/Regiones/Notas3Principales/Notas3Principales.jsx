@@ -12,7 +12,7 @@ export const Notas3Principales = ({ notas3Principales }) => {
           imagen={item.node.featuredImage.node.sourceUrl}
           slug={item.node.slug}
           volanta={item.node.campos.volanta}
-          bajada={item.node.campos.bajada}
+          descripcionDestacado={item.node.campos.descripcionDestacado}
         />
       ))}
     </>

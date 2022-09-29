@@ -7,7 +7,7 @@ export const TarjetaGrandeConFoto = ({
   imagen,
   slug,
   volanta,
-  bajada,
+  descripcionDestacado,
 }) => {
   // const seccion = seccion?.length > 0 && seccion.map((item) => item.name);
   return (
@@ -26,7 +26,7 @@ export const TarjetaGrandeConFoto = ({
             </a>
           </Link>
 
-          <p>{bajada}</p>
+          <p>{descripcionDestacado}</p>
         </div>
       </article>
     </>
