@@ -1,3 +1,16 @@
 .tarjetaChicaConFoto {
-    background-color: blue;
+    background-color: white;
+}
+
+.imagen {
+    max-width: 100%;
+}
+
+.contenedorImagen {
+    height: 200px;
+    overflow: hidden;
+}
+
+.data {
+    padding: 10px;
 }

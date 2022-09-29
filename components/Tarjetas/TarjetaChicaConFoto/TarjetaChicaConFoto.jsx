@@ -13,19 +13,21 @@ export const TarjetaChicaConFoto = ({
   return (
     <>
       <article className={styles.tarjetaChicaConFoto}>
-        <div>
+        <div className={styles.volanta}>
           <span>{volanta}</span>
         </div>
-        <picture>
-          <img src={imagen || "https://via.placeholder.com/400"} />
+        <picture className={styles.contenedorImagen}>
+          <img
+            className={styles.imagen}
+            src={imagen || "https://via.placeholder.com/400"}
+          />
         </picture>
-        <div>
+        <div className={styles.data}>
           <Link href={`/notas/${slug}`}>
             <a>
               <h3>{titulo}</h3>
             </a>
           </Link>
-
           <p>{descripcionDestacado}</p>
         </div>
       </article>
