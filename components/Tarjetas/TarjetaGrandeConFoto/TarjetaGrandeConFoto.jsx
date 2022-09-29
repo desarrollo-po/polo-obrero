@@ -2,13 +2,19 @@ import Link from "next/link";
 import React from "react";
 import styles from "./TarjetaGrandeConFoto.module.scss";
 
-export const TarjetaGrandeConFoto = ({ titulo, imagen, slug }) => {
+export const TarjetaGrandeConFoto = ({
+  titulo,
+  imagen,
+  slug,
+  volanta,
+  bajada,
+}) => {
   // const seccion = seccion?.length > 0 && seccion.map((item) => item.name);
   return (
     <>
       <article>
         <div>
-          <span>volanta</span>
+          <span>{volanta}</span>
         </div>
         <picture>
           <img src={imagen || "https://via.placeholder.com/400"} />
@@ -20,7 +26,7 @@ export const TarjetaGrandeConFoto = ({ titulo, imagen, slug }) => {
             </a>
           </Link>
 
-          <p>descripcionDestacada</p>
+          <p>{bajada}</p>
         </div>
       </article>
     </>
