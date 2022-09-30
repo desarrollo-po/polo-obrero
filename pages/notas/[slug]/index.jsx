@@ -9,6 +9,7 @@ const index = ({
   post: {
     title,
     bajada,
+    slug,
     content,
     featuredImage: {
       node: { sourceUrl },
@@ -29,6 +30,31 @@ const index = ({
         <title>{title}</title>
         <meta name="description" content={bajada} />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content={process.env.NEXT_PUBLIC_FACEBOOK} />
+        <meta
+          property="og:url"
+          content={process.env.NEXT_PUBLIC_PROD_URL + "/notas/" + slug}
+        />
+        {/* <meta property="og:title" content={seo.opengraphTitle} />
+        <meta property="og:description" content={seo.metaDesc} /> */}
+        <meta property="og:image" itemProp="image" content={sourceUrl} />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:creator"
+          content={process.env.NEXT_PUBLIC_TWITTER}
+        />
+        <meta
+          property="twitter:url"
+          content={process.env.NEXT_PUBLIC_PROD_URL + "/notas/" + slug}
+        />
+        {/* <meta property="twitter:title" content={seo.opengraphTitle} />
+        <meta property="twitter:description" content={seo.metaDesc} /> */}
+        <meta property="twitter:image" content={sourceUrl} />
+        {/* <meta name="description" content={seo.metaDesc} /> */}
       </Head>
       <MainContainer>
         <section className={styles.nota}>
