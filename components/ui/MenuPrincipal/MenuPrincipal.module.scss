@@ -1,0 +1,24 @@
+.nav {
+    background-color: black;
+    color: white;
+    
+    ul {
+        display: flex;
+        margin: 0;
+        max-width: 1200px;
+        margin: auto;
+        padding: 10px 20px;
+        font-weight: 600;
+        font-size: 24px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        li {
+            list-style: none;
+            margin-right: 20px;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}

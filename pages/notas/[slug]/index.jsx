@@ -1,12 +1,28 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import MainContainer from "../../../components/Containers/MainContainer/MainContainer";
 import { getPostsBySlug } from "../../../services/queries/PostBySlug";
 import { getAllPosts } from "../../../services/queries/Posts";
 import styles from "./nota.module.scss";
 
-const index = ({ post }) => {
-  const { title, bajada, content } = post;
+const index = ({
+  post: {
+    title,
+    bajada,
+    content,
+    featuredImage: {
+      node: { sourceUrl },
+    },
+  },
+}) => {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const s = document.createElement("script");
+      s.setAttribute("src", "https://platform.twitter.com/widgets.js");
+      s.setAttribute("async", "true");
+      document.head.appendChild(s);
+    }
+  }, []);
   return (
     <>
       <Head>
@@ -17,10 +33,12 @@ const index = ({ post }) => {
       <MainContainer>
         <section className={styles.nota}>
           <h1>{title}</h1>
+          <picture>
+            <img width="400" src={sourceUrl} alt={title} />
+          </picture>
           {/* <p>Por: {autores.join(", ")}</p> */}
           {/* <p>{categorias}</p> */}
           <p>{bajada}</p>
-          {/* <img src={imagen} alt={title} /> */}
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </section>
       </MainContainer>

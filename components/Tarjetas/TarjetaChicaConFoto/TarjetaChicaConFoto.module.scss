@@ -1,0 +1,34 @@
+.tarjetaChicaConFoto {
+    background-color: white;
+    
+}
+
+.imagen {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedorImagen {
+    height: 200px;
+    display: block;
+    display: flex;
+    align-items: flex-start;
+}
+
+.data {
+    padding: 10px;
+    h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #000;
+        margin: 10px 0 10px 0;
+    }
+    p {
+        font-size: .9rem;
+        font-weight: 400;
+        color: #000;
+        margin: 0;
+    }
+}

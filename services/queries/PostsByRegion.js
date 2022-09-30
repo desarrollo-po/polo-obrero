@@ -1,16 +1,18 @@
 import { gql } from "@apollo/client";
 import { client } from "../../pages/_app";
+import { tarjetaNota } from "../models/tarjetaNota";
 
-export async function getPostsRegion2Subdestacados() {
+export async function getPostsByRegion(region, notas) {
   const { data } = await client.query({
     query: gql`
-      query PostsRegion2Subdestacados {
+      query PostsByRegion {
         posts(
+          first: ${notas}
           where: {
             taxQuery: {
               taxArray: {
                 taxonomy: REGION
-                terms: "2-sub-destacado-4"
+                terms: "${region}"
                 field: SLUG
               }
             }
@@ -18,8 +20,7 @@ export async function getPostsRegion2Subdestacados() {
         ) {
           edges {
             node {
-              slug
-              title
+              ${tarjetaNota}
             }
           }
         }
