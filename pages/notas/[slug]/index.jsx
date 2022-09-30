@@ -11,6 +11,7 @@ const index = ({
     bajada,
     slug,
     content,
+    seo,
     featuredImage: {
       node: { sourceUrl },
     },
@@ -24,6 +25,7 @@ const index = ({
       document.head.appendChild(s);
     }
   }, []);
+  console.log("opengraphTitle", seo.metaDesc);
   return (
     <>
       <Head>
@@ -37,8 +39,8 @@ const index = ({
           property="og:url"
           content={process.env.NEXT_PUBLIC_PROD_URL + "/notas/" + slug}
         />
-        {/* <meta property="og:title" content={seo.opengraphTitle} />
-        <meta property="og:description" content={seo.metaDesc} /> */}
+        <meta property="og:title" content={seo.opengraphTitle} />
+        <meta property="og:description" content={seo.metaDesc} />
         <meta property="og:image" itemProp="image" content={sourceUrl} />
 
         {/* Twitter */}
@@ -51,10 +53,10 @@ const index = ({
           property="twitter:url"
           content={process.env.NEXT_PUBLIC_PROD_URL + "/notas/" + slug}
         />
-        {/* <meta property="twitter:title" content={seo.opengraphTitle} />
-        <meta property="twitter:description" content={seo.metaDesc} /> */}
+        <meta property="twitter:title" content={seo.opengraphTitle} />
+        <meta property="twitter:description" content={seo.metaDesc} />
         <meta property="twitter:image" content={sourceUrl} />
-        {/* <meta name="description" content={seo.metaDesc} /> */}
+        <meta name="description" content={seo.metaDesc} />
       </Head>
       <MainContainer>
         <section className={styles.nota}>
