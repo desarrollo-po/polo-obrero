@@ -1,6 +1,28 @@
 @import "../../../styles/colors.scss";
 .header {
+  display: flex;
   background-color: $color-primary;
   color: $color-secondary;
   padding: 1rem;
+  
+  ul {
+    display: flex;
+    margin: 0;
+    max-width: 1200px;
+    padding: 10px 0px 10px 0;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    li {
+        list-style: none;
+        margin-right: 20px;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
 }
+}
+
+

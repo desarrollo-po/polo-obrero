@@ -7,11 +7,19 @@ export const Header = () => {
   return (
     <>
       <header className={styles.header}>
-        <MainContainer>
-          <Link href="/">
-            <a>Inicio Fede</a>
-          </Link>
-        </MainContainer>
+        <Link href="/">
+          <a>
+            <img className={styles.logo} src="imgs/logo-polo-obrero.png" />
+          </a>
+        </Link>
+        <ul>
+          <li>
+            <a href="https://www.instagram/polo.obrero">Instagram</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/polo.obrero.3">Facebook</a>
+          </li>
+        </ul>
       </header>
     </>
   );
