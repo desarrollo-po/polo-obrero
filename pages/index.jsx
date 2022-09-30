@@ -7,6 +7,7 @@ import styles from "../styles/Home.module.css";
 import { Notas3Principales } from "../components/Regiones/Notas3Principales/Notas3Principales";
 import MenuPrincipal from "../components/ui/MenuPrincipal/MenuPrincipal";
 import { NotasSubDestacadas } from "../components/Regiones/NotasSubDestacadas/NotasSubDestacadas";
+import { Footer } from "../components/ui/Footer/Footer";
 
 export default function Home({ notasSubDestacadas, notas3Principales }) {
   return (
@@ -23,6 +24,7 @@ export default function Home({ notasSubDestacadas, notas3Principales }) {
           <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
         </MainContainer>
       </main>
+      <Footer />
     </>
   );
 }
