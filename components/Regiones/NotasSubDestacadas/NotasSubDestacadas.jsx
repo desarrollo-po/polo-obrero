@@ -9,6 +9,7 @@ export const NotasSubDestacadas = ({ notasSubDestacadas }) => {
     <section className={styles.notasSubDestacadas}>
       {notasSubDestacadas.edges.map((item) => (
         <TarjetaChicaConFoto
+          key={item.node.id}
           titulo={item.node.title}
           imagen={item.node.featuredImage.node.sourceUrl}
           slug={item.node.slug}

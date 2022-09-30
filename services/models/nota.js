@@ -5,6 +5,11 @@ export const nota = `
   title
   date
   uri
+  seo {
+    opengraphTitle
+    opengraphUrl
+    metaDesc
+  }
   prensaNumeros {
     nodes {
       name
