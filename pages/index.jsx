@@ -9,8 +9,7 @@ import MenuPrincipal from "../components/ui/MenuPrincipal/MenuPrincipal";
 import { NotasSubDestacadas } from "../components/Regiones/NotasSubDestacadas/NotasSubDestacadas";
 import { Footer } from "../components/ui/Footer/Footer";
 
-export default function Home({ notasSubDestacadas, notas3Principales, data }) {
-  console.log(data);
+export default function Home({ notasSubDestacadas, notas3Principales }) {
   return (
     <>
       <Head>
@@ -30,19 +29,12 @@ export default function Home({ notasSubDestacadas, notas3Principales, data }) {
 }
 
 export async function getServerSideProps() {
-  const YOTUBE_PLAYLIST_ITEM_API =
-    "https://www.googleapis.com/youtube/v3/playlistItems";
   const notasSubDestacadas = await getPostsByRegion("notas-sub-destacadas", 4);
   const notas3Principales = await getPostsByRegion("3-notas-principales", 3);
-  const res = await fetch(
-    `${YOTUBE_PLAYLIST_ITEM_API}?part=snippet&playlistId=PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y&key=${process.env.YOUTUBE_API_KEY}`
-  );
-  const data = await res.json();
   return {
     props: {
       notasSubDestacadas: notasSubDestacadas.posts,
       notas3Principales: notas3Principales.posts,
-      data,
     },
   };
 }
