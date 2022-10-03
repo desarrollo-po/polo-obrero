@@ -13,9 +13,13 @@ export const TarjetaChicaConFoto = ({
   return (
     <>
       <article className={styles.tarjetaChicaConFoto}>
-        <div className={styles.volanta}>
-          <span>{volanta}</span>
-        </div>
+        {volanta?.length > 0 ? (
+          <div className={styles.volanta}>
+            <span>{volanta.toUpperCase()}</span>
+          </div>
+        ) : (
+          !volanta
+        )}
         <picture className={styles.contenedorImagen}>
           <img
             className={styles.imagen}

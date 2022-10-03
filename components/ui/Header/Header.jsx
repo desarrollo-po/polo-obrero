@@ -33,11 +33,6 @@ export const Header = () => {
                 <IconInstagram size="30" />
               </a>
             </li>
-            <li>
-              <a href="https://www.facebook.com/polo.obrero.3">
-                <IconTwitter size="30" />
-              </a>
-            </li>
           </ul>
         </header>
       </MainContainer>

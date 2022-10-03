@@ -1,15 +1,52 @@
+import Head from "next/head";
 import React from "react";
+import MainContainer from "../components/Containers/MainContainer/MainContainer";
+import { TarjetaChicaConFoto } from "../components/Tarjetas/TarjetaChicaConFoto/TarjetaChicaConFoto";
+import { getUltimasNoticias } from "../services/queries/GetUltimasNoticias";
+import { getPostsByRegion } from "../services/queries/PostsByRegion";
+import styles from "../styles/UltimasNoticias.module.scss";
 
-const UltimasNoticias = () => {
-  return <div>UltimasNoticias</div>;
-};
-
-export default UltimasNoticias;
-
-export async function getStaticProps() {
+export default function UltimasNoticias({ ultimasNoticias }) {
+  return (
+    <>
+      <Head>
+        <title>Ultimas Noticias</title>
+      </Head>
+      <MainContainer>
+        <h3 className={styles.titulo}>Noticias del Movimiento Piquetero</h3>
+        <section className={styles.ultimasNoticias}>
+          {ultimasNoticias.edges.map(
+            ({
+              node: {
+                id,
+                title,
+                slug,
+                featuredImage: {
+                  node: { sourceUrl },
+                },
+                campos: { volanta, descripcionDestacado },
+              },
+            }) => (
+              <TarjetaChicaConFoto
+                key={id}
+                titulo={title}
+                imagen={sourceUrl}
+                slug={slug}
+                volanta={volanta}
+                descripcionDestacado={descripcionDestacado}
+              />
+            )
+          )}
+        </section>
+      </MainContainer>
+    </>
+  );
+}
+export async function getServerSideProps() {
+  const ultimasNoticias = await getUltimasNoticias(8);
   return {
     props: {
-      post: "post",
+      ultimasNoticias: ultimasNoticias.posts,
     },
   };
 }
