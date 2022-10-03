@@ -8,6 +8,7 @@ import { Notas3Principales } from "../components/Regiones/Notas3Principales/Nota
 import MenuPrincipal from "../components/ui/MenuPrincipal/MenuPrincipal";
 import { NotasSubDestacadas } from "../components/Regiones/NotasSubDestacadas/NotasSubDestacadas";
 import { Footer } from "../components/ui/Footer/Footer";
+import { Banners } from "../components/ui/Banners/Banners";
 
 export default function Home({ notasSubDestacadas, notas3Principales }) {
   return (
@@ -21,6 +22,7 @@ export default function Home({ notasSubDestacadas, notas3Principales }) {
         <MainContainer>
           <Notas3Principales notas3Principales={notas3Principales} />
           <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
+          <Banners />
         </MainContainer>
       </main>
       <Footer />

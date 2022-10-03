@@ -11,7 +11,7 @@ const MenuPrincipal = () => {
             <a href="/ultimas-noticias">ÚLTIMAS NOTICIAS</a>
           </li>
           <li>
-            <a href="#">MEDIOS</a>
+            <a href="/medios">MEDIOS</a>
           </li>
           <li>
             <a href="#">CURSOS Y TALLERES</a>
