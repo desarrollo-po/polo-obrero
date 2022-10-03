@@ -8,7 +8,7 @@ import styles from "./nota.module.scss";
 const index = ({
   post: {
     title,
-    bajada,
+    campos: { bajada, epigrafe, volanta },
     slug,
     content,
     seo,
@@ -60,14 +60,17 @@ const index = ({
       </Head>
       <MainContainer>
         <section className={styles.nota}>
-          <h1>{title}</h1>
-          <picture>
-            <img width="400" src={sourceUrl} alt={title} />
+          <h3 className={styles.volanta}>{volanta}</h3>
+          <h1 className={styles.titulo}>{title}</h1>
+          <p className={styles.bajada}>{bajada}</p>
+          <picture className={styles.picture}>
+            <img width="500" src={sourceUrl} alt={title} />
+            <p className={styles.epigrafe}>{epigrafe}</p>
           </picture>
+          
           {/* <p>Por: {autores.join(", ")}</p> */}
           {/* <p>{categorias}</p> */}
-          <p>{bajada}</p>
-          <div dangerouslySetInnerHTML={{ __html: content }} />
+          <div className={styles.content}dangerouslySetInnerHTML={{ __html: content }} />
         </section>
       </MainContainer>
     </>
