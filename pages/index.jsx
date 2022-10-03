@@ -10,6 +10,7 @@ import { NotasSubDestacadas } from "../components/Regiones/NotasSubDestacadas/No
 import { Footer } from "../components/ui/Footer/Footer";
 import { Banners } from "../components/ui/Banners/Banners";
 import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
+import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
 
 export default function Home({
   notasSubDestacadas,
@@ -37,14 +38,12 @@ export default function Home({
 }
 
 export async function getServerSideProps() {
-  const YOTUBE_PLAYLIST_ITEM_API =
-    "https://www.googleapis.com/youtube/v3/playlistItems";
   const notasSubDestacadas = await getPostsByRegion("notas-sub-destacadas", 4);
   const notas3Principales = await getPostsByRegion("3-notas-principales", 3);
-  const res = await fetch(
-    `${YOTUBE_PLAYLIST_ITEM_API}?part=snippet&playlistId=PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y&maxResults=3&key=${process.env.YOUTUBE_API_KEY}`
+  const listaYouTube = await getVideosByPlayList(
+    "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
+    3
   );
-  const listaYouTube = await res.json();
   return {
     props: {
       notasSubDestacadas: notasSubDestacadas.posts,

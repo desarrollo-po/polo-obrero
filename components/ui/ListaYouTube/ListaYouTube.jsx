@@ -4,20 +4,26 @@ import styles from "./ListaYouTube.module.scss";
 export const ListaYouTube = ({ listaYouTube }) => {
   console.log("listaYouTube", listaYouTube);
   return (
-    <section className={styles.listaYouTube}>
-      {listaYouTube.items.map(
-        ({
-          id,
-          snippet: {
-            resourceId: { videoId },
-            thumbnails: {
-              medium: { url },
+    <>
+      <h2 className={styles.titulo}>El Polo Obrero en los Medios</h2>
+      <section className={styles.listaYouTube}>
+        {listaYouTube.items.map(
+          ({
+            id,
+            snippet: {
+              title,
+              resourceId: { videoId },
+              thumbnails: {
+                medium: { url },
+              },
             },
-          },
-        }) => {
-          return <IframeVideo key={id} url={url} videoId={videoId} />;
-        }
-      )}
-    </section>
+          }) => {
+            return (
+              <IframeVideo key={id} title={title} url={url} videoId={videoId} />
+            );
+          }
+        )}
+      </section>
+    </>
   );
 };
