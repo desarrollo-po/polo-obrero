@@ -14,10 +14,7 @@ const MenuPrincipal = () => {
             <a href="#">MEDIOS</a>
           </li>
           <li>
-            <a href="#">COMUNICADOS</a>
-          </li>
-          <li>
-            <a href="#">LOCALES</a>
+            <a href="#">CURSOS Y TALLERES</a>
           </li>
           <li>
             <a href="#">CONTACTO</a>
