@@ -1,0 +1,12 @@
+@import "./styles/colors.scss";
+.ultimasNoticias {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 10px;
+}
+
+.titulo {
+    color: $color-secondary;
+    text-align: center;
+    font-size: 24px;
+}

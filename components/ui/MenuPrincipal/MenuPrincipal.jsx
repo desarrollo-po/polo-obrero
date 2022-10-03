@@ -8,7 +8,7 @@ const MenuPrincipal = () => {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="#">ÚLTIMAS NOTICIAS</a>
+            <a href="/ultimas-noticias">ÚLTIMAS NOTICIAS</a>
           </li>
           <li>
             <a href="#">MEDIOS</a>
