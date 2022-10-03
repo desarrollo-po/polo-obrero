@@ -13,7 +13,7 @@ export default function UltimasNoticias({ ultimasNoticias }) {
         <title>Ultimas Noticias</title>
       </Head>
       <MainContainer>
-        <h3 className={styles.titulo}>Ultimas Noticias:</h3>
+        <h3 className={styles.titulo}>Noticias del Movimiento Piquetero</h3>
         <section className={styles.ultimasNoticias}>
           {ultimasNoticias.edges.map(
             ({
