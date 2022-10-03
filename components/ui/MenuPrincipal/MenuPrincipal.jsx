@@ -17,7 +17,7 @@ const MenuPrincipal = () => {
             <a href="#">CURSOS Y TALLERES</a>
           </li>
           <li>
-            <a href="#">CONTACTO</a>
+            <a href="/juventud">JUVENTUD</a>
           </li>
         </ul>
       </nav>
