@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./IframeVideo.module.scss";
 
-export const IframeVideo = ({ url, videoId }) => {
+export const IframeVideo = ({ url, videoId, title }) => {
   const [showVideo, setShowVideo] = useState(false);
   return (
     <>
@@ -11,7 +11,7 @@ export const IframeVideo = ({ url, videoId }) => {
           width="100%"
           height="215"
           src={`https://www.youtube.com/embed/${videoId}`}
-          title="YouTube video player"
+          title={title}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
