@@ -1,25 +1,23 @@
-import React from "react";
+import { IframeVideo } from "../IframeVideo/IframeVideo";
+import styles from "./ListaYouTube.module.scss";
 
 export const ListaYouTube = ({ listaYouTube }) => {
+  console.log("listaYouTube", listaYouTube);
   return (
-    <>
-      <ul>
-        {listaYouTube.items.map((item) => {
-          return (
-            <li key={item.id}>
-              <iframe
-                width="560"
-                height="315"
-                src={`https://www.youtube.com/embed/${item.snippet.resourceId.videoId}`}
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </li>
-          );
-        })}
-      </ul>
-    </>
+    <section className={styles.listaYouTube}>
+      {listaYouTube.items.map(
+        ({
+          id,
+          snippet: {
+            resourceId: { videoId },
+            thumbnails: {
+              medium: { url },
+            },
+          },
+        }) => {
+          return <IframeVideo key={id} url={url} videoId={videoId} />;
+        }
+      )}
+    </section>
   );
 };

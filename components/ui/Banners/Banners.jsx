@@ -49,10 +49,12 @@ export const Banners = () => {
           Del prólogo de Néstor Pitrola
         </p>
       </div>
-
       <picture className={styles.imagen}>
         <img src="../../../imgs/historia-movimiento-piquetero.jpg" />
       </picture>
+      <a href="https://revistaedm.com/producto/preventa-una-historia-del-movimiento-piquetero/">
+        <button className={styles.boton}>Comprar</button>
+      </a>
     </section>
   );
 };

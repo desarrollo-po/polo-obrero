@@ -8,6 +8,7 @@ import { Notas3Principales } from "../components/Regiones/Notas3Principales/Nota
 import MenuPrincipal from "../components/ui/MenuPrincipal/MenuPrincipal";
 import { NotasSubDestacadas } from "../components/Regiones/NotasSubDestacadas/NotasSubDestacadas";
 import { Footer } from "../components/ui/Footer/Footer";
+import { Banners } from "../components/ui/Banners/Banners";
 import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 
 export default function Home({
@@ -26,6 +27,7 @@ export default function Home({
         <MainContainer>
           <Notas3Principales notas3Principales={notas3Principales} />
           <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
+          <Banners />
           <ListaYouTube listaYouTube={listaYouTube} />
         </MainContainer>
       </main>
@@ -40,7 +42,7 @@ export async function getServerSideProps() {
   const notasSubDestacadas = await getPostsByRegion("notas-sub-destacadas", 4);
   const notas3Principales = await getPostsByRegion("3-notas-principales", 3);
   const res = await fetch(
-    `${YOTUBE_PLAYLIST_ITEM_API}?part=snippet&playlistId=PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y&key=${process.env.YOUTUBE_API_KEY}`
+    `${YOTUBE_PLAYLIST_ITEM_API}?part=snippet&playlistId=PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y&maxResults=3&key=${process.env.YOUTUBE_API_KEY}`
   );
   const listaYouTube = await res.json();
   return {
