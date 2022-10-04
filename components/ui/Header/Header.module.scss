@@ -1,36 +1,40 @@
 @import "../../../styles/colors.scss";
+@import "../../../styles/breakpoints.scss";
 .header {
     display: flex;
     background-color: $color-primary;
     color: $color-secondary;
     padding: 1rem 0;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     ul {
-    display: flex;
-    margin: 0;
-    max-width: 1200px;
-    padding: 10px 0px 10px 0;
-    font-weight: 600;
-    font-size: 17px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    li {
-        list-style: none;
-        margin-right: 20px;
-        a {
-            text-decoration: none;
-            color: white;
+        display: flex;
+        margin: 0;
+        max-width: 1200px;
+        padding: 10px 0px 10px 0;
+        font-weight: 600;
+        font-size: 17px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        li {
+            list-style: none;
+            margin-right: 20px;
+            a {
+                text-decoration: none;
+                color: white;
+            }
         }
     }
 }
-@media(max-width:600px) {
+@media(max-width: $mobile) {
+    .header {
+        justify-content: center;
+    }
     .logo {
         width: 100%;
         text-align: center;
     }
-    ul {
+    .header ul {
         display: none;
     }
-}
 }
