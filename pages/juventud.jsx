@@ -1,14 +1,14 @@
-import Head from 'next/head'
-import React from 'react'
-import MainContainer from '../components/Containers/MainContainer/MainContainer'
-import { Footer } from '../components/ui/Footer/Footer'
-import styles from "../styles/Juventud.module.scss"
+import Head from "next/head";
+import React from "react";
+import MainContainer from "../components/Containers/MainContainer/MainContainer";
+import { Footer } from "../components/ui/Footer/Footer";
+import styles from "../styles/Juventud.module.scss";
 
-const juventud = () => {
+export default function Juventud() {
   return (
     <>
       <Head>
-        <title>Polo Obrero - Medios</title>
+        <title>Juventud del Polo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainContainer>
@@ -16,7 +16,5 @@ const juventud = () => {
       </MainContainer>
       <Footer />
     </>
-  )
+  );
 }
-
-export default juventud
