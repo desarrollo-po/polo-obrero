@@ -13,7 +13,7 @@ const MenuPrincipal = () => {
           <a href="/medios">MEDIOS</a>
         </li>
         <li>
-          <a href="#">CURSOS Y TALLERES</a>
+          <a href="/cursos-y-talleres">CURSOS Y TALLERES</a>
         </li>
         <li>
           <a href="/juventud">JUVENTUD</a>
