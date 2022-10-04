@@ -55,7 +55,9 @@ export const Banners = () => {
             <br></br>
             Del prólogo de Néstor Pitrola
           </p>
-          <button onClick={onShowText}>Ver mas</button>
+          <button onClick={onShowText} className={styles.verMas}>
+            Ver mas
+          </button>
         </div>
         <picture className={styles.imagen}>
           <img src="../../../imgs/historia-movimiento-piquetero.jpg" />

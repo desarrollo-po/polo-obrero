@@ -2,8 +2,12 @@
 @import "../../../styles/breakpoints.scss";
 
 .active {
-  height: 200px;
+  -webkit-line-clamp: 20;
   overflow: hidden;
+}
+
+.verMas {
+  display: none;
 }
 
 .banner {
@@ -43,22 +47,26 @@
 }
 
 .comprar {
-  background-color: transparent;
+
+  display: block ;
+  text-align: center;
+  margin: auto;
+  width: 100px;
+  padding: 10px;
   border-radius: 20px;
+  background-color: transparent;
   font-size: 17px;
   color: $color-secondary;
   border-color: $color-secondary;
   border-style: solid;
-  padding: 10px 32px;
-  width: 110px; 
-  margin-left: 50%;
-  margin-bottom: 10px;
-  transform: translateX(-50%);
 }
 
 .comprar:hover {
   background-color:rgb(255, 255, 255);
   color: $color-primary;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  
   
 }
 
@@ -71,7 +79,7 @@
     margin-top: 0;
     display: -webkit-box;
     overflow: hidden;
-    -webkit-line-clamp: 20;
+    -webkit-line-clamp: auto;
     -webkit-box-orient: vertical;
     margin:10px;
     padding: 0;   
@@ -82,5 +90,11 @@
   }
   .imagen {
     margin: 20px;
+  }
+  .verMas {
+    display: block ;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
   }
 }
