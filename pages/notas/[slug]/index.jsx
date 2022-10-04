@@ -60,7 +60,9 @@ const index = ({
       </Head>
       <MainContainer>
         <section className={styles.nota}>
-          <h3 className={styles.volanta}>{volanta}</h3>
+          {
+            volanta && <h3 className={styles.volanta}>{volanta}</h3>
+          }
           <h1 className={styles.titulo}>{title}</h1>
           <p className={styles.bajada}>{bajada}</p>
           <picture className={styles.picture}>
