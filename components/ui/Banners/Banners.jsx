@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./banners.module.scss";
 
 export const Banners = () => {
+  const [showText, setShowText] = useState(false);
+  const onShowText = () => {
+    setShowText(!showText);
+  };
+
   return (
     <>
       <section className={styles.banner}>
         <div className={styles.texto}>
           <h3 className={styles.titulo}>Historia del Movimiento Piquetero:</h3>
-          <p className={styles.data}>
+          <p className={`${styles.data} ${showText ? styles.active : ""}`}>
             La oportunidad de publicar esta tercera edición de Una historia del
             movimiento piquetero es acercar a los lectores una comprensión de la
             naturaleza y el rol de este movimiento, del desarrollo y las luchas
@@ -50,6 +55,7 @@ export const Banners = () => {
             <br></br>
             Del prólogo de Néstor Pitrola
           </p>
+          <button onClick={onShowText}>Ver mas</button>
         </div>
         <picture className={styles.imagen}>
           <img src="../../../imgs/historia-movimiento-piquetero.jpg" />
