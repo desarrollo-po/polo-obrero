@@ -1,3 +1,6 @@
+@import "../../../styles/breakpoints.scss";
+@import "../../../styles/colors.scss";
+
 .tarjetaChicaConFoto {
     background-color: white;
     
@@ -43,5 +46,11 @@
         font-weight: 400;
         color: #000;
         margin: 0;
+    }
+}
+
+@media(max-width: $mobile) {
+    .tarjetaChicaConFoto {
+      margin-bottom: 15px;
     }
 }
