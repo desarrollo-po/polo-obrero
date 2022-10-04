@@ -1,6 +1,11 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/breakpoints.scss";
 
+.active {
+  height: 200px;
+  overflow: hidden;
+}
+
 .banner {
  display: grid;
  grid-template-columns: repeat(3,minmax(0,1fr));
