@@ -1,6 +1,19 @@
+@import "../../../styles/breakpoints.scss";
+@import "../../../styles/colors.scss";
+
 .notasSubDestacadas {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 10px;
     margin-top: 20px;
+}
+
+@media(max-width: $mobile) {
+    .notasSubDestacadas {
+      display:block;
+    }
+    .titulo {
+      color: $color-secondary;
+      text-align: center;
+    }
 }

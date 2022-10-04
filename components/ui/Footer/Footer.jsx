@@ -4,18 +4,25 @@ import MainContainer from '../../Containers/MainContainer/MainContainer'
 
 export const Footer = () => {
   return (
-      <footer className={styles.footer}>
-          <MainContainer>
-              <nav>
-                  <ul>
-                      <li><a href="#">ÚLTIMAS NOTICIAS</a></li>
-                      <li><a href="#">MEDIOS</a></li>
-                      <li><a href="#">COMUNICADOS</a></li>
-                      <li><a href="#">LOCALES</a></li>
-                      <li><a href="#">CONTACTO</a></li>
-                  </ul>
-              </nav>
-          </ MainContainer>
-      </footer>
+    <footer className={styles.footer}>
+      <MainContainer>
+          <nav>
+          <ul>
+            <li>
+                <a href="/ultimas-noticias">ÚLTIMAS NOTICIAS</a>
+            </li>
+            <li>
+                <a href="/medios">MEDIOS</a>
+            </li>
+            <li>
+                <a href="/cursos-y-talleres">CURSOS Y TALLERES</a>
+            </li>
+            <li>
+                <a href="/juventud">JUVENTUD</a>
+            </li>
+            </ul>
+          </nav>
+      </ MainContainer>
+    </footer>
   )
 }

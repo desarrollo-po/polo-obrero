@@ -6,17 +6,20 @@ import styles from "./notasSubDestacadas.module.scss";
 export const NotasSubDestacadas = ({ notasSubDestacadas }) => {
   console.log("notasSubDestacadas", notasSubDestacadas);
   return (
-    <section className={styles.notasSubDestacadas}>
-      {notasSubDestacadas.edges.map((item) => (
-        <TarjetaChicaConFoto
-          key={item.node.id}
-          titulo={item.node.title}
-          imagen={item.node.featuredImage.node.sourceUrl}
-          slug={item.node.slug}
-          volanta={item.node.campos.volanta}
-          descripcionDestacado={item.node.campos.descripcionDestacado}
-        />
-      ))}
-    </section>
+    <>
+      <h2 className={styles.titulo}>Conocé más de nosotros:</h2>
+      <section className={styles.notasSubDestacadas}>
+        {notasSubDestacadas.edges.map((item) => (
+          <TarjetaChicaConFoto
+            key={item.node.id}
+            titulo={item.node.title}
+            imagen={item.node.featuredImage.node.sourceUrl}
+            slug={item.node.slug}
+            volanta={item.node.campos.volanta}
+            descripcionDestacado={item.node.campos.descripcionDestacado}
+          />
+        ))}
+      </section>
+    </>
   );
 };

@@ -7,12 +7,14 @@
 
 .volanta {
   display: grid;
-  font-size: 23px;
+  font-size: 15px;
   grid-template-columns: repeat(12, 1fr);
   gap: 10px;
   margin-top: 0;
   margin-bottom: 0%;
+  color: rgb(242, 65, 65);
   border-bottom: 1px solid rgb(242, 65, 65);
+  text-transform: uppercase;
 }
 
 .titulo {
@@ -48,7 +50,7 @@
   margin-top: 25px;
   float: left;
   width: 50%;
-  margin-right: -5px;
+  margin-right: -30px;
   margin-bottom: -15px;
 }
 
@@ -61,4 +63,37 @@
 
 .twitter-tweet.twitter-tweet-rendered {
   margin: auto;
+}
+
+@media(max-width:600px) {
+  .titulo {
+    font-size: 20px;
+  }
+  .bajada {
+    font-size: 13px;
+  }
+  .picture {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    float: none;
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+  .epigrafe {
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+  .content {
+    font-size: 15px;
+  }
+  .nota iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+  .twitter-tweet {
+    width: 100%;
+  }
 }

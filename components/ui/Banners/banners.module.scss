@@ -1,4 +1,14 @@
 @import "../../../styles/colors.scss";
+@import "../../../styles/breakpoints.scss";
+
+.active {
+  -webkit-line-clamp: 20;
+  overflow: hidden;
+}
+
+.verMas {
+  display: none;
+}
 
 .banner {
  display: grid;
@@ -10,7 +20,7 @@
 
 .texto {
   grid-column: 1 / span 2;
-  padding: 10px;
+  margin: 0;
 }
 
 .titulo {
@@ -36,19 +46,55 @@
   }
 }
 
-.boton {
-  background-color: transparent;
+.comprar {
+
+  display: block ;
+  text-align: center;
+  margin: auto;
+  width: 100px;
+  padding: 10px;
   border-radius: 20px;
+  background-color: transparent;
   font-size: 17px;
   color: $color-secondary;
   border-color: $color-secondary;
-  padding: 15px 32px;
-  text-align: center;
-  display: inline-block;
+  border-style: solid;
 }
 
-.boton:hover {
+.comprar:hover {
   background-color:rgb(255, 255, 255);
   color: $color-primary;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
   
+  
+}
+
+
+@media(max-width: $mobile) {
+  .banner {
+    display:block;
+  }
+  .data {
+    margin-top: 0;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: auto;
+    -webkit-box-orient: vertical;
+    margin:10px;
+    padding: 0;   
+  }
+  .comprar {
+    display: flex;
+    justify-content: center;
+  }
+  .imagen {
+    margin: 20px;
+  }
+  .verMas {
+    display: block ;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+  }
 }
