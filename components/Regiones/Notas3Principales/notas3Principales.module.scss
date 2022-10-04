@@ -3,3 +3,11 @@
   grid-template-columns: 60% 40%;
   height: 480px;
 }
+
+@media(max-width:600px) {
+  .notas3Principales {
+    display: block;
+    grid-template-columns: none;
+  }
+}
+
