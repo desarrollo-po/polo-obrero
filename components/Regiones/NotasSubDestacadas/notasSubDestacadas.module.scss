@@ -1,4 +1,5 @@
 @import "../../../styles/breakpoints.scss";
+@import "../../../styles/colors.scss";
 
 .notasSubDestacadas {
     display: grid;
@@ -10,5 +11,9 @@
 @media(max-width: $mobile) {
     .notasSubDestacadas {
       display:block;
+    }
+    .titulo {
+      color: $color-secondary;
+      text-align: center;
     }
 }
