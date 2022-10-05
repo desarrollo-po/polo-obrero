@@ -17,7 +17,7 @@ export const Header = () => {
               <img
                 width="200"
                 className={styles.logo}
-                src="imgs/logo-polo-obrero.png"
+                src="/imgs/logo-polo-obrero.png"
               />
             </a>
           </Link>
