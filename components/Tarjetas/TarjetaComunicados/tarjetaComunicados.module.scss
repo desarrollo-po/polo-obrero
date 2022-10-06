@@ -1,0 +1,50 @@
+@import "../../../styles/breakpoints.scss";
+@import "../../../styles/colors.scss";
+
+.tarjetaComunicados {
+    background-color: white;
+    
+}
+.volanta {
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    padding: 2px 5px;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #000;
+    margin: 5px;
+    
+  }
+
+.imagen {
+    
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedorImagen {
+    
+    height: 200px;
+    display: block;
+    display: flex;
+    align-items: flex-start;
+}
+
+.data {
+    padding: 10px;
+    h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #000;
+        margin: 10px 0 10px 0;
+    }
+    p {
+        font-size: .9rem;
+        font-weight: 400;
+        color: #000;
+        margin: 0;
+    }
+}

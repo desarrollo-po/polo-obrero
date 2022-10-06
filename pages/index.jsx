@@ -12,6 +12,7 @@ import { Banners } from "../components/ui/Banners/Banners";
 import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
 import { getComunicadosPO } from "../services/queries/ComunicadosPO";
+import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
 
 export default function Home({
   notasSubDestacadas,
@@ -33,6 +34,7 @@ export default function Home({
           <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
           <Banners />
           <ListaYouTube listaYouTube={listaYouTube} />
+          <Comunicados comunicadosPO={comunicadosPO} />
         </MainContainer>
       </main>
       <Footer />
@@ -47,7 +49,7 @@ export async function getServerSideProps() {
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
   );
-  const comunicadosPO = await getComunicadosPO(3);
+  const comunicadosPO = await getComunicadosPO(6);
   return {
     props: {
       notasSubDestacadas: notasSubDestacadas.posts,
