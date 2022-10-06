@@ -1,6 +1,7 @@
 import { Header } from "../components/ui/Header/Header";
 import "../styles/globals.css";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { NotasGuardadasContextProvider } from "../context/NotasGuardadasProvider";
 
 export const client = new ApolloClient({
   connectToDevTools: true,
@@ -11,9 +12,11 @@ export const client = new ApolloClient({
 function MyApp({ Component, pageProps }) {
   return (
     <ApolloProvider client={client}>
-      <Header />
-      <Component {...pageProps} />
-      <footer></footer>
+      <NotasGuardadasContextProvider>
+        <Header />
+        <Component {...pageProps} />
+        <footer></footer>
+      </NotasGuardadasContextProvider>
     </ApolloProvider>
   );
 }

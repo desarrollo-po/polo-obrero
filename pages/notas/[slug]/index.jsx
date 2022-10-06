@@ -1,12 +1,15 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import MainContainer from "../../../components/Containers/MainContainer/MainContainer";
+import { ListaNotasGuardadas } from "../../../components/NotasGuardadas/ListaNotasGuardadas";
+import { NotasGuardadasContext } from "../../../context/NotasGuardadasContext";
 import { getPostsBySlug } from "../../../services/queries/PostBySlug";
 import { getAllPosts } from "../../../services/queries/Posts";
 import styles from "./nota.module.scss";
 
 const index = ({
   post: {
+    id,
     title,
     campos: { bajada, epigrafe, volanta },
     slug,
@@ -25,7 +28,18 @@ const index = ({
       document.head.appendChild(s);
     }
   }, []);
-  console.log("opengraphTitle", seo.metaDesc);
+
+  const { addNota } = useContext(NotasGuardadasContext);
+
+  const handleGuardarNota = () => {
+    addNota({
+      title,
+      slug,
+      imagen: sourceUrl,
+      id,
+    });
+  };
+
   return (
     <>
       <Head>
@@ -60,6 +74,7 @@ const index = ({
       </Head>
       <MainContainer>
         <section className={styles.nota}>
+          <button onClick={handleGuardarNota}>Guardar nota</button>
           {volanta && <h3 className={styles.volanta}>{volanta}</h3>}
           <h1 className={styles.titulo}>{title}</h1>
           <p className={styles.bajada}>{bajada}</p>

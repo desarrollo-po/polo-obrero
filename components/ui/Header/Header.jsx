@@ -3,7 +3,6 @@ import React from "react";
 import MainContainer from "../../Containers/MainContainer/MainContainer";
 import IconFacebook from "../../Iconos/IconFacebook";
 import IconInstagram from "../../Iconos/IconInstagram";
-import IconTwitter from "../../Iconos/IconTwitter";
 import MenuPrincipal from "../MenuPrincipal/MenuPrincipal";
 import styles from "./Header.module.scss";
 
