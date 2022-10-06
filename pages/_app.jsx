@@ -8,10 +8,15 @@ export const client = new ApolloClient({
   uri: process.env.NEXT_PUBLIC_WORDPRESS_GRAPHQL,
   cache: new InMemoryCache(),
 });
+export const clientPO = new ApolloClient({
+  connectToDevTools: true,
+  uri: process.env.NEXT_PUBLIC_PO_WORDPRESS_GRAPHQL,
+  cache: new InMemoryCache(),
+});
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ApolloProvider client={client}>
+    <ApolloProvider clientPO={clientPO} client={client}>
       <NotasGuardadasContextProvider>
         <Header />
         <Component {...pageProps} />

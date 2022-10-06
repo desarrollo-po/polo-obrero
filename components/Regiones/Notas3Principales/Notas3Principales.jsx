@@ -4,8 +4,6 @@ import { TarjetaGrandeConFoto } from "../../Tarjetas/TarjetaGrandeConFoto/Tarjet
 import styles from "./notas3Principales.module.scss";
 
 export const Notas3Principales = ({ notas3Principales }) => {
-  console.log("notas3Principales", notas3Principales);
-
   return (
     <section className={styles.notas3Principales}>
       {notas3Principales.edges.map(

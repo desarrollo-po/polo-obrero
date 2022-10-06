@@ -4,7 +4,6 @@ import { TarjetaChicaConFoto } from "../../Tarjetas/TarjetaChicaConFoto/TarjetaC
 import styles from "./notasSubDestacadas.module.scss";
 
 export const NotasSubDestacadas = ({ notasSubDestacadas }) => {
-  console.log("notasSubDestacadas", notasSubDestacadas);
   return (
     <>
       <h2 className={styles.titulo}>Conocé más de nosotros:</h2>

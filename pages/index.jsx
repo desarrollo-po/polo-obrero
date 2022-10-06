@@ -11,12 +11,15 @@ import { Footer } from "../components/ui/Footer/Footer";
 import { Banners } from "../components/ui/Banners/Banners";
 import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
+import { getComunicadosPO } from "../services/queries/ComunicadosPO";
 
 export default function Home({
   notasSubDestacadas,
   notas3Principales,
+  comunicadosPO,
   listaYouTube,
 }) {
+  console.log("Comunicados", comunicadosPO);
   return (
     <>
       <Head>
@@ -44,10 +47,12 @@ export async function getServerSideProps() {
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
   );
+  const comunicadosPO = await getComunicadosPO(3);
   return {
     props: {
       notasSubDestacadas: notasSubDestacadas.posts,
       notas3Principales: notas3Principales.posts,
+      comunicadosPO: comunicadosPO.posts,
       listaYouTube,
     },
   };

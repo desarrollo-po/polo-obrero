@@ -2,7 +2,6 @@ import { IframeVideo } from "../IframeVideo/IframeVideo";
 import styles from "./ListaYouTube.module.scss";
 
 export const ListaYouTube = ({ listaYouTube }) => {
-  console.log("listaYouTube", listaYouTube);
   return (
     <>
       <h2 className={styles.titulo}>El Polo Obrero en los Medios</h2>
