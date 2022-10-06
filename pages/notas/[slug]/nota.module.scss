@@ -3,6 +3,9 @@
   padding: 20px;
   max-width: 1160px;
   margin: 2px auto;
+  iframe {
+    margin: auto;
+  }
 }
 
 .volanta {
@@ -22,20 +25,20 @@
   font-size: 36px;
   margin-top: 10px;
   margin-bottom: 10px;
-  color: rgb(44, 44, 44)
+  color: rgb(44, 44, 44);
 }
 
 .bajada {
   grid-column: span 9;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-style: italic;
-    font-weight: 600;
-    font-size: 14px;
-    color: rgb(75, 75, 75);
-    gap: 10px;
-    padding: 7px 0px;
-    border-bottom: 0.3px solid rgb(200, 200, 200);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(75, 75, 75);
+  gap: 10px;
+  padding: 7px 0px;
+  border-bottom: 0.3px solid rgb(200, 200, 200);
 }
 
 .content {
@@ -61,11 +64,7 @@
   color: rgb(75, 75, 75);
 }
 
-.twitter-tweet.twitter-tweet-rendered {
-  margin: auto;
-}
-
-@media(max-width:600px) {
+@media (max-width: 600px) {
   .titulo {
     font-size: 20px;
   }
@@ -88,10 +87,6 @@
   }
   .content {
     font-size: 15px;
-  }
-  .nota iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
   }
   .twitter-tweet {
     width: 100%;

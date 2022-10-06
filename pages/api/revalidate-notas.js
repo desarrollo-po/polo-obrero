@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     // const slugToRevalidate = body.post.post_name;
 
     await res.revalidate(`/notas/${req.query.slug}`);
-    return res.json({ revalidated: "req, res" });
+    return res.json({ revalidated: `/notas/${req.query.slug}` });
   } catch (err) {
     // If there was an error, Next.js will continue
     // to show the last successfully generated page
