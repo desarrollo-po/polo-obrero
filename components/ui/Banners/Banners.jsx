@@ -55,7 +55,7 @@ export const Banners = () => {
             <br></br>
             Del prólogo de Néstor Pitrola
           </p>
-          <button onClick={onShowText} className={styles.verMas}>
+          <button onClick={onShowText} className={styles.btn}>
             {`${showText ? "Ver Más" : "Ver Menos"}`}
           </button>
         </div>
