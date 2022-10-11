@@ -1,12 +1,13 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/breakpoints.scss";
+@import "../../../styles/botones.scss";
 
 .active {
   -webkit-line-clamp: 20;
   overflow: hidden;
 }
 
-.verMas {
+.btn {
   display: none;
 }
 
@@ -47,7 +48,6 @@
 }
 
 .comprar {
-
   display: block ;
   text-align: center;
   margin: auto;
@@ -91,10 +91,8 @@
   .imagen {
     margin: 20px;
   }
-  .verMas {
-    display: block ;
-    margin: auto;
-    padding: 10px;
-    border-radius: 20px;
+  .btn {
+    @include btn
   }
+
 }

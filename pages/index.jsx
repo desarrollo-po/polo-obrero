@@ -12,6 +12,7 @@ import { Banners } from "../components/ui/Banners/Banners";
 import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
 import { getComunicadosPO } from "../services/queries/ComunicadosPO";
+import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
 
 export default function Home({
   notasSubDestacadas,
@@ -33,6 +34,7 @@ export default function Home({
           <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
           <Banners />
           <ListaYouTube listaYouTube={listaYouTube} />
+          <Comunicados comunicadosPO={comunicadosPO} />
         </MainContainer>
       </main>
       <Footer />
@@ -41,13 +43,13 @@ export default function Home({
 }
 
 export async function getServerSideProps() {
-  const notasSubDestacadas = await getPostsByRegion("notas-sub-destacadas", 4);
+  const notasSubDestacadas = await getPostsByRegion("notas-sub-destacadas", 3);
   const notas3Principales = await getPostsByRegion("3-notas-principales", 3);
   const listaYouTube = await getVideosByPlayList(
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
   );
-  const comunicadosPO = await getComunicadosPO(3);
+  const comunicadosPO = await getComunicadosPO(6);
   return {
     props: {
       notasSubDestacadas: notasSubDestacadas.posts,

@@ -1,0 +1,43 @@
+@import "../../../styles/breakpoints.scss";
+@import "../../../styles/colors.scss";
+
+.active {
+    height: 200px;
+    overflow: hidden;
+}
+
+.containerComunicados {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:10px;
+  margin-top: 20px;
+}
+
+.titulo {
+  color: $color-secondary;
+}
+
+.active {
+  height: 290px;
+  overflow: hidden;
+}
+
+.btn {
+  
+    background-color: $color-primary;
+    color: $color-secondary;
+    border: 2px solid $color-secondary;
+    border-radius: 12px;
+    font-size: 17px;
+    padding: 15px 25px;
+    display: block ;
+    margin: 10px auto auto auto;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover {
+  background-color: $color-secondary;
+  color: $color-primary;
+}
