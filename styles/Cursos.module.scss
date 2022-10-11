@@ -4,12 +4,20 @@
 }
 .cursos{
   display: flex;
-  gap: 0px;
+  gap: 10px;
 
   .curso{
     color: white;
     img {
       max-width: 100%;
+    }
+    h3{
+      font-size: 14px;
+      padding: 0px
+    }
+    p {
+      font-size: 12xp;
+      line-height: 0px;
     }
   }
 }
