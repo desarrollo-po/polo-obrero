@@ -2,3 +2,14 @@
   color: white;
   text-align: center;
 }
+.cursos{
+  display: flex;
+  gap: 0px;
+
+  .curso{
+    color: white;
+    img {
+      max-width: 100%;
+    }
+  }
+}

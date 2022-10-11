@@ -13,15 +13,18 @@ const cursos = () => {
       </Head>
       <MainContainer>
         <h1 className={styles.titulo}>Cursos y talleres</h1>
-          <div className={styles.curso}>
+          <div className={styles.cursos}>
             <div className={styles.curso}>
               <img src="/imgs/curso-lucha-hambre-socialismo.jpg" />
+              <h2>titulo</h2>
             </div>
-            <div>
+            <div className={styles.curso}>
               <img src="/imgs/curso-lucha-hambre-socialismo.jpg" />
+              <h2>titulo</h2>
             </div>
-            <div>
+            <div className={styles.curso}>
               <img src="/imgs/curso-lucha-hambre-socialismo.jpg" />
+              <h2>titulo</h2>
             </div>
           </div>
       </MainContainer>
