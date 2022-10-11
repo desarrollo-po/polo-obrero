@@ -21,7 +21,6 @@ export default function Home({
   comunicadosPO,
   listaYouTube,
 }) {
-  console.log("Comunicados", comunicadosPO);
   return (
     <>
       <Head>

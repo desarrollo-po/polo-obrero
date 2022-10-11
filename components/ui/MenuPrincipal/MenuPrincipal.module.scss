@@ -1,28 +1,78 @@
 @import " ../../../../../styles/breakpoints.scss";
+@import "../../../styles/colors.scss";
+
+
 .nav {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    
-    ul {
-        display: flex;
-        margin: 0;
-        max-width: 1200px;
-        padding: 10px 0px 10px 0;
-        font-weight: 600;
-        font-size: 16px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 300;
+   
+    padding: 20px;
+    top: 50px;
+    max-width: 500px;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+} 
+
+.nav ul {
+      z-index: 2;
+      display: block;
+      background-color: $color-primary;
+      padding: 10px;
+      font-size: 18px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
         li {
             list-style: none;
-            margin-right: 20px;
+            margin-bottom: 5px;
+            padding: 5px;
             a {
                 text-decoration: none;
                 color: white;
             }
+            a:hover {
+              text-decoration: none;
+              color: $color-primary;
+              background-color: $color-secondary;
+          }
         }
-    }
+      }
+
+.hamb {
+  overflow: hidden;
+  position: relative;
+  grid-column: span 4;
+  height: 20px;
+  width: 35px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.hamb span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: none;
+  background-color: $color-secondary;
+  transition: width 0.1s ease-in-out;
+}
+
+.hamb .line2 {
+  width: 30px;
+}
+.hamb:hover .line1 {
+  width: 30px;
+  transition: width 0.1s ease-in-out;
+}
+.hamb:hover .line2 {
+  width: 35px;
+  transition: width 0.1s ease-in-out;
+}
+.hamb:hover .line3 {
+  width: 30px;
+  transition: width 0.1s ease-in-out;
 }
 
 @media(max-width:$mobile) {
@@ -30,3 +80,4 @@
     display: none;
   }
 }
+
