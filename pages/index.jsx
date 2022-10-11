@@ -45,7 +45,7 @@ export default function Home({
 }
 
 export async function getServerSideProps() {
-  const notasSubDestacadas = await getPostsByRegion("notas-sub-destacadas", 4);
+  const notasSubDestacadas = await getPostsByRegion("notas-sub-destacadas", 3);
   const notas3Principales = await getPostsByRegion("3-notas-principales", 3);
   const listaYouTube = await getVideosByPlayList(
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
