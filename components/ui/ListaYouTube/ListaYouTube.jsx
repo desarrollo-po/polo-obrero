@@ -4,7 +4,6 @@ import styles from "./ListaYouTube.module.scss";
 export const ListaYouTube = ({ listaYouTube }) => {
   return (
     <>
-      <h2 className={styles.titulo}>El Polo Obrero en los Medios</h2>
       <section className={styles.listaYouTube}>
         {listaYouTube.items.map(
           ({
