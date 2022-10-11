@@ -13,6 +13,7 @@ import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
 import { getComunicadosPO } from "../services/queries/ComunicadosPO";
 import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
+import { Formulario } from "../components/ui/Formulario/Formulario";
 
 export default function Home({
   notasSubDestacadas,
@@ -35,6 +36,7 @@ export default function Home({
           <Banners />
           <ListaYouTube listaYouTube={listaYouTube} />
           <Comunicados comunicadosPO={comunicadosPO} />
+          <Formulario />
         </MainContainer>
       </main>
       <Footer />
