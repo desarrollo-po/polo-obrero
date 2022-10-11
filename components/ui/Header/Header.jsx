@@ -1,9 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import MainContainer from "../../Containers/MainContainer/MainContainer";
-import IconFacebook from "../../Iconos/IconFacebook";
-import IconInstagram from "../../Iconos/IconInstagram";
 import MenuPrincipal from "../MenuPrincipal/MenuPrincipal";
+import { Redes } from "../Redes/Redes";
 import styles from "./Header.module.scss";
 
 export const Header = () => {
@@ -11,6 +10,7 @@ export const Header = () => {
     <>
       <MainContainer>
         <header className={styles.header}>
+          <MenuPrincipal />
           <Link href="/">
             <a>
               <img
@@ -20,19 +20,7 @@ export const Header = () => {
               />
             </a>
           </Link>
-          <MenuPrincipal />
-          <ul>
-            <li>
-              <a href="https://www.instagram/polo.obrero">
-                <IconFacebook size="30" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/polo.obrero.3">
-                <IconInstagram size="30" />
-              </a>
-            </li>
-          </ul>
+          <Redes />
         </header>
       </MainContainer>
     </>
