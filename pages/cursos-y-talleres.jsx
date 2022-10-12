@@ -28,7 +28,7 @@ const cursos = () => {
             <img src="/imgs/curso-peronismo-socialismo.jpg" />
             <h2>Peronismo y Socialismo</h2>
             <h3>En la lucha de clases argentina</h3>
-            <IconVideo size="40" color="white" />
+            <IconVideo size="40" color="green" />
             <p>3 Clases</p>
             <p>Bibliografía</p>
             <p>Duración por clase: 21-23 minutos</p>
