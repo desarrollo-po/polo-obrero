@@ -1,0 +1,15 @@
+.h1 {
+  color: #fff;
+}
+.formContainer {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: auto;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+
+  iframe {
+    width: 100%;
+  }
+}
