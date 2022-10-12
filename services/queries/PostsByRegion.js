@@ -6,6 +6,13 @@ export async function getPostsByRegion(region, notas) {
   const { data } = await client.query({
     query: gql`
       query PostsByRegion {
+        regiones(where: {slug: "${region}"}) {
+          nodes {
+            estado_de_la_region {
+              estadoDeLaRegion
+            }
+          }
+        }
         posts(
           first: ${notas}
           where: {

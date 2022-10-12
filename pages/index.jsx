@@ -30,7 +30,10 @@ export default function Home({
       </Head>
       <main>
         <MainContainer>
-          <Notas3Principales notas3Principales={notas3Principales} />
+          {notas3Principales.regiones.nodes[0].estado_de_la_region
+            .estadoDeLaRegion && (
+            <Notas3Principales notas3Principales={notas3Principales.posts} />
+          )}
           <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
           <Banners />
           <ListaYouTube listaYouTube={listaYouTube} />
@@ -54,7 +57,7 @@ export async function getServerSideProps() {
   return {
     props: {
       notasSubDestacadas: notasSubDestacadas.posts,
-      notas3Principales: notas3Principales.posts,
+      notas3Principales,
       comunicadosPO: comunicadosPO.posts,
       listaYouTube,
     },
