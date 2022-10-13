@@ -7,7 +7,6 @@ import { getPostsByTag } from "../services/queries/PostsByTag";
 import styles from "../styles/Juventud.module.scss";
 
 export default function Juventud({notasTagJuventud}) {
-  console.log(notasTagJuventud);
   return (
     <>
       <Head>
