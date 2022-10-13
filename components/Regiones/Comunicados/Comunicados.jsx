@@ -36,7 +36,7 @@ export const Comunicados = ({ comunicadosPO }) => {
         )}
       </section>
       <button onClick={onShowComunicados} className={styles.btn}>
-        {`${showComunicados ? "Ver Más" : "Ver Menos"}`}
+        {showComunicados ? "Ver Más" : "Ver Menos"}
       </button>
     </>
   );

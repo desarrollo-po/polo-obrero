@@ -9,7 +9,6 @@ import styles from "./nota.module.scss";
 
 const index = ({
   post: {
-    id,
     title,
     campos: { bajada, epigrafe, volanta },
     slug,
@@ -29,16 +28,16 @@ const index = ({
     }
   }, []);
 
-  const { addNota } = useContext(NotasGuardadasContext);
+  // const { addNota } = useContext(NotasGuardadasContext);
 
-  const handleGuardarNota = () => {
-    addNota({
-      title,
-      slug,
-      imagen: sourceUrl,
-      id,
-    });
-  };
+  // const handleGuardarNota = () => {
+  //   addNota({
+  //     title,
+  //     slug,
+  //     imagen: sourceUrl,
+  //     id,
+  //   });
+  // };
 
   return (
     <>
@@ -74,7 +73,7 @@ const index = ({
       </Head>
       <MainContainer>
         <section className={styles.nota}>
-          <button onClick={handleGuardarNota}>Guardar nota</button>
+          {/* <button onClick={handleGuardarNota}>Guardar nota</button> */}
           {volanta && <h3 className={styles.volanta}>{volanta}</h3>}
           <h1 className={styles.titulo}>{title}</h1>
           <p className={styles.bajada}>{bajada}</p>
@@ -82,9 +81,6 @@ const index = ({
             <img width="500" src={sourceUrl} alt={title} />
             <p className={styles.epigrafe}>{epigrafe}</p>
           </picture>
-
-          {/* <p>Por: {autores.join(", ")}</p> */}
-          {/* <p>{categorias}</p> */}
           <div
             className={styles.content}
             dangerouslySetInnerHTML={{ __html: content }}
