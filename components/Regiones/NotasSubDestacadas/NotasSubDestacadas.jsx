@@ -6,7 +6,6 @@ import styles from "./notasSubDestacadas.module.scss";
 export const NotasSubDestacadas = ({ notasSubDestacadas }) => {
   return (
     <>
-      <h2 className={styles.titulo}>Conocé más de nosotros:</h2>
       <section className={styles.notasSubDestacadas}>
         {notasSubDestacadas.edges.map((item) => (
           <TarjetaChicaConFoto
