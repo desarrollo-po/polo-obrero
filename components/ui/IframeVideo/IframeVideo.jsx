@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { IconPlayVideo } from "../../Iconos/IconPlayVideo";
 import styles from "./IframeVideo.module.scss";
 
 export const IframeVideo = ({ url, videoId, title }) => {
@@ -21,6 +22,8 @@ export const IframeVideo = ({ url, videoId, title }) => {
           className={styles.iframeVideo}
           onClick={() => setShowVideo(!showVideo)}
         >
+          <div className={styles.data}>{title}</div>
+          <IconPlayVideo />
           <img height="215" src={url} alt="" />
         </article>
       )}
