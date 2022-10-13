@@ -1,10 +1,13 @@
 import Head from "next/head";
 import React from "react";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
+import { TarjetaChicaConFoto } from "../components/Tarjetas/TarjetaChicaConFoto/TarjetaChicaConFoto";
 import { Footer } from "../components/ui/Footer/Footer";
+import { getPostsByTag } from "../services/queries/PostsByTag";
 import styles from "../styles/Juventud.module.scss";
 
-export default function Juventud() {
+export default function Juventud({notasTagJuventud}) {
+  console.log(notasTagJuventud);
   return (
     <>
       <Head>
@@ -13,8 +16,38 @@ export default function Juventud() {
       </Head>
       <MainContainer>
         <h1 className={styles.titulo}>Juventud del Polo Obrero</h1>
+        <div className={styles.containerNota}>
+        {
+          notasTagJuventud.edges.map(({ node: {
+              id,
+              title,
+              slug,
+              campos : { volanta, descripcionDestacado},
+              featuredImage : {
+                node: { sourceUrl },
+              }
+          } }) => (
+            <TarjetaChicaConFoto
+                key={id}
+                titulo={title}
+                imagen={sourceUrl}
+                slug={slug}
+                volanta={volanta}
+                descripcionDestacado={descripcionDestacado}
+              />
+          ))}
+        </div>
       </MainContainer>
       <Footer />
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const notasTagJuventud = await getPostsByTag("juventud-del-polo", 6);
+  return {
+    props: {
+      notasTagJuventud: notasTagJuventud.posts,
+    },
+  };
 }
