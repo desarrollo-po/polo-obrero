@@ -1,9 +1,7 @@
-@import " ../../../../../styles/breakpoints.scss";
 @import "../../../styles/colors.scss";
 
 
 .nav {
-   
     padding: 20px;
     top: 50px;
     max-width: 500px;
@@ -75,9 +73,5 @@
   transition: width 0.1s ease-in-out;
 }
 
-@media(max-width:$mobile) {
-  .nav {
-    display: none;
-  }
-}
+
 

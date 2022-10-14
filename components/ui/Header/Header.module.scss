@@ -10,7 +10,7 @@
 }
 @media(max-width: $mobile) {
     .header {
-        justify-content: center;
+        justify-content: space-between;
     }
     .logo {
         width: 100%;
