@@ -16,6 +16,8 @@ import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
 import { Formulario } from "../components/ui/Formulario/Formulario";
 import { getPostsSuplePolo } from "../services/queries/PostsSuplePolo";
 import { SuplePolo } from "../components/Regiones/SuplePolo/SuplePolo";
+import { NotasMovPiquetero } from "../components/Regiones/NotasMovPiquetero/NotasMovPiquetero";
+import { getPostsCategoriaPrensa } from "../services/queries/PostsCategoriaPrensa";
 
 export default function Home({
   notasSubDestacadas,
@@ -23,6 +25,7 @@ export default function Home({
   comunicadosPO,
   listaYouTube,
   notasSuplePolo,
+  notasMovPiquetero,
 }) {
   // const tapaSuplePolo =
   //   notasSuplePolo.edges[0].node.datosDePrensaNumero.imagenTapa.sourceUrl;
@@ -43,7 +46,7 @@ export default function Home({
           )}
           <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
           <Banners />
-
+          <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} />
           <ListaYouTube listaYouTube={listaYouTube} />
           <Comunicados comunicadosPO={comunicadosPO} />
           <Formulario />
@@ -63,6 +66,11 @@ export async function getStaticProps() {
   );
   const notasSuplePolo = await getPostsSuplePolo("1655SP", 4);
   const comunicadosPO = await getComunicadosPO(6);
+  const notasMovPiquetero = await getPostsCategoriaPrensa(
+    "movimiento-piquetero",
+    4
+  );
+
   return {
     props: {
       notasSubDestacadas: notasSubDestacadas.posts,
@@ -70,6 +78,7 @@ export async function getStaticProps() {
       comunicadosPO: comunicadosPO.posts,
       listaYouTube,
       notasSuplePolo: notasSuplePolo.prensaNumeros,
+      notasMovPiquetero: notasMovPiquetero.posts,
     },
   };
 }
