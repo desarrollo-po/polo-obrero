@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import MainContainer from "../../Containers/MainContainer/MainContainer";
+import { BotonSumate } from "../BotonSumate/BotonSumate";
 import MenuPrincipal from "../MenuPrincipal/MenuPrincipal";
 import { Redes } from "../Redes/Redes";
 import styles from "./Header.module.scss";
@@ -20,6 +21,8 @@ export const Header = () => {
               />
             </a>
           </Link>
+          <BotonSumate className={styles.btn}>
+          </BotonSumate>
           <Redes />
         </header>
       </MainContainer>

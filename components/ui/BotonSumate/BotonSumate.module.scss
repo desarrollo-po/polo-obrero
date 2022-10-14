@@ -1,0 +1,26 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/breakpoints.scss";
+@import "../../../styles/botones.scss";
+
+.btn {
+  display: block ;
+  text-align: center;
+  margin: auto;
+  width: 100px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: transparent;
+  font-size: 17px;
+  color: $color-secondary;
+  border-color: $color-secondary;
+  border-style: solid;
+}
+
+.btn:hover {
+  background-color:rgb(255, 255, 255);
+  color: $color-primary;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  
+  
+}
