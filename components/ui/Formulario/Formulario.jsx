@@ -4,7 +4,6 @@ import styles from "./formulario.module.scss";
 export const Formulario = () => {
   return (
     <>
-      <h1 className={styles.h1}>Contacto</h1>
       <form className={styles.formContainer}>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSd-JtQSp-ksvGnF8e7wTesL0iovfK9JPxWAPLgwQuJFjyrMbQ/viewform?embedded=true"

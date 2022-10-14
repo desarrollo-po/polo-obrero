@@ -14,13 +14,19 @@ import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
 import { getComunicadosPO } from "../services/queries/ComunicadosPO";
 import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
 import { Formulario } from "../components/ui/Formulario/Formulario";
+import { getPostsSuplePolo } from "../services/queries/PostsSuplePolo";
+import { SuplePolo } from "../components/Regiones/SuplePolo/SuplePolo";
 
 export default function Home({
   notasSubDestacadas,
   notas3Principales,
   comunicadosPO,
   listaYouTube,
+  notasSuplePolo,
 }) {
+  // const tapaSuplePolo =
+  //   notasSuplePolo.edges[0].node.datosDePrensaNumero.imagenTapa.sourceUrl;
+
   return (
     <>
       <Head>
@@ -30,12 +36,14 @@ export default function Home({
       </Head>
       <main>
         <MainContainer>
+          <SuplePolo notasSuplePolo={notasSuplePolo.edges[0].node.posts} />
           {notas3Principales.regiones.nodes[0].estado_de_la_region
             .estadoDeLaRegion && (
             <Notas3Principales notas3Principales={notas3Principales.posts} />
           )}
           <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
           <Banners />
+
           <ListaYouTube listaYouTube={listaYouTube} />
           <Comunicados comunicadosPO={comunicadosPO} />
           <Formulario />
@@ -53,6 +61,7 @@ export async function getStaticProps() {
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
   );
+  const notasSuplePolo = await getPostsSuplePolo("1655SP", 4);
   const comunicadosPO = await getComunicadosPO(6);
   return {
     props: {
@@ -60,6 +69,7 @@ export async function getStaticProps() {
       notas3Principales,
       comunicadosPO: comunicadosPO.posts,
       listaYouTube,
+      notasSuplePolo: notasSuplePolo.prensaNumeros,
     },
   };
 }

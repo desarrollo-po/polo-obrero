@@ -1,15 +1,20 @@
-.h1 {
-  color: #fff;
-}
+@import "../../../styles/breakpoints.scss";
+
 .formContainer {
   background-color: #fff;
   border-radius: 10px;
-  margin: auto;
-  width: 600px;
+  margin: 20px auto 20px auto;
+  max-width: 700px;
   display: flex;
   justify-content: center;
 
   iframe {
     width: 100%;
+  }
+}
+
+@include media(mobile) {
+  .formContainer {
+    width: auto;
   }
 }

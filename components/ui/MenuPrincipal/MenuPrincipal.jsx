@@ -24,6 +24,9 @@ const MenuPrincipal = () => {
             <li>
               <a href="/juventud">JUVENTUD</a>
             </li>
+            <li>
+              <a href="/contacto">CONTACTO</a>
+            </li>
           </ul>
         </nav>
       )}
