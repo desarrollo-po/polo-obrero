@@ -1,0 +1,19 @@
+@import "../../../styles/breakpoints.scss";
+@import "../../../styles/colors.scss";
+
+.notasMovPiquetero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+@include media(mobile) {
+    .notasMovPiquetero {
+      display:block;
+    }
+    .titulo {
+      color: $color-secondary;
+      text-align: center;
+    }
+}

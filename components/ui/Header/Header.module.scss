@@ -1,13 +1,16 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/breakpoints.scss";
+
 .header {
     display: flex;
+    
     background-color: $color-primary;
     color: $color-secondary;
     padding: 1rem 0;
     align-items: center;
     justify-content: space-between;
 }
+
 @media(max-width: $mobile) {
     .header {
         justify-content: space-between;
@@ -16,5 +19,4 @@
         width: 100%;
         text-align: center;
     }
- 
 }
