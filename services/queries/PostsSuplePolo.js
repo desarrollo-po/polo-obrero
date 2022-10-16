@@ -19,6 +19,7 @@ export async function getPostsSuplePolo(edicion, notas) {
                 edges {
                   node {
                     ${tarjetaNota}
+                    link
                   }
                 }
               }

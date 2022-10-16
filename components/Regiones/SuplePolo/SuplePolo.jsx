@@ -1,6 +1,4 @@
-import Link from "next/link";
-import React from "react";
-import { TarjetaGrandeConFoto } from "../../Tarjetas/TarjetaGrandeConFoto/TarjetaGrandeConFoto";
+import { TarjetaSuplePolo } from "../../Tarjetas/TarjetaSuplePolo/TarjetaSuplePolo";
 import styles from "./SuplePolo.module.scss";
 
 export const SuplePolo = ({ notasSuplePolo }) => {
@@ -13,18 +11,18 @@ export const SuplePolo = ({ notasSuplePolo }) => {
             node: {
               id,
               title,
-              slug,
+              link,
               featuredImage: {
                 node: { sourceUrl },
               },
               campos: { volanta, descripcionDestacado },
             },
           }) => (
-            <TarjetaGrandeConFoto
+            <TarjetaSuplePolo
               key={id}
               titulo={title}
               imagen={sourceUrl}
-              slug={slug}
+              link={link}
               volanta={volanta}
               descripcionDestacado={descripcionDestacado}
             />

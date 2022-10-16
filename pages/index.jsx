@@ -1,11 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import { getPostsByRegion } from "../services/queries/PostsByRegion";
-import styles from "../styles/Home.module.css";
 import { Notas3Principales } from "../components/Regiones/Notas3Principales/Notas3Principales";
-import MenuPrincipal from "../components/ui/MenuPrincipal/MenuPrincipal";
 import { NotasSubDestacadas } from "../components/Regiones/NotasSubDestacadas/NotasSubDestacadas";
 import { Footer } from "../components/ui/Footer/Footer";
 import { Banners } from "../components/ui/Banners/Banners";
