@@ -40,11 +40,11 @@ export default function Home({
             .estadoDeLaRegion && (
             <Notas3Principales notas3Principales={notas3Principales.posts} />
           )} */}
-          <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
+          {/* <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
 
-          <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} />
-          <ListaYouTube listaYouTube={listaYouTube} />
+          <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} /> */}
           <Comunicados comunicadosPO={comunicadosPO} />
+          <ListaYouTube listaYouTube={listaYouTube} />
           <Formulario />
           <Banners />
         </MainContainer>
