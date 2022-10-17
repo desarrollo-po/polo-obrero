@@ -36,7 +36,7 @@ export const Comunicados = ({ comunicadosPO }) => {
         )}
       </section>
       <div className={styles.btn}>
-        Ver más comunicados
+        <a href="/prensa-comunicados">Ver más comunicados</a>
       </div>
     </>
   );
