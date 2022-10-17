@@ -13,7 +13,10 @@ export default function UltimasNoticias({ ultimasNoticias }) {
         <title>Ultimas Noticias</title>
       </Head>
       <MainContainer>
-        <h3 className={styles.titulo}>Noticias del Movimiento Piquetero</h3>
+        <div className={styles.contenedorTitulo}>
+          <h3 className={styles.titulo}>Noticias del Movimiento Piquetero</h3>
+        </div>
+
         <section className={styles.ultimasNoticias}>
           {ultimasNoticias.edges.map(
             ({
@@ -43,7 +46,7 @@ export default function UltimasNoticias({ ultimasNoticias }) {
   );
 }
 export async function getServerSideProps() {
-  const ultimasNoticias = await getUltimasNoticias(8);
+  const ultimasNoticias = await getUltimasNoticias(12);
   return {
     props: {
       ultimasNoticias: ultimasNoticias.posts,
