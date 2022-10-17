@@ -18,7 +18,7 @@ export const Header = () => {
           <div>
             <Link href="/">
             <a>
-              <LogoPoloObrero size="150" color="white"/>
+              <LogoPoloObrero wsize="350" wheight="60" color="white"/>
             </a>
           </Link>
           </div>

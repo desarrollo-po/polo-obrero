@@ -1,12 +1,12 @@
 import React from "react";
 
-export const LogoPoloObrero = ({ size = " 40", color = "red" }) => {
+export const LogoPoloObrero = ({ wsize = "50", wheight = "50" , color = "red" }) => {
   return (
     <svg
-      width={size}
-      height={size}
+      width={wsize}
+      height={wheight}
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 620 620"
+      viewBox="0 0 50 250"
       fill={color}
       >
           <g>
