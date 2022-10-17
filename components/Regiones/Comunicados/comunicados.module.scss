@@ -10,12 +10,13 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap:10px;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 ;
 }
 
 .titulo {
   color: $color-secondary;
   text-align: center;
+  padding: 40px 0 0 0;
 }
 
 .active {
@@ -35,6 +36,7 @@
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
+    width: 224px;
 }
 
 .btn:hover {

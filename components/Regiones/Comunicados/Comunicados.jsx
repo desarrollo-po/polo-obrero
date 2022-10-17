@@ -4,9 +4,9 @@ import styles from "./comunicados.module.scss";
 
 export const Comunicados = ({ comunicadosPO }) => {
   const [showComunicados, setShowComunicados] = useState(true);
-  const onShowComunicados = () => {
-    setShowComunicados(!showComunicados);
-  };
+  // const onShowComunicados = () => {
+  //   setShowComunicados(!showComunicados);
+  // };
   return (
     <>
       <h2 className={styles.titulo}>Comunicados:</h2>
@@ -35,9 +35,9 @@ export const Comunicados = ({ comunicadosPO }) => {
           )
         )}
       </section>
-      <button onClick={onShowComunicados} className={styles.btn}>
-        {showComunicados ? "Ver Más" : "Ver Menos"}
-      </button>
+      <div className={styles.btn}>
+        Ver más comunicados
+      </div>
     </>
   );
 };

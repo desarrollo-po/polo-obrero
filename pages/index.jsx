@@ -9,7 +9,6 @@ import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
 import { getComunicadosPO } from "../services/queries/ComunicadosPO";
 import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
-import { Formulario } from "../components/ui/Formulario/Formulario";
 import { getPostsSuplePolo } from "../services/queries/PostsSuplePolo";
 import { SuplePolo } from "../components/Regiones/SuplePolo/SuplePolo";
 import { NotasMovPiquetero } from "../components/Regiones/NotasMovPiquetero/NotasMovPiquetero";
@@ -45,7 +44,6 @@ export default function Home({
           <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} /> */}
           <Comunicados comunicadosPO={comunicadosPO} />
           <ListaYouTube listaYouTube={listaYouTube} />
-          <Formulario />
           <Banners />
         </MainContainer>
       </main>
