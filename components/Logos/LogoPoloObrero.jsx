@@ -1,6 +1,6 @@
 import React from "react";
 
-export const IconDuracion = ({ size = " 40", color = "red" }) => {
+export const LogoPoloObrero = ({ size = " 40", color = "red" }) => {
   return (
     <svg
       width={size}

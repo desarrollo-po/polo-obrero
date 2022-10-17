@@ -5,25 +5,27 @@ import HeaderContainer from "../../Containers/HeaderContainer/HeaderContainer";
 import MenuPrincipal from "../MenuPrincipal/MenuPrincipal";
 import { Redes } from "../Redes/Redes";
 import styles from "./Header.module.scss";
+import { LogoPoloObrero } from "../../Logos/LogoPoloObrero";
 
 export const Header = () => {
   return (
     <>
       <HeaderContainer>
         <header className={styles.header}>
-          <MenuPrincipal />
-          <Link href="/">
+          <div>
+            <MenuPrincipal/>
+          </div>
+          <div>
+            <Link href="/">
             <a>
-              <img
-                width="200"
-                className={styles.logo}
-                src="/imgs/logo-polo-obrero.png"
-              />
+              <LogoPoloObrero size="150" color="white"/>
             </a>
           </Link>
-          <BotonSumate className={styles.btn}>
-          </BotonSumate>
-          <Redes />
+          </div>
+          <div className={styles.btnRedes}>
+            <BotonSumate className={styles.btn}/>
+          <Redes/> 
+          </div>
         </header>
       </HeaderContainer>
     </>

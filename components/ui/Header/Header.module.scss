@@ -3,12 +3,16 @@
 
 .header {
     display: flex;
-    
     background-color: $color-primary;
     color: $color-secondary;
     padding: 1rem 0;
     align-items: center;
     justify-content: space-between;
+}
+
+.btnRedes {
+    display: flex;
+    gap: 10px;
 }
 
 @media(max-width: $mobile) {

@@ -5,7 +5,7 @@ import styles from "./redes.module.scss";
 
 export const Redes = () => {
   return (
-    <ul className={styles.redes}>
+    <div className={styles.redes}>
       <li>
         <a href="https://www.instagram/polo.obrero">
           <IconFacebook size="30" />
@@ -16,6 +16,6 @@ export const Redes = () => {
           <IconInstagram size="30" />
         </a>
       </li>
-    </ul>
+    </div>
   );
 };
