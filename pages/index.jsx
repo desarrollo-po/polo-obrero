@@ -36,16 +36,17 @@ export default function Home({
       <main>
         <MainContainer>
           <SuplePolo notasSuplePolo={notasSuplePolo.edges[0].node.posts} />
-          {notas3Principales.regiones.nodes[0].estado_de_la_region
+          {/* {notas3Principales.regiones.nodes[0].estado_de_la_region
             .estadoDeLaRegion && (
             <Notas3Principales notas3Principales={notas3Principales.posts} />
-          )}
+          )} */}
           <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
-          <Banners />
+
           <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} />
           <ListaYouTube listaYouTube={listaYouTube} />
           <Comunicados comunicadosPO={comunicadosPO} />
           <Formulario />
+          <Banners />
         </MainContainer>
       </main>
       <Footer />
@@ -60,11 +61,11 @@ export async function getStaticProps() {
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
   );
-  const notasSuplePolo = await getPostsSuplePolo("1655SP", 4);
+  const notasSuplePolo = await getPostsSuplePolo("1655SP", 5);
   const comunicadosPO = await getComunicadosPO(6);
   const notasMovPiquetero = await getPostsCategoriaPrensa(
     "movimiento-piquetero",
-    4
+    3
   );
 
   return {

@@ -3,7 +3,7 @@ import styles from "./SuplePolo.module.scss";
 
 export const SuplePolo = ({ notasSuplePolo }) => {
   return (
-    <section className={styles.notas3Principales}>
+    <section className={styles.suplePolo}>
       {notasSuplePolo.edges
         // .filter((nota) => nota.node.title !== "NOTIPOLO")
         .map(

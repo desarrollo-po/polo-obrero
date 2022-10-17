@@ -1,13 +1,15 @@
-.notas3Principales {
+@import "../../../styles/breakpoints.scss";
+
+.suplePolo {
   display: grid;
-  grid-template-columns: 60% 40%;
-  
+  grid-template-columns: 2fr repeat(2, 1fr);
+  grid-template-rows: repeat (2, 2fr);  
+  margin: 10px 0 20px 0;
 }
 
-@media(max-width:600px) {
-  .notas3Principales {
+@include media(mobile) {
+  .suplePolo {
     display: block;
-    grid-template-columns: none;
   }
 }
 
