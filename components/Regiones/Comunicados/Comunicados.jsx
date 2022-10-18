@@ -3,18 +3,13 @@ import { TarjetaComunicados } from "../../Tarjetas/TarjetaComunicados/TarjetaCom
 import styles from "./comunicados.module.scss";
 
 export const Comunicados = ({ comunicadosPO }) => {
-  const [showComunicados, setShowComunicados] = useState(true);
+  // const [showComunicados, setShowComunicados] = useState(true);
   // const onShowComunicados = () => {
   //   setShowComunicados(!showComunicados);
   // };
   return (
     <>
-      <h2 className={styles.titulo}>Comunicados:</h2>
-      <section
-        className={`${styles.containerComunicados} ${
-          showComunicados && styles.active
-        }`}
-      >
+      <section className={styles.containerComunicados}>
         {comunicadosPO.edges.map(
           ({
             node: {
@@ -36,7 +31,7 @@ export const Comunicados = ({ comunicadosPO }) => {
         )}
       </section>
       <div className={styles.btn}>
-        <a href="/prensa-comunicados">Ver más comunicados</a>
+        <a href="/comunicados">Ver más comunicados</a>
       </div>
     </>
   );

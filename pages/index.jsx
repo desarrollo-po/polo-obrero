@@ -40,9 +40,10 @@ export default function Home({
             <Notas3Principales notas3Principales={notas3Principales.posts} />
           )} */}
           {/* <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
-
           <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} /> */}
+
           <Comunicados comunicadosPO={comunicadosPO} />
+
           <ListaYouTube listaYouTube={listaYouTube} />
           <Banners />
         </MainContainer>
@@ -60,7 +61,7 @@ export async function getStaticProps() {
     3
   );
   const notasSuplePolo = await getPostsSuplePolo("1655SP", 5);
-  const comunicadosPO = await getComunicadosPO(6);
+  const comunicadosPO = await getComunicadosPO(4);
   const notasMovPiquetero = await getPostsCategoriaPrensa(
     "movimiento-piquetero",
     3
