@@ -13,6 +13,7 @@ import { getPostsSuplePolo } from "../services/queries/PostsSuplePolo";
 import { SuplePolo } from "../components/Regiones/SuplePolo/SuplePolo";
 import { NotasMovPiquetero } from "../components/Regiones/NotasMovPiquetero/NotasMovPiquetero";
 import { getPostsCategoriaPrensa } from "../services/queries/PostsCategoriaPrensa";
+import { BotonMasComunicados } from "../components/ui/BotonMasComunicados/BotonMasComunicados";
 
 export default function Home({
   notasSubDestacadas,
@@ -43,7 +44,7 @@ export default function Home({
           <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} /> */}
 
           <Comunicados comunicadosPO={comunicadosPO} />
-
+          <BotonMasComunicados />
           <ListaYouTube listaYouTube={listaYouTube} />
           <Banners />
         </MainContainer>

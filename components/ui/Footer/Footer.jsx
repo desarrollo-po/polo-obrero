@@ -7,19 +7,25 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <MainContainer>
           <nav>
-          <ul>
-            <li>
+            <ul>
+              <li>
                 <a href="/ultimas-noticias">ÚLTIMAS NOTICIAS</a>
-            </li>
-            <li>
+              </li>
+              <li>
+                <a href="/comunicados">COMUNICADOS DE PRENSA</a>
+              </li>
+              <li>
                 <a href="/medios">MEDIOS</a>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a href="/cursos-y-talleres">CURSOS Y TALLERES</a>
-            </li>
-            <li>
+              </li>
+              <li>
                 <a href="/juventud">JUVENTUD</a>
-            </li>
+              </li>
+              <li>
+                <a href="/contacto">CONTACTO</a>
+              </li>
             </ul>
           </nav>
       </ MainContainer>
