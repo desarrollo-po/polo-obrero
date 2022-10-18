@@ -6,7 +6,7 @@ export const LogoPoloObrero = ({ wsize = "50", wheight = "50" , color = "red" })
       width={wsize}
       height={wheight}
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="690 -55 25 250"
+      viewBox="705 -55 25 250"
       fill={color}
       >
           <g>

@@ -12,19 +12,21 @@ export const Header = () => {
     <>
       <HeaderContainer>
         <header className={styles.header}>
-          <div>
-            <MenuPrincipal/>
-          </div>
-          <div>
-            <Link href="/">
-            <a>
-              <LogoPoloObrero wsize="350" wheight="60" color="white"/>
-            </a>
-          </Link>
-          </div>
-          <div className={styles.btnRedes}>
-            <BotonSumate className={styles.btn}/>
-          <Redes/> 
+            <div className={styles.menu}>
+              <MenuPrincipal />
+            </div>
+            <div className={styles.logo}>
+              <Link href="/">
+                <a>
+                  <LogoPoloObrero wsize="350" wheight="60" color="white" />
+                </a>
+              </Link>
+            </div>
+            <div className={styles.redes}>
+              <div className={styles.btnRedes}>
+                <BotonSumate className={styles.btn}/>
+              <Redes/> 
+            </div>
           </div>
         </header>
       </HeaderContainer>
