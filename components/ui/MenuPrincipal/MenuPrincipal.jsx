@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MainContainer from "../../Containers/MainContainer/MainContainer";
+import { IconClose } from "../../Iconos/IconClose";
 import styles from "./MenuPrincipal.module.scss";
 
 const MenuPrincipal = () => {
@@ -32,6 +33,14 @@ const MenuPrincipal = () => {
             </li>
           </ul>
         </nav>
+      )}
+
+      {showMenu && (
+        <div className={styles.overlay} onClick={onShowMenu}>
+          <div className={styles.close}>
+            <IconClose size="3em" />
+          </div>
+        </div>
       )}
 
       <div className={styles.hamb} onClick={onShowMenu}>
