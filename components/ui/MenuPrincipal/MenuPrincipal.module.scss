@@ -112,4 +112,13 @@
       }
     }
   }
+  .hamb span {
+    display: block;
+    height: 2px;
+    width: 80%;
+    transition: none;
+  }
+  .hamb .line2 {
+    width: 25px;
+  }
 }

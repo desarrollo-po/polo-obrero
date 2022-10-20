@@ -25,14 +25,14 @@
     }
 }
 
-
-
-@media(max-width: $mobile) {
+@include media(mobile) {
     .header {
-        justify-content: space-between;
-    }
-    .logo {
-        width: 100%;
-        text-align: center;
-    }
+        display: flex;
+        justify-content: flex-start;
+        .logo { 
+            text-align: center;
+            width: 30px;
+        }
+        
+}
 }

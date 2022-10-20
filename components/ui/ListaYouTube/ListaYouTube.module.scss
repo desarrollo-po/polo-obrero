@@ -12,8 +12,14 @@
   color: #fff;
 }
 
-@media(max-width: $mobile) {
+@include media(mobile) {
   .listaYouTube {
-    flex-direction: column;
+    display: block;
+  }
+}
+
+@include media(tablet) {
+  .listaYouTube {
+    display: block;
   }
 }

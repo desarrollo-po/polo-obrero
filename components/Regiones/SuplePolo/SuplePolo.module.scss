@@ -10,6 +10,14 @@
 @include media(mobile) {
   .suplePolo {
     display: block;
+    article {margin-bottom: 10px}
+    
   }
 }
 
+@include media(tablet) {
+  .suplePolo {
+    display: block;
+    article {margin-bottom: 10px}
+  }
+}

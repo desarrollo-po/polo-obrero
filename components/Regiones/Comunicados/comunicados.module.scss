@@ -1,10 +1,10 @@
 @import "../../../styles/breakpoints.scss";
 @import "../../../styles/colors.scss";
 
-.active {
-    height: 300px;
-    overflow: hidden;
-}
+// .active {
+//     height: 300px;
+//     overflow: hidden;
+// }
 
 .containerComunicados {
   display: grid;
@@ -47,9 +47,15 @@
 @include media(mobile) {
   .containerComunicados {
     display: block;
-  }
-  .active {
+    article {margin-bottom: 10px}
     height: 280px;
     overflow: hidden;
   }
 }
+
+@include media(tablet) {
+  .containerComunicados {
+    display: block;
+    article {margin-bottom: 10px}
+  }
+  }
