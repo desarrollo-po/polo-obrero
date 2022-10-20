@@ -31,3 +31,10 @@
     display: none;
   }
 }
+
+
+@include media(tablet) {
+  .btn {
+    display: none;
+  }
+}
