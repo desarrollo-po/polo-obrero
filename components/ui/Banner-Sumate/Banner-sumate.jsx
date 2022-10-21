@@ -5,7 +5,9 @@ export const BannerSumate = () => {
   return (
     <section className={styles.bannerSumate}>
       <picture className={styles.imagenContainer}>
-        <img src="../../../imgs/banner-sumate.png" />
+        <a href="/contacto">
+          <img src="../../../imgs/banner-sumate.png" />
+        </a>
       </picture>
     </section>
   );

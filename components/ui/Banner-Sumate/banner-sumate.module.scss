@@ -10,8 +10,17 @@ justify-content: center;
 }
 
 @include media(mobile) {
-  .bannerSumate {
-    display: none;
+  .imagenContainer {
+    img {
+    width: 100%;
+  }
   }
 }
 
+@include media(tablet) {
+  .imagenContainer {
+    img {
+    width: 100%;
+  }
+  }
+}

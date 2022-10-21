@@ -44,12 +44,11 @@ export default function Home({
           )} */}
           {/* <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
           <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} /> */}
-
+          <BannerSumate />
           <Comunicados comunicadosPO={comunicadosPO} />
           <BotonMasComunicados />
           <ListaYouTube listaYouTube={listaYouTube} />
           <BotonMasVideos />
-          <BannerSumate />
           <Banners />
         </MainContainer>
       </main>
