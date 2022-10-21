@@ -20,7 +20,7 @@ const MenuPrincipal = () => {
               <a href="/comunicados">COMUNICADOS DE PRENSA</a>
             </li>
             <li>
-              <a href="/medios">MEDIOS</a>
+              <a href="/videos">VIDEOS</a>
             </li>
             <li>
               <a href="/cursos-y-talleres">CURSOS Y TALLERES</a>
