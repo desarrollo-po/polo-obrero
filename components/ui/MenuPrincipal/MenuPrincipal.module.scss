@@ -94,6 +94,9 @@
   width: 30px;
   transition: width 0.1s ease-in-out;
 }
+.redes {
+  display: none;
+}
 
 @include media(mobile) {
   .nav {
@@ -103,13 +106,17 @@
     background: #000;
     top: 0px;
     ul {
-      margin-top: 0;
+      
       padding: 0;
       li {
         a {
           font-size: 17px;
         }
       }
+    }
+    .redes {
+      display: flex;
+      gap:10px;
     }
   }
   .hamb span {

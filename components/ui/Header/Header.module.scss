@@ -27,8 +27,7 @@
 
 @include media(mobile) {
     .header {
-        display: flex;
-        justify-content: space-between;
+        
         .logo { 
             text-align: center;
             svg {
@@ -37,12 +36,14 @@
             }
         }    
     }
+    .redes {
+        display: none;
+    }
 }
 
 @include media(tablet) {
     .header {
-        display: flex;
-        justify-content: space-between;
+       
         .logo { 
             text-align: center;
         }    

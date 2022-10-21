@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MainContainer from "../../Containers/MainContainer/MainContainer";
 import { IconClose } from "../../Iconos/IconClose";
+import { Redes } from "../Redes/Redes";
 import styles from "./MenuPrincipal.module.scss";
 
 const MenuPrincipal = () => {
@@ -32,6 +33,9 @@ const MenuPrincipal = () => {
               <a href="/contacto">CONTACTO</a>
             </li>
           </ul>
+          <div className={styles.redes}>
+            <Redes />
+          </div>
         </nav>
       )}
 
