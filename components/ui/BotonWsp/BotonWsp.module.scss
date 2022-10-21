@@ -1,0 +1,18 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/breakpoints.scss";
+@import "../../../styles/botones.scss";
+
+.btnWsp {
+    position: fixed;
+    height: 55px;
+    width: 55px;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+    z-index: 100;
+}
+
+.btnWsp:hover{
+    text-decoration: none;
+    color: #0df053;
+}

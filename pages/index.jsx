@@ -15,6 +15,7 @@ import { NotasMovPiquetero } from "../components/Regiones/NotasMovPiquetero/Nota
 import { getPostsCategoriaPrensa } from "../services/queries/PostsCategoriaPrensa";
 import { BotonMasComunicados } from "../components/ui/BotonMasComunicados/BotonMasComunicados";
 import { BotonMasVideos } from "../components/ui/BotonMasVideos/BotonMasVideos";
+import { BotonWsp } from "../components/ui/BotonWsp/BotonWsp";
 
 export default function Home({
   notasSubDestacadas,
@@ -49,6 +50,7 @@ export default function Home({
           <ListaYouTube listaYouTube={listaYouTube} />
           <BotonMasVideos />
           <Banners />
+          <BotonWsp />
         </MainContainer>
       </main>
       <Footer />
