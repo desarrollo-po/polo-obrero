@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  background-color: #000;
+  background-color: rgb(23, 23, 23);
 }
 
 a {
