@@ -15,7 +15,9 @@ import { NotasMovPiquetero } from "../components/Regiones/NotasMovPiquetero/Nota
 import { getPostsCategoriaPrensa } from "../services/queries/PostsCategoriaPrensa";
 import { BotonMasComunicados } from "../components/ui/BotonMasComunicados/BotonMasComunicados";
 import { BotonMasVideos } from "../components/ui/BotonMasVideos/BotonMasVideos";
-import { BannerSumate } from "../components/ui/Banner-Sumate/Banner-sumate";
+import { BannerSumateWeb } from "../components/ui/BannerSumateWeb/BannerSumateWeb";
+import { BannerSumateMobile } from "../components/ui/BannerSumateMobile/BannerSumateMobile";
+import { BotonWsp } from "../components/ui/BotonWsp/BotonWsp";
 
 export default function Home({
   notasSubDestacadas,
