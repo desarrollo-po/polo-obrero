@@ -2,7 +2,6 @@ import Head from "next/head";
 import React from "react";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
-import { TarjetaComunicados } from "../components/Tarjetas/TarjetaComunicados/TarjetaComunicados";
 import { Footer } from "../components/ui/Footer/Footer";
 import { getComunicadosPO } from "../services/queries/ComunicadosPO";
 import styles from "../styles/ComunicadosPrensa.module.scss";
@@ -14,10 +13,12 @@ export default function PrensaComunicados({ comunicadosPO }) {
         <title>Comunicados de Prensa</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <MainContainer>
         <h1 className={styles.titulo}>Comunicados de Prensa</h1>
         <Comunicados comunicadosPO={comunicadosPO} />
       </MainContainer>
+
       <Footer />
     </>
   );

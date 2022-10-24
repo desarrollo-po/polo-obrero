@@ -48,10 +48,8 @@
   .containerComunicados {
     display: block;
     article {margin-bottom: 10px}
-    height: 280px;
-    overflow: hidden;
+    }
   }
-}
 
 @include media(tablet) {
   .containerComunicados {
