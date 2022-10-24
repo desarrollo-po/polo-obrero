@@ -7,13 +7,13 @@ export const Redes = () => {
   return (
     <div className={styles.redes}>
       <li className={styles.fb}>
-        <a href="https://www.instagram/polo.obrero">
+        <a href="https://www.facebook.com/polo.obrero.3">
           <IconFacebook size="30" />
         </a>
       </li>
       <li>
         <div className={styles.ig}>
-          <a href="https://www.facebook.com/polo.obrero.3">
+          <a href="https://www.instagram.com/polo.obrero">
             <IconInstagram size="30" />
           </a>
         </div>
