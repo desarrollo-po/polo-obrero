@@ -6,14 +6,20 @@
   justify-content: center;
   gap: 10px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin: 20px 0;
+  margin: 40px 0;
 }
 .titulo {
   color: #fff;
 }
 
-@media(max-width: $mobile) {
+@include media(mobile) {
   .listaYouTube {
-    flex-direction: column;
+    display: block;
+  }
+}
+
+@include media(tablet) {
+  .listaYouTube {
+    display: block;
   }
 }

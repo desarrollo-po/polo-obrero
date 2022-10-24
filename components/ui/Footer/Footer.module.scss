@@ -1,3 +1,6 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/breakpoints.scss";
+
 .footer {
     background-color: black;
     color: white;
@@ -8,12 +11,30 @@
         font-size: 11px;
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
+        gap: 20px;
         li {
             list-style: none;
-            margin-right: 20px;
+            text-align: center;
             a {
                 text-decoration: none;
                 color: white;
+            }
+        }
+    }
+}
+
+@include media(mobile) {
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        ul {
+            margin:0; 
+            gap: 10px;
+            li {
+                font-size: 10px;
+                text-align: center;
             }
         }
     }

@@ -2,21 +2,50 @@
 @import "../../../styles/breakpoints.scss";
 
 .header {
-    display: flex;
-    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     background-color: $color-primary;
     color: $color-secondary;
     padding: 1rem 0;
     align-items: center;
     justify-content: space-between;
-}
-
-@media(max-width: $mobile) {
-    .header {
-        justify-content: space-between;
+    .menu {
+        grid-column: span 2/span 2;
     }
     .logo {
-        width: 100%;
+        grid-column: span 8/span 8;
         text-align: center;
+    }
+    .redes {
+        grid-column: span 2/span 2;
+        .btnRedes {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}
+
+@include media(mobile) {
+    .header {
+        
+        .logo { 
+            text-align: center;
+            svg {
+                width: 235px;
+                height: 40px; 
+            }
+        }    
+    }
+    .redes {
+        display: none;
+    }
+}
+
+@include media(tablet) {
+    .header {
+       
+        .logo { 
+            text-align: center;
+        }    
     }
 }

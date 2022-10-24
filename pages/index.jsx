@@ -9,11 +9,15 @@ import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
 import { getComunicadosPO } from "../services/queries/ComunicadosPO";
 import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
-import { Formulario } from "../components/ui/Formulario/Formulario";
 import { getPostsSuplePolo } from "../services/queries/PostsSuplePolo";
 import { SuplePolo } from "../components/Regiones/SuplePolo/SuplePolo";
 import { NotasMovPiquetero } from "../components/Regiones/NotasMovPiquetero/NotasMovPiquetero";
 import { getPostsCategoriaPrensa } from "../services/queries/PostsCategoriaPrensa";
+import { BotonMasComunicados } from "../components/ui/BotonMasComunicados/BotonMasComunicados";
+import { BotonMasVideos } from "../components/ui/BotonMasVideos/BotonMasVideos";
+import { BannerSumateWeb } from "../components/ui/BannerSumateWeb/BannerSumateWeb";
+import { BannerSumateMobile } from "../components/ui/BannerSumateMobile/BannerSumateMobile";
+import { BotonWsp } from "../components/ui/BotonWsp/BotonWsp";
 
 export default function Home({
   notasSubDestacadas,
@@ -36,16 +40,21 @@ export default function Home({
       <main>
         <MainContainer>
           <SuplePolo notasSuplePolo={notasSuplePolo.edges[0].node.posts} />
-          {notas3Principales.regiones.nodes[0].estado_de_la_region
+          {/* {notas3Principales.regiones.nodes[0].estado_de_la_region
             .estadoDeLaRegion && (
             <Notas3Principales notas3Principales={notas3Principales.posts} />
-          )}
-          <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
-          <Banners />
-          <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} />
-          <ListaYouTube listaYouTube={listaYouTube} />
+          )} */}
+          {/* <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
+          <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} /> */}
+          <BannerSumateMobile />
+          <BannerSumateWeb />
           <Comunicados comunicadosPO={comunicadosPO} />
-          <Formulario />
+          <BotonMasComunicados />
+          <ListaYouTube listaYouTube={listaYouTube} />
+          <BotonMasVideos />
+
+          <Banners />
+          <BotonWsp />
         </MainContainer>
       </main>
       <Footer />
@@ -60,11 +69,11 @@ export async function getStaticProps() {
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
   );
-  const notasSuplePolo = await getPostsSuplePolo("1655SP", 4);
-  const comunicadosPO = await getComunicadosPO(6);
+  const notasSuplePolo = await getPostsSuplePolo("1655SP", 5);
+  const comunicadosPO = await getComunicadosPO(4);
   const notasMovPiquetero = await getPostsCategoriaPrensa(
     "movimiento-piquetero",
-    4
+    3
   );
 
   return {

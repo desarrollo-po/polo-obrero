@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import MainContainer from "../../Containers/MainContainer/MainContainer";
+import { IconClose } from "../../Iconos/IconClose";
+import { Redes } from "../Redes/Redes";
 import styles from "./MenuPrincipal.module.scss";
 
 const MenuPrincipal = () => {
@@ -16,7 +18,10 @@ const MenuPrincipal = () => {
               <a href="/ultimas-noticias">ÚLTIMAS NOTICIAS</a>
             </li>
             <li>
-              <a href="/medios">MEDIOS</a>
+              <a href="/comunicados">COMUNICADOS DE PRENSA</a>
+            </li>
+            <li>
+              <a href="/videos">VIDEOS</a>
             </li>
             <li>
               <a href="/cursos-y-talleres">CURSOS Y TALLERES</a>
@@ -28,7 +33,18 @@ const MenuPrincipal = () => {
               <a href="/contacto">CONTACTO</a>
             </li>
           </ul>
+          <div className={styles.redes}>
+            <Redes />
+          </div>
         </nav>
+      )}
+
+      {showMenu && (
+        <div className={styles.overlay} onClick={onShowMenu}>
+          <div className={styles.close}>
+            <IconClose size="3em" />
+          </div>
+        </div>
       )}
 
       <div className={styles.hamb} onClick={onShowMenu}>

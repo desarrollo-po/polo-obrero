@@ -1,0 +1,27 @@
+@import "../../../styles/breakpoints.scss";
+
+.bannerSumate {
+  margin: 20px 0 20px 0;
+}
+
+.imagenContainer {
+display: flex;
+justify-content: center;
+  img {
+    width: 100%;
+  }
+}
+
+@include media(mobile) {
+  .bannerSumate {
+    display: none;
+  }
+}
+
+@include media(tablet) {
+  .imagenContainer {
+    img {
+    width: 100%;
+  }
+  }
+}

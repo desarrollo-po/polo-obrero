@@ -4,20 +4,34 @@
 }
 .cursos{
   display: flex;
-  gap: 10px;
+  gap: 20px;
 
   .curso{
     color: white;
+    flex:1;
     img {
       max-width: 100%;
     }
+    h2{
+      font-size: 22px;
+      padding: 0;
+    }
     h3{
-      font-size: 14px;
-      padding: 0px
+      font-size: 18px;
+      padding: 0;
+      font-weight: 400;
     }
     p {
-      font-size: 12xp;
-      line-height: 0px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 10px;
+      padding: 0px;      
+    }
+    .texto {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 10px;
+      padding: 0px;
     }
   }
 }

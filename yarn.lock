@@ -336,6 +336,11 @@
   "resolved" "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz"
   "version" "1.2.0"
 
+"yarn@^1.22.19":
+  "integrity" "sha512-/0V5q0WbslqnwP91tirOvldvYISzaqhClxzyUKXYxs07yUILIs5jx/k6CFe8bvKSkds5w+eiOqta39Wk3WxdcQ=="
+  "resolved" "https://registry.npmjs.org/yarn/-/yarn-1.22.19.tgz"
+  "version" "1.22.19"
+
 "zen-observable-ts@^1.2.5":
   "integrity" "sha512-QZWQekv6iB72Naeake9hS1KxHlotfRpe+WGNbNx5/ta+R3DNjVO2bswf63gXlWDcs+EMd7XY8HfVQyP1X6T4Zg=="
   "resolved" "https://registry.npmjs.org/zen-observable-ts/-/zen-observable-ts-1.2.5.tgz"
