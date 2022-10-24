@@ -7,13 +7,14 @@
 .imagenContainer {
 display: flex;
 justify-content: center;
+  img {
+    width: 100%;
+  }
 }
 
 @include media(mobile) {
-  .imagenContainer {
-    img {
-    width: 100%;
-  }
+  .bannerSumate {
+    display: none;
   }
 }
 
