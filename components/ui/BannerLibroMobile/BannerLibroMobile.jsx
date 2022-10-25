@@ -6,7 +6,7 @@ export const BannerLibroMobile = () => {
     <section className={styles.bannerLibro}>
       <picture className={styles.imagenContainer}>
         <a href="/contacto">
-          <img src="../../../imgs/BANNER-HDMP-mobile.png" />
+          <img src="../../../imgs/BANNER-HDMP-MOBILE.png" />
         </a>
       </picture>
     </section>

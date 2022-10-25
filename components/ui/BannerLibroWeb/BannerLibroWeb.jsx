@@ -6,7 +6,7 @@ export const BannerLibroWeb = () => {
     <section className={styles.bannerLibro}>
       <picture className={styles.imagenContainer}>
         <a href="/contacto">
-          <img src="../../../imgs/BANNER-HDMP-web.png" />
+          <img src="../../../imgs/BANNER-HDMP-WEB.png" />
         </a>
       </picture>
     </section>
