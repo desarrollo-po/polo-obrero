@@ -49,7 +49,7 @@
     }
 }
 
-@media(max-width: $mobile) {
+@include media(mobile) { 
     .tarjetaChicaConFoto {
       margin-bottom: 15px;
     }
