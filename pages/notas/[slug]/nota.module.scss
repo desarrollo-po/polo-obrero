@@ -81,7 +81,7 @@
     float: none;
     display: block;
     img {
-      width: 100%;
+      max-width: 100%;
     }
   }
   .epigrafe {
@@ -91,8 +91,8 @@
   .content {
     font-size: 15px;
     img {
-      max-width: 100%;
       height: auto;
+      max-width: 100%;
     }
   }
   .twitter-tweet {
