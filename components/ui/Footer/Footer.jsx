@@ -24,6 +24,9 @@ export const Footer = () => {
               <a href="/juventud">JUVENTUD</a>
             </li>
             <li>
+              <a href="/historia">HISTORIA</a>
+            </li>
+            <li>
               <a href="/contacto">CONTACTO</a>
             </li>
           </ul>
