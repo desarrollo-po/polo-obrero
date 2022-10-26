@@ -1,7 +1,21 @@
+@import "./colors.scss";
+@import "./breakpoints.scss";
+
 .titulo {
-  color: white;
+  color: $color-secondary;
   text-align: center;
 }
 .texto{
-  color: white;
+  color: $color-secondary;
+}
+
+@include media(mobile) {
+  .titulo {
+    color: $color-primary;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    padding: 12px;
+    background-color: $color-secondary;
+}
 }
