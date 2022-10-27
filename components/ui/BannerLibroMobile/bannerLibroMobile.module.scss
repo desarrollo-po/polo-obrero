@@ -1,0 +1,28 @@
+@import "../../../styles/breakpoints.scss";
+
+.bannerLibro {
+  display: none;
+  margin: 20px 0 20px 0;
+}
+
+.imagenContainer {
+display: flex;
+justify-content: center;
+  img {
+    width: 100%;
+  }
+}
+
+@include media(mobile) {
+  .bannerLibro {
+    display: block;
+  }
+}
+
+@include media(tablet) {
+  .imagenContainer {
+    img {
+    width: 100%;
+  }
+}
+}

@@ -6,7 +6,7 @@ import { Footer } from "../components/ui/Footer/Footer";
 import { getPostsByTag } from "../services/queries/PostsByTag";
 import styles from "../styles/Juventud.module.scss";
 
-export default function Juventud({notasTagJuventud}) {
+export default function Juventud({ notasTagJuventud }) {
   return (
     <>
       <Head>
@@ -16,17 +16,19 @@ export default function Juventud({notasTagJuventud}) {
       <MainContainer>
         <h1 className={styles.titulo}>Juventud del Polo Obrero</h1>
         <div className={styles.containerNota}>
-        {
-          notasTagJuventud.edges.map(({ node: {
-              id,
-              title,
-              slug,
-              campos : { volanta, descripcionDestacado},
-              featuredImage : {
-                node: { sourceUrl },
-              }
-          } }) => (
-            <TarjetaChicaConFoto
+          {notasTagJuventud.edges.map(
+            ({
+              node: {
+                id,
+                title,
+                slug,
+                campos: { volanta, descripcionDestacado },
+                featuredImage: {
+                  node: { sourceUrl },
+                },
+              },
+            }) => (
+              <TarjetaChicaConFoto
                 key={id}
                 titulo={title}
                 imagen={sourceUrl}
@@ -34,7 +36,8 @@ export default function Juventud({notasTagJuventud}) {
                 volanta={volanta}
                 descripcionDestacado={descripcionDestacado}
               />
-          ))}
+            )
+          )}
         </div>
       </MainContainer>
       <Footer />
@@ -42,7 +45,7 @@ export default function Juventud({notasTagJuventud}) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const notasTagJuventud = await getPostsByTag("juventud-del-polo", 6);
   return {
     props: {

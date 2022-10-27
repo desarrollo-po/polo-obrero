@@ -1,5 +1,5 @@
 @import "./styles/colors.scss";
-@import url("https://use.typekit.net/ifz3tgf.css");
+@import "./breakpoints.scss";
   
   @keyframes blur {
     0%   {
@@ -35,4 +35,21 @@
 
 .contenedorTitulo {
     background-color: $color-secondary;
+}
+
+@include media(mobile) {
+  .ultimasNoticias{
+    display: block;
+  }
+  .titulo {
+    color: $color-primary;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    padding: 12px;
+}
+
+  .contenedorTitulo {
+    background-color: $color-secondary;
+}
 }

@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import { TarjetaChicaConFoto } from "../components/Tarjetas/TarjetaChicaConFoto/TarjetaChicaConFoto";
+import { Footer } from "../components/ui/Footer/Footer";
 import { getUltimasNoticias } from "../services/queries/GetUltimasNoticias";
 import { getPostsByRegion } from "../services/queries/PostsByRegion";
 import styles from "../styles/UltimasNoticias.module.scss";
@@ -41,6 +42,7 @@ export default function UltimasNoticias({ ultimasNoticias }) {
             )
           )}
         </section>
+        <Footer />
       </MainContainer>
     </>
   );

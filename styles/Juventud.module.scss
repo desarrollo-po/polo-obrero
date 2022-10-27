@@ -1,5 +1,8 @@
+@import "./colors.scss";
+@import "./breakpoints.scss";
+
 .titulo {
-  color: white;
+  color: $color-secondary;
   text-align: center;
 }
 
@@ -7,4 +10,19 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
+}
+
+@include media(mobile) {
+  .containerNota {
+    display: block;
+  }
+
+  .titulo {
+    color: $color-primary;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    padding: 12px;
+    background-color: $color-secondary;
+}
 }
