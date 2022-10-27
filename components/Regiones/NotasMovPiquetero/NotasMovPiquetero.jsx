@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { TarjetaChicaConFoto } from "../../Tarjetas/TarjetaChicaConFoto/TarjetaChicaConFoto";
+import { Footer } from "../../ui/Footer/Footer";
 import styles from "./NotasMovPiquetero.module.scss";
 
 export const NotasMovPiquetero = ({ notasMovPiquetero }) => {
@@ -18,6 +19,7 @@ export const NotasMovPiquetero = ({ notasMovPiquetero }) => {
           />
         ))}
       </section>
+      <Footer />
     </>
   );
 };
