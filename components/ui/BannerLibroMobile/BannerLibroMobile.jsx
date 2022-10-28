@@ -6,7 +6,7 @@ export const BannerLibroMobile = () => {
     <section className={styles.bannerLibro}>
       <picture className={styles.imagenContainer}>
         <a href="https://revistaedm.com/producto/preventa-una-historia-del-movimiento-piquetero/">
-          <img src="../../../imgs/BANNER-HDMP-MOBILE.png" />
+          <img src="../../../imgs/BANNER-HDMP-mobile.png" />
         </a>
       </picture>
     </section>
