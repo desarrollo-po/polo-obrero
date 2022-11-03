@@ -14,7 +14,6 @@
 }
 
   .texto1{
-    
     color: $color-secondary;
     font-size: 60px;
     font-family: 'Anton', sans-serif;
@@ -24,9 +23,15 @@
     align-items: center;
     margin-left: 300px;
     z-index: 10;
-    
   }
 
+  @include media(tablet) {
+
+    .texto1 {
+      font-size: 2rem;
+      margin-left: 200px;
+    }
+  }
 
 @include media(mobile) {
   .containerVideo {
@@ -35,15 +40,7 @@
   }
 
   .texto1 {
-    font-size: 17px;
-    margin-left: 100px;
-  }
-}
-
-@include media(tablet) {
-
-  .texto1 {
-    font-size: 30px;
-    margin-left: 220px;
+    font-size: 1.5rem;
+    margin-left: 90px;
   }
 }
