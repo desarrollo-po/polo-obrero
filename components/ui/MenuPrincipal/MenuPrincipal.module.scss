@@ -21,9 +21,6 @@
     align-items: center; 
   }
 }
-.close1 {
-  display: none;
-}
 
 .nav {
   grid-column: span 3 / span 3;
@@ -33,7 +30,6 @@
   position: absolute;
   left: 0;
   z-index: 10;
-  
 }
 
 .nav ul {
@@ -44,7 +40,6 @@
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
- 
   li {
     list-style: none;
     margin-bottom: 5px;
@@ -104,40 +99,24 @@
 }
 
 @include media(mobile) {
-  .overlay {
-    display: none;
-  }
-  .close1 {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;   
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
   .nav {
-    width: 100%;
+    width: 200px;
     height: 100%;
     position: fixed;
     background: $color-primary;
-    opacity: 0.9;
     top: 0px;
     ul {
-      margin: 80px auto auto auto;
-      text-align: center;
+      
       padding: 0;
       li {
         a {
-          font-size: 18px;
+          font-size: 17px;
         }
       }
     }
     .redes {
       display: flex;
       gap:10px;
-      justify-content: center;
     }
   }
   .hamb span {
