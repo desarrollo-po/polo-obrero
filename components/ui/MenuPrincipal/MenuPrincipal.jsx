@@ -12,7 +12,10 @@ const MenuPrincipal = () => {
   return (
     <>
       {showMenu && (
-        <nav className={styles.nav}>
+        <nav className={styles.nav} onClick={onShowMenu}>
+          <div className={styles.close1}>
+            <IconClose size="3em" />
+          </div>
           <ul>
             <li>
               <a href="/ultimas-noticias">ÚLTIMAS NOTICIAS</a>
