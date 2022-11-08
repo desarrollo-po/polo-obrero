@@ -17,7 +17,12 @@ const VideoHome = () => {
           loop
         ></video>
       </div>
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+</style>
     </>
+
+    
   );
 };
 
