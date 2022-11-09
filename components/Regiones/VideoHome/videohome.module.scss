@@ -21,17 +21,20 @@
     justify-content: center;
     position: absolute;
     align-items: center;
-    margin-left: 300px;
+    margin: 400px;
     z-index: 10;
+    background-color: rgb(0, 0, 0, 75%);
+    padding: 0 15px;
   }
 
-  @include media(tablet) {
 
-    .texto1 {
-      font-size: 2rem;
-      margin-left: 200px;
-    }
+@include media(tablet) {
+
+  .texto1 {
+    font-size: 2rem;
+    margin-left: 200px;
   }
+}
 
 @include media(mobile) {
   .containerVideo {
