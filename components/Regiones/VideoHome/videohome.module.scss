@@ -13,9 +13,20 @@
   }
 }
 
+.containertexto {
+  display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    margin: 0 -8% 0;
+    height: 100%;
+    width: 115%;
+    word-break:normal;
+}
+
   .texto1{
-    color: $color-secondary;
-    font-size: 60px;
+    color: rgb(249, 249, 245);
+    font-size: 80px;
     font-family: 'Anton', sans-serif;
     display: flex;
     justify-content: center;
@@ -23,7 +34,7 @@
     align-items: center;
     margin: 400px;
     z-index: 10;
-    background-color: rgb(0, 0, 0, 75%);
+    background-color: rgba(55, 55, 55, 0.75);
     padding: 0 15px;
   }
 
