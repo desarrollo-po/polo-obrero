@@ -21,6 +21,7 @@ import { BotonWsp } from "../components/ui/BotonWsp/BotonWsp";
 import { BannerLibroMobile } from "../components/ui/BannerLibroMobile/BannerLibroMobile";
 import { BannerLibroWeb } from "../components/ui/BannerLibroWeb/BannerLibroWeb";
 import VideoHome from "../components/Regiones/VideoHome/VideoHome";
+import { TapaSuplePolo } from "../components/ui/TapaSuplePoloMobile/TapaSuplePoloMobile";
 
 export default function Home({
   notasSubDestacadas,
@@ -50,9 +51,10 @@ export default function Home({
           )} */}
           {/* <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
           <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} /> */}
-
+          
           <BannerSumateMobile />
           <BannerSumateWeb />
+          <TapaSuplePolo />
           <Comunicados comunicadosPO={comunicadosPO} />
           <BotonMasComunicados />
           <ListaYouTube listaYouTube={listaYouTube} />
