@@ -31,9 +31,6 @@ export default function Home({
   notasSuplePolo,
   notasMovPiquetero,
 }) {
-  // const tapaSuplePolo =
-  //   notasSuplePolo.edges[0].node.datosDePrensaNumero.imagenTapa.sourceUrl;
-
   return (
     <>
       <Head>
@@ -51,10 +48,16 @@ export default function Home({
           )} */}
           {/* <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
           <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} /> */}
-          
+
           <BannerSumateMobile />
           <BannerSumateWeb />
-          <TapaSuplePolo />
+          <TapaSuplePolo
+            slug={notasSuplePolo.edges[0].node.slug}
+            tapaSuplePolo={
+              notasSuplePolo.edges[0].node.datosDePrensaNumero.imagenTapa
+                .sourceUrl
+            }
+          />
           <Comunicados comunicadosPO={comunicadosPO} />
           <BotonMasComunicados />
           <ListaYouTube listaYouTube={listaYouTube} />
@@ -76,7 +79,7 @@ export async function getStaticProps() {
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
   );
-  const notasSuplePolo = await getPostsSuplePolo("1655SP", 5);
+  const notasSuplePolo = await getPostsSuplePolo("1657SP", 5);
   const comunicadosPO = await getComunicadosPO(4);
   const notasMovPiquetero = await getPostsCategoriaPrensa(
     "movimiento-piquetero",
