@@ -21,6 +21,7 @@ import { BotonWsp } from "../components/ui/BotonWsp/BotonWsp";
 import { BannerLibroMobile } from "../components/ui/BannerLibroMobile/BannerLibroMobile";
 import { BannerLibroWeb } from "../components/ui/BannerLibroWeb/BannerLibroWeb";
 import VideoHome from "../components/Regiones/VideoHome/VideoHome";
+import { TapaSuplePolo } from "../components/ui/TapaSuplePoloMobile/TapaSuplePoloMobile";
 
 export default function Home({
   notasSubDestacadas,
@@ -30,9 +31,6 @@ export default function Home({
   notasSuplePolo,
   notasMovPiquetero,
 }) {
-  // const tapaSuplePolo =
-  //   notasSuplePolo.edges[0].node.datosDePrensaNumero.imagenTapa.sourceUrl;
-
   return (
     <>
       <Head>
@@ -53,6 +51,13 @@ export default function Home({
 
           <BannerSumateMobile />
           <BannerSumateWeb />
+          <TapaSuplePolo
+            slug={notasSuplePolo.edges[0].node.slug}
+            tapaSuplePolo={
+              notasSuplePolo.edges[0].node.datosDePrensaNumero.imagenTapa
+                .sourceUrl
+            }
+          />
           <Comunicados comunicadosPO={comunicadosPO} />
           <BotonMasComunicados />
           <ListaYouTube listaYouTube={listaYouTube} />
@@ -74,7 +79,7 @@ export async function getStaticProps() {
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
   );
-  const notasSuplePolo = await getPostsSuplePolo("1655SP", 5);
+  const notasSuplePolo = await getPostsSuplePolo("1657SP", 5);
   const comunicadosPO = await getComunicadosPO(4);
   const notasMovPiquetero = await getPostsCategoriaPrensa(
     "movimiento-piquetero",

@@ -10,6 +10,7 @@ export async function getPostsSuplePolo(edicion, notas) {
           edges {
             node {
               id
+              slug
               datosDePrensaNumero {
                 imagenTapa {
                   sourceUrl
