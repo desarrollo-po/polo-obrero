@@ -27,6 +27,9 @@ const MenuPrincipal = () => {
               <a href="/videos">VIDEOS</a>
             </li>
             <li>
+              <a href="/congreso">CONGRESO</a>
+            </li>
+            <li>
               <a href="/cursos-y-talleres">CURSOS Y TALLERES</a>
             </li>
             <li>
