@@ -26,9 +26,9 @@ export const Footer = () => {
             {/* <li>
               <a href="/cursos-y-talleres">CURSOS Y TALLERES</a>
             </li> */}
-            <li>
+            {/* <li>
               <a href="/juventud">JUVENTUD</a>
-            </li>
+            </li> */}
             {/* <li>
               <a href="/historia">HISTORIA</a>
             </li> */}
