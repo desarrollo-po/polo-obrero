@@ -1,8 +1,5 @@
 import Head from "next/head";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
-import { getPostsByRegion } from "../services/queries/PostsByRegion";
-import { Notas3Principales } from "../components/Regiones/Notas3Principales/Notas3Principales";
-import { NotasSubDestacadas } from "../components/Regiones/NotasSubDestacadas/NotasSubDestacadas";
 import { Footer } from "../components/ui/Footer/Footer";
 import { Banners } from "../components/ui/Banners/Banners";
 import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
@@ -24,8 +21,6 @@ import { BannerLibroWeb } from "../components/ui/BannerLibroWeb/BannerLibroWeb";
 import { TapaSuplePolo } from "../components/ui/TapaSuplePoloMobile/TapaSuplePoloMobile";
 
 export default function Home({
-  notasSubDestacadas,
-  notas3Principales,
   comunicadosPO,
   listaYouTube,
   notasSuplePolo,
@@ -42,13 +37,6 @@ export default function Home({
       <main>
         <MainContainer>
           <SuplePolo notasSuplePolo={notasSuplePolo.edges[0].node.posts} />
-          {/* {notas3Principales.regiones.nodes[0].estado_de_la_region
-            .estadoDeLaRegion && (
-            <Notas3Principales notas3Principales={notas3Principales.posts} />
-          )} */}
-          {/* <NotasSubDestacadas notasSubDestacadas={notasSubDestacadas} />
-          <NotasMovPiquetero notasMovPiquetero={notasMovPiquetero} /> */}
-
           <BannerSumateMobile />
           <BannerSumateWeb />
           <TapaSuplePolo
@@ -73,13 +61,11 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const notasSubDestacadas = await getPostsByRegion("notas-sub-destacadas", 3);
-  const notas3Principales = await getPostsByRegion("3-notas-principales", 3);
   const listaYouTube = await getVideosByPlayList(
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
   );
-  const notasSuplePolo = await getPostsSuplePolo("1657SP", 5);
+  const notasSuplePolo = await getPostsSuplePolo("1658SP", 5);
   const comunicadosPO = await getComunicadosPO(4);
   const notasMovPiquetero = await getPostsCategoriaPrensa(
     "movimiento-piquetero",
@@ -88,8 +74,6 @@ export async function getStaticProps() {
 
   return {
     props: {
-      notasSubDestacadas: notasSubDestacadas.posts,
-      notas3Principales,
       comunicadosPO: comunicadosPO.posts,
       listaYouTube,
       notasSuplePolo: notasSuplePolo.prensaNumeros,

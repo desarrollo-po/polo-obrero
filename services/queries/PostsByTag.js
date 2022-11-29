@@ -1,13 +1,12 @@
 import { gql } from "@apollo/client";
-import { client } from "../../pages/_app";
+import { clientPRENSA } from "../../pages/_app";
 import { tarjetaNota } from "../models/tarjetaNota";
 
-export async function getPostsByTag(tag, notas) {
-  const { data } = await client.query({
+export async function getPostsByTag(tag) {
+  const { data } = await clientPRENSA.query({
     query: gql`
       query PostsByTag {
         posts(
-          first: ${notas}
           where: {
             taxQuery: {
               taxArray: {
