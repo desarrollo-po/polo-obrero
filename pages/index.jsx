@@ -19,6 +19,8 @@ import { BannerLibroMobile } from "../components/ui/BannerLibroMobile/BannerLibr
 import { BannerLibroWeb } from "../components/ui/BannerLibroWeb/BannerLibroWeb";
 // import VideoHome from "../components/Regiones/VideoHome/VideoHome";
 import { TapaSuplePolo } from "../components/ui/TapaSuplePoloMobile/TapaSuplePoloMobile";
+import { BannerAuditoriasMobile } from "../components/ui/BannerAuditoriasMobile/BannerAuditoriasMobile";
+import { BannerAuditoriasWeb } from "../components/ui/BannerAuditoriasWeb/BannerAuditoriasWeb";
 
 export default function Home({
   comunicadosPO,
@@ -36,6 +38,8 @@ export default function Home({
       {/* <VideoHome /> */}
       <main>
         <MainContainer>
+          <BannerAuditoriasWeb />
+          <BannerAuditoriasMobile />
           <SuplePolo notasSuplePolo={notasSuplePolo.edges[0].node.posts} />
           <BannerSumateMobile />
           <BannerSumateWeb />
