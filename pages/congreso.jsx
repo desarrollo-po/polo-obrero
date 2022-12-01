@@ -7,7 +7,6 @@ import { getPostsByTag } from '../services/queries/PostsByTag';
 import styles from "../styles/Congreso.module.scss";
 
 export default function Congreso({ notasCongreso }) {
-    console.log(notasCongreso, "notassss")
     return (
         <>
             <Head>

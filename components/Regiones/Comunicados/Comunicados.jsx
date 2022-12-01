@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TarjetaComunicados } from "../../Tarjetas/TarjetaComunicados/TarjetaComunicados";
 import styles from "./comunicados.module.scss";
 
-export const Comunicados = ({ comunicadosPO }) => {
+export const Comunicados = ({ comunicadosPolo }) => {
   // const [showComunicados, setShowComunicados] = useState(true);
   // const onShowComunicados = () => {
   //   setShowComunicados(!showComunicados);
@@ -10,16 +10,14 @@ export const Comunicados = ({ comunicadosPO }) => {
   return (
     <>
       <section className={styles.containerComunicados}>
-        {comunicadosPO.edges.map(
+        {comunicadosPolo.nodes.map(
           ({
-            node: {
               id,
               title,
               slug,
               featuredImage: {
                 node: { sourceUrl },
               },
-            },
           }) => (
             <TarjetaComunicados
               key={id}

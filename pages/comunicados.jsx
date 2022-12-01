@@ -3,10 +3,11 @@ import React from "react";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
 import { Footer } from "../components/ui/Footer/Footer";
-import { getComunicadosPO } from "../services/queries/ComunicadosPO";
+import { getComunicadosPolo } from "../services/queries/PostsComunicados";
 import styles from "../styles/ComunicadosPrensa.module.scss";
 
-export default function PrensaComunicados({ comunicadosPO }) {
+export default function PrensaComunicados({ comunicadosPolo }) {
+  console.log(comunicadosPolo, "COMUNICADOS")
   return (
     <>
       <Head>
@@ -16,7 +17,7 @@ export default function PrensaComunicados({ comunicadosPO }) {
 
       <MainContainer>
         <h1 className={styles.titulo}>Comunicados de Prensa</h1>
-        <Comunicados comunicadosPO={comunicadosPO} />
+        <Comunicados comunicadosPolo={comunicadosPolo} />
       </MainContainer>
 
       <Footer />
@@ -25,10 +26,10 @@ export default function PrensaComunicados({ comunicadosPO }) {
 }
 
 export async function getServerSideProps() {
-  const comunicadosPO = await getComunicadosPO(12);
+  const comunicadosPolo = await getComunicadosPolo();
   return {
     props: {
-      comunicadosPO: comunicadosPO.posts,
+      comunicadosPolo: comunicadosPolo.comunicados,
     },
   };
 }
