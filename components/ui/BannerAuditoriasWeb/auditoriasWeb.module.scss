@@ -1,0 +1,27 @@
+@import "../../../styles/breakpoints.scss";
+
+.bannerAuditoriasWeb {
+  margin: 20px 0 20px 0;
+}
+
+.imagenContainer {
+display: flex;
+justify-content: center;
+  img {
+    width: 100%;
+  }
+}
+
+@include media(mobile) {
+  .bannerAuditoriasWeb {
+    display: none;
+  }
+}
+
+@include media(tablet) {
+  .imagenContainer {
+    img {
+    width: 100%;
+  }
+  }
+}
