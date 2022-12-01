@@ -12,7 +12,6 @@ const auditorias = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainContainer>
-      <h1 className={styles.titulo}>titulo</h1>
       <img src='https://po-proyecto.tk/wp-content/uploads/2022/11/1200-x-2000.jpg' className={styles.banner} alt="Auditoria Potenciar Trabajo" />
       </MainContainer>
       <Footer />
