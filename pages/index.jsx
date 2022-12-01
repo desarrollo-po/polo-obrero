@@ -4,7 +4,7 @@ import { Footer } from "../components/ui/Footer/Footer";
 import { Banners } from "../components/ui/Banners/Banners";
 import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
-import { getComunicadosPO } from "../services/queries/ComunicadosPO";
+import { getComunicadosPolo } from "../services/queries/PostsComunicados";
 import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
 import { getPostsSuplePolo } from "../services/queries/PostsSuplePolo";
 import { SuplePolo } from "../components/Regiones/SuplePolo/SuplePolo";
@@ -23,7 +23,7 @@ import { BannerAuditoriasMobile } from "../components/ui/BannerAuditoriasMobile/
 import { BannerAuditoriasWeb } from "../components/ui/BannerAuditoriasWeb/BannerAuditoriasWeb";
 
 export default function Home({
-  comunicadosPO,
+  comunicadosPolo,
   listaYouTube,
   notasSuplePolo,
   notasMovPiquetero,
@@ -50,7 +50,7 @@ export default function Home({
                 .sourceUrl
             }
           />
-          <Comunicados comunicadosPO={comunicadosPO} />
+          <Comunicados comunicadosPolo={comunicadosPolo} />
           <BotonMasComunicados />
           <ListaYouTube listaYouTube={listaYouTube} />
           <BotonMasVideos />
@@ -70,7 +70,7 @@ export async function getStaticProps() {
     3
   );
   const notasSuplePolo = await getPostsSuplePolo("1658SP", 5);
-  const comunicadosPO = await getComunicadosPO(4);
+  const comunicadosPolo = await getComunicadosPolo();
   const notasMovPiquetero = await getPostsCategoriaPrensa(
     "movimiento-piquetero",
     3
@@ -78,7 +78,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      comunicadosPO: comunicadosPO.posts,
+      comunicadosPolo: comunicadosPolo.comunicados,
       listaYouTube,
       notasSuplePolo: notasSuplePolo.prensaNumeros,
       notasMovPiquetero: notasMovPiquetero.posts,
