@@ -1,25 +1,54 @@
 import Head from 'next/head';
 import React from "react";
 import MainContainer from '../components/Containers/MainContainer/MainContainer';
+import { TarjetaChicaConFoto } from '../components/Tarjetas/TarjetaChicaConFoto/TarjetaChicaConFoto';
 import { Footer } from '../components/ui/Footer/Footer';
+import { getPostsByTag } from '../services/queries/PostsByTag';
 import styles from "../styles/Congreso.module.scss";
 
-const congreso = () => {
+export default function Congreso({ notasCongreso }) {
     return (
-        < >
-        <Head>
-            <title>Congreso</title>
-            <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <MainContainer>
-        <h1 className={styles.titulo}>Congreso</h1>
-        <div className={styles.iframe}>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YNiNYjs73aE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        </MainContainer>
-        <Footer />
+        <>
+            <Head>
+                <title>Congreso</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <MainContainer>
+            <h1 className={styles.titulo}>Congreso del Polo Obrero</h1>
+                <div className={styles.containerNota}>
+                    {notasCongreso.edges.map(({
+                         node: {
+                            id,
+                            title,
+                            slug,
+                            campos: { volanta, descripcionDestacado },
+                            featuredImage: {
+                            node: { sourceUrl },
+                            },
+                        },
+                        })=> (
+                        <TarjetaChicaConFoto
+                            key={id}
+                            titulo={title}
+                            imagen={sourceUrl}
+                            slug={slug}
+                            volanta={volanta}
+                            descripcionDestacado={descripcionDestacado}
+                        />
+                        )
+                    )}  
+                </div>
+            </MainContainer>
+            <Footer />
         </>
     )
 }
 
-export default congreso
+export async function getStaticProps() {
+    const notasCongreso = await getPostsByTag("congreso-del-polo-obrero");
+    return {
+        props: {
+            notasCongreso: notasCongreso.posts,     
+         },
+    };
+}

@@ -15,20 +15,26 @@ export const Footer = () => {
               <a href="/comunicados">COMUNICADOS DE PRENSA</a>
             </li>
             <li>
+              <a href="/auditoria-potenciar-trabajo">AUDITORIAS</a>
+            </li>            
+            <li>
               <a href="/videos">VIDEOS</a>
             </li>
             <li>
               <a href="/congreso">CONGRESO</a>
             </li>            
-            <li>
+            {/* <li>
               <a href="/cursos-y-talleres">CURSOS Y TALLERES</a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="/juventud">JUVENTUD</a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="/historia">HISTORIA</a>
-            </li>
+            </li> */}
+            {/* <li>
+              <a href="/locales">LOCALES</a>
+            </li> */}
             <li>
               <a href="/contacto">CONTACTO</a>
             </li>
