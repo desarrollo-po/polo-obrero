@@ -15,20 +15,23 @@ export const TarjetaSuplePolo = ({
       <article className={styles.tarjetaSuplePolo}>
         {volanta?.length > 0 ? (
           <div className={styles.volanta}>
+            <a target="_blank" href={link}>
             <span>{volanta.toUpperCase()}</span>
+            </a>
           </div>
         ) : (
           !volanta
         )}
         <picture>
+        <a target="_blank" href={link}>
           <img src={imagen || "https://via.placeholder.com/400"} />
+          </a>
         </picture>
         <div className={styles.data}>
           <a target="_blank" href={link}>
             <h3>{titulo}</h3>
-          </a>
-
           <p>{descripcionDestacado}</p>
+          </a>
         </div>
       </article>
     </>
