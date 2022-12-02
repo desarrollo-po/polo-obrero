@@ -25,7 +25,7 @@ export const TarjetaComunicados = ({
           />
         </picture>
         <div className={styles.data}>
-          <Link href={`https://po.org.ar/comunicados/${slug}`}>
+          <Link href={`/comunicados/${slug}`}>
             <a target="_blank">
               <h3>{titulo}</h3>
             </a>

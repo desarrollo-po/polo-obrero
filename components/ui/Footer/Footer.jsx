@@ -9,9 +9,6 @@ export const Footer = () => {
         <nav>
           <ul>
             <li>
-              <a href="/ultimas-noticias">ÚLTIMAS NOTICIAS</a>
-            </li>
-            <li>
               <a href="/comunicados">COMUNICADOS DE PRENSA</a>
             </li>
             <li>

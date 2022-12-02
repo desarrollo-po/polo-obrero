@@ -27,7 +27,7 @@ export const TarjetaChicaConFoto = ({
           />
         </picture>
         <div className={styles.data}>
-          <Link href={`/notas/${slug}`}>
+          <Link href={`https://prensaobrera.com/movimiento-piquetero/${slug}`}>
             <a>
               <h3>{titulo}</h3>
             </a>
