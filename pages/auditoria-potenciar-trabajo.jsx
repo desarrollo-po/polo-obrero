@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React from "react";
 import MainContainer from '../components/Containers/MainContainer/MainContainer';
+import { BotonWsp } from '../components/ui/BotonWsp/BotonWsp';
 import { Footer } from '../components/ui/Footer/Footer';
 import styles from "../styles/Auditoria-potenciar-trabajo.module.scss";
 
@@ -23,6 +24,7 @@ const auditorias = () => {
         <p className={styles.p}>Podés ingresar descargarla <a href="https://play.google.com/store/apps/details?id=ar.gob.argentinagobar">acá</a> tambien podes ingresar desde tu navegador <a href="https://id.argentina.gob.ar/ingresar/"acá /></p>
       </div>
       </MainContainer>
+      <BotonWsp />
       <Footer />
     </>
   )
