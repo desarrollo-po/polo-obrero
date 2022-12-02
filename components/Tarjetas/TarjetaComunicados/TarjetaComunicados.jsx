@@ -10,7 +10,9 @@ export const TarjetaComunicados = ({
 }) => {
   return (
     <>
-      <article className={styles.tarjetaComunicados}>
+    <article className={styles.tarjetaComunicados}>
+          <Link href={`https://po.org.ar/comunicados/${slug}`}>
+            <a target="_blank">
         {volanta?.length > 0 ? (
           <div className={styles.volanta}>
             <span>{volanta.toUpperCase()}</span>
@@ -25,14 +27,13 @@ export const TarjetaComunicados = ({
           />
         </picture>
         <div className={styles.data}>
-          <Link href={`https://po.org.ar/comunicados/${slug}`}>
-            <a target="_blank">
               <h3>{titulo}</h3>
-            </a>
-          </Link>
+            
           <p>{descripcionDestacado}</p>
         </div>
-      </article>
+      </a>
+          </Link>
+          </article>
     </>
   );
 };

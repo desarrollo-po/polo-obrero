@@ -28,7 +28,7 @@ export const TarjetaChicaConFoto = ({
         </picture>
         <div className={styles.data}>
           <Link href={`/notas/${slug}`}>
-            <a>
+            <a target="_blank">
               <h3>{titulo}</h3>
             </a>
           </Link>
