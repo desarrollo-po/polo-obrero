@@ -50,7 +50,6 @@ export default function Home({
                 .sourceUrl
             }
           />
-          <h2>Comunicados de prensa</h2>
           <Comunicados comunicadosPolo={comunicadosPolo} />
           <BotonMasComunicados />
           <ListaYouTube listaYouTube={listaYouTube} />
