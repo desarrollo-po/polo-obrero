@@ -6,9 +6,15 @@
     .titulo {
         text-align: center;
     }
-    .banner {
-        padding: 10px 0 0 0;
-        width: 100%;
-        max-width: 1100px !important;
+    .link {
+        text-decoration: underline;
+        font-weight: 800;
     }
+}
+.banner {
+    padding: 10px 0 0 0;
+    width: 90%;
+    max-width: 100% !important;
+    display: block;
+    margin: auto;
 }

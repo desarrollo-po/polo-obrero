@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import React, { useContext, useEffect } from "react";
 import MainContainer from "../../../components/Containers/MainContainer/MainContainer";
 import { ListaNotasGuardadas } from "../../../components/NotasGuardadas/ListaNotasGuardadas";
@@ -7,14 +8,32 @@ import { getAllComunicados } from "../../../services/queries/Comunicados";
 import { getPostsBySlugComunicado } from "../../../services/queries/PostBySlugComunicados";
 import styles from "./comunicados.module.scss";
 
+
+const formatDate = (date) => {
+  const newDate = new Date(date);
+  return `${newDate.getDate()}/${
+    newDate.getMonth() + 1
+  }/${newDate.getFullYear()}`;
+};
+
 const index = ({
   comunicado: {
-    title,
-    slug,
-    content,
-    featuredImage: {
-      node: { sourceUrl },
-    },
+    edges: [
+      {
+        node: {
+          title,
+          content,
+          date,
+          featuredImage: {
+            node: { sourceUrl },
+          },
+          camposComunicados: {
+            volanta
+          },
+          autores
+        },
+      },
+    ],
   },
 }) => {
   useEffect(() => {
@@ -25,8 +44,8 @@ const index = ({
       document.head.appendChild(s);
     }
   }, []);
-  
-  return ( 
+
+  return (
     <>
       <Head>
         <title>{title}</title>
@@ -34,14 +53,28 @@ const index = ({
       </Head>
       <MainContainer>
         <section className={styles.nota}>
-          {/* <button onClick={handleGuardarNota}>Guardar nota</button> */}
+          {
+            volanta && (
+              <p>
+                {volanta}
+              </p>
+            )
+          }
 
           <h1 className={styles.titulo}>{title}</h1>
-          
+
+          <p>{formatDate(date)}</p>
+
+          <div className="autores">
+            {autores.nodes.map((autor) => (
+              <p>{autor.name}</p>
+            ))}
+          </div>
+
           <picture className={styles.picture}>
             <img width="500" src={sourceUrl} alt={title} />
-        
           </picture>
+
           <div
             className={styles.content}
             dangerouslySetInnerHTML={{ __html: content }}
@@ -66,10 +99,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await getPostsBySlugComunicado(params?.id);
+  const data = await getPostsBySlugComunicado(params?.slug);
   return {
     props: {
-      comunicado: data.comunicado,
+      comunicado: data.comunicados,
     },
     // revalidate: 300,
   };
