@@ -9,7 +9,6 @@ export const Comunicados = ({ comunicadosPolo }) => {
   // };
   return (
     <>
-      <h2 className={styles.h2}>Comunicados de prensas</h2>
       <section className={styles.containerComunicados}>
         {comunicadosPolo.nodes.map(
           ({
