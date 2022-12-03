@@ -26,7 +26,7 @@ export default function PrensaComunicados({ comunicadosPolo }) {
 }
 
 export async function getServerSideProps() {
-  const comunicadosPolo = await getComunicadosPolo();
+  const comunicadosPolo = await getComunicadosPolo(3);
   return {
     props: {
       comunicadosPolo: comunicadosPolo.comunicados,
