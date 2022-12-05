@@ -7,6 +7,7 @@ import { getPostsBySlug } from "../../../services/queries/PostBySlug";
 import { getAllPosts } from "../../../services/queries/Posts";
 import styles from "./nota.module.scss";
 
+
 const index = ({
   post: {
     title,
@@ -19,6 +20,7 @@ const index = ({
     },
   },
 }) => {
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       const s = document.createElement("script");

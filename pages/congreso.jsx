@@ -31,7 +31,7 @@ export default function Congreso({ notasCongreso }) {
                             key={id}
                             titulo={title}
                             imagen={sourceUrl}
-                            slug={slug}
+                            slug= {slug}
                             volanta={volanta}
                             descripcionDestacado={descripcionDestacado}
                         />
