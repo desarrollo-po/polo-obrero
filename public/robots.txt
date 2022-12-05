@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://poloobrero.org.ar
+
+# Sitemaps
+Sitemap: https://poloobrero.org.ar/sitemap.xml
