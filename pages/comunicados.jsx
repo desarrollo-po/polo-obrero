@@ -16,7 +16,6 @@ export default function PrensaComunicados({ comunicadosPolo }) {
       </Head>
 
       <MainContainer>
-        <h1 className={styles.titulo}>Comunicados de Prensa</h1>
         <Comunicados comunicadosPolo={comunicadosPolo} />
       </MainContainer>
 
