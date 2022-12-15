@@ -14,7 +14,7 @@ const contacto = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainContainer>
-        <h1 className={styles.titulo}>Organizate junto a nosotros para por el derecho al trabajo, la vivienda y todas nuestra reivindicaciones</h1>
+        <h1 className={styles.titulo}>Organizate junto a nosotros por el derecho al trabajo, la vivienda y todas nuestra reivindicaciones</h1>
         <Formulario />
       </MainContainer>
       <BotonWsp />

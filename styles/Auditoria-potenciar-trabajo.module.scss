@@ -1,7 +1,10 @@
+@import "./colors.scss";
+@import "./breakpoints.scss";
+
 .contenedor{
     background-color: #F0F0F0;
     margin: 10px 0;
-    padding: 25px;
+    padding: 20px;
     
     .titulo {
         text-align: center;
@@ -12,9 +15,45 @@
     }
 }
 .banner {
-    padding: 10px 0 0 0;
-    width: 90%;
+    width: 100%;
     max-width: 100% !important;
     display: block;
     margin: auto;
+}
+
+.contactos ul {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 0.5px #000;
+    margin: 5px;
+    width: 700px;
+    list-style: none;
+    padding: 0;
+}
+
+.region {
+    font-weight: bold;
+
+}
+
+
+@include media(mobile) {
+    .contactos ul {
+        font-size: 15px;
+        width: 300px;
+    }
+
+    .contenedor {
+        font-size: 15px;
+
+        h3 {
+        font-size: 17px;
+        margin-bottom: 5px;
+        }
+    }
+
+    .p {
+        margin: auto;
+    }
+    
 }
