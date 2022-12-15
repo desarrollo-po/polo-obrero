@@ -26,7 +26,7 @@ const auditorias = () => {
         <h3>¿Qué sucede si no realizo la auditoria?</h3>
         <p className={styles.p}>El gobierno puede dar de baja a las personas que no actualicen sus datos mediante la aplicación.</p>
         <h3>¿Dónde realizo la auditoria?</h3>
-        <p className={styles.p}>En tu celular desgargando la aplicacion Mi Argentina o ingresando por internet a la web de Mi Argentina.</p>
+        <p className={styles.p}>En tu celular <a className={styles.link} href="https://play.google.com/store/apps/details?id=ar.gob.argentinagobar">descargando la aplicación Mi Argentina</a> o ingresando por internet a la <a className={styles.link} href="https://id.argentina.gob.ar/ingresar/">web de Mi Argentina</a>.</p>
         <h3>¿Cómo realizo la auditoria?</h3>
         <p className={styles.p}>Completando la encuesta en Mi Argentina.</p>
         <h3>¿Cómo descargo la app MiArgentina?</h3>
