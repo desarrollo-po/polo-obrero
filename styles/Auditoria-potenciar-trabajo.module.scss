@@ -48,9 +48,13 @@
 }
 
 @include media(mobile) {
+
+    .contactos {
+        width: 300px;
+    }
+
     .contactos ul {
         font-size: 15px;
-        width: 300px;
     }
 
     .contenedor {
