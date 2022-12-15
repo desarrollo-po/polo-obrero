@@ -21,21 +21,31 @@
     margin: auto;
 }
 
-.contactos ul {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: solid 0.5px #000;
-    margin: 5px;
+.contactos {
+    display: grid;
+    grid-template-columns: 50% 50%;
     width: 700px;
-    list-style: none;
     padding: 0;
+}
+
+.contactos ul {
+    list-style: none;
+    border-bottom: solid 0.5px rgb(161, 161, 161);
+    margin: 0;
 }
 
 .region {
     font-weight: bold;
-
+    margin: 10px 0 10px 0;
 }
 
+.telefono {
+    color: red;
+}
+
+.telefono:hover {
+    text-decoration: underline;
+}
 
 @include media(mobile) {
     .contactos ul {
