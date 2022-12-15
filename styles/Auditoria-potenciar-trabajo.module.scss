@@ -24,7 +24,7 @@
 .contactos {
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 700px;
+    width: 100%;
     padding: 0;
 }
 
@@ -37,10 +37,12 @@
 .region {
     font-weight: bold;
     margin: 10px 0 10px 0;
+    font-size: 18px;
 }
 
 .telefono {
     color: red;
+    font-size: 18px;
 }
 
 .telefono:hover {
@@ -48,9 +50,42 @@
 }
 
 @include media(mobile) {
-    .contactos ul {
+
+    .contactos {
+        width: 100%;
+    }
+
+    .listaContactos {
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .contenedor {
         font-size: 15px;
-        width: 300px;
+
+        h3 {
+        font-size: 17px;
+        margin-bottom: 5px;
+        }
+    }
+
+    .p {
+        margin: auto;
+    }
+    .region {
+        font-size: 15px;
+    }
+    .telefono {
+        font-size: 15px;
+    }
+}
+
+@include media(tablet) {
+
+
+    .listaContactos {
+        font-size: 15px;
+        padding: 0;
     }
 
     .contenedor {
