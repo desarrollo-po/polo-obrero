@@ -9,14 +9,27 @@
   font-size: 17px;
   padding: 15px 25px;
   display: block ;
-  margin: 20px auto 40px auto;
+  margin: auto;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
-  width: 224px;
+  width: 250px;
+  text-align: center;
 }
 
 .btn:hover {
 background-color: $color-secondary;
 color: $color-primary;
+}
+
+.linkboton {
+  text-align: center;
+}
+
+@include media(mobile) {
+  .btn {
+    font-size: 15px;
+    padding: 10px;
+    width: 170px;
+  }
 }

@@ -6,7 +6,7 @@ export const BannerLibroMobile = () => {
     <section className={styles.bannerLibro}>
       <picture className={styles.imagenContainer}>
         <a href="https://revistaedm.com/producto/preventa-una-historia-del-movimiento-piquetero/">
-          <img src="https://po-proyecto.tk/wp-content/uploads/2022/10/BANNER-HDMP-MOBILE-1.png" />
+          <img src="https://po-proyecto.tk/wp-content/uploads/2022/12/BANNER-HDMP-800-x-1080.jpg" />
         </a>
       </picture>
     </section>

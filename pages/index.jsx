@@ -69,7 +69,7 @@ export async function getStaticProps() {
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
   );
-  const notasSuplePolo = await getPostsSuplePolo("1658SP", 5);
+  const notasSuplePolo = await getPostsSuplePolo("1659SP", 5);
   const comunicadosPolo = await getComunicadosPolo(4);
   const notasMovPiquetero = await getPostsCategoriaPrensa(
     "movimiento-piquetero",

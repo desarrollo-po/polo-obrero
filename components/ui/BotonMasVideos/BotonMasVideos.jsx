@@ -4,7 +4,7 @@ import styles from "./BotonMasVideos.module.scss";
 export const BotonMasVideos = () => {
   return (
     <div className={styles.btn}>
-      <a href="/videos">Ver más videos</a>
+      <a classname={styles.linkBoton} href="/videos">Ver más videos</a>
     </div>
   )
 }
