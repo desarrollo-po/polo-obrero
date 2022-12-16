@@ -21,6 +21,7 @@ const index = ({
     edges: [
       {
         node: {
+          slug,
           title,
           content,
           date,
@@ -50,6 +51,26 @@ const index = ({
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="@polo.obrero.3" />
+        <meta property="og:url" content={"https://poloobrero.org.ar/comunicados" + "/" + slug} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={volanta} />
+        <meta property="og:image" itemProp="image" content={sourceUrl} />
+  
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@polo.obrero" />
+        <meta
+          property="twitter:url"
+          content={"https://poloobrero.org.ar/comunicados" + "/" + slug}
+        />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={volanta} />
+        <meta property="twitter:image" content={sourceUrl} />
+        <meta property="description" content={volanta} />
+        {/* <meta name="description" content={seo.metaDesc} /> */}
       </Head>
       <MainContainer>
         <section className={styles.nota}>

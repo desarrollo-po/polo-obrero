@@ -13,12 +13,12 @@ export default function Medios({
   return (
     <>
       <Head>
-        <title>Polo Obrero - Medios</title>
+        <title>Polo Obrero - Videos</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
         <MainContainer>
-          <h1 className={styles.titulo}>El Polo Obrero en los medios</h1>
+          <h1 className={styles.titulo}>Nuestros videos</h1>
           <ListaYouTube listaYouTube={listaYouTube} />
         </MainContainer>
       </main>
