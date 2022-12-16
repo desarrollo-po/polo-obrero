@@ -39,7 +39,7 @@ export default function Home({
         <meta property="og:url" content="https://poloobrero.org.ar/" />
         <meta property="og:title" content="Polo Obrero" />
         {/* <meta property="og:description" content={volanta} /> */}
-        <meta property="og:image" itemProp="image" content="favicon/favicon.ico" />
+        <meta property="og:image" itemProp="image" href="favicon/favicon.ico" />
   
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -50,7 +50,7 @@ export default function Home({
         />
         <meta property="twitter:title" content="Polo Obrero" />
         {/* <meta property="twitter:description" content={volanta} /> */}
-        <meta property="twitter:image" content="favicon/favicon.ico" />
+        <meta property="twitter:image" href="favicon/favicon.ico" />
         {/* <meta property="description" content={volanta} /> */}
         {/* <meta name="description" content={seo.metaDesc} /> */}
         <link rel="icon" href="favicon/favicon.ico" />
