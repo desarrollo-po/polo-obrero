@@ -32,28 +32,35 @@ export default function Home({
     <>
       <Head>
         <title>Polo Obrero</title>
-        <meta name="description" content="Por trabajo genuino. Contra el hambre y la miseria" />
+        <meta
+          name="description"
+          content="Por trabajo genuino. Contra el hambre y la miseria"
+        />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="@polo.obrero.3" />
         <meta property="og:url" content="https://poloobrero.org.ar/" />
         <meta property="og:title" content="Polo Obrero" />
         {/* <meta property="og:description" content={volanta} /> */}
-        <meta property="og:image" itemProp="image" href="favicon/favicon.ico" />
-  
+        <meta
+          property="og:image"
+          itemProp="image"
+          content="https://po-proyecto.tk/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-17-at-18.46.25.jpeg"
+        />
+
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@polo.obrero" />
-        <meta
-          property="twitter:url"
-          content="https://poloobrero.org.ar/"
-        />
+        <meta property="twitter:url" content="https://poloobrero.org.ar/" />
         <meta property="twitter:title" content="Polo Obrero" />
         {/* <meta property="twitter:description" content={volanta} /> */}
-        <meta property="twitter:image" href="favicon/favicon.ico" />
+        <meta
+          property="twitter:image"
+          content="https://po-proyecto.tk/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-17-at-18.46.25.jpeg"
+        />
         {/* <meta property="description" content={volanta} /> */}
         {/* <meta name="description" content={seo.metaDesc} /> */}
-        <link rel="icon" href="favicon/favicon.ico" />
+        <link rel="icon" content="favicon/favicon.ico" />
       </Head>
 
       {/* <VideoHome /> */}
