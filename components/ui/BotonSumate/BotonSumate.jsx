@@ -2,8 +2,10 @@ import styles from "./BotonSumate.module.scss"
 
 export const BotonSumate = () => {
   return (
-    <div className={styles.btn} href="http://localhost:3000/contacto">
+  <a href="/contacto">
+    <div className={styles.btn}>
       Sumate
     </div>
+    </a>
   );
 };
