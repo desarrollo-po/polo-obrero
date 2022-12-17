@@ -1,0 +1,15 @@
+@import "../styles/colors.scss";
+@import "../styles/breakpoints.scss";
+
+.paginaNoEncontrada {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align-last: center;
+    font-weight: 700;
+}
+
+.volver {
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-align-last: center;
+}
