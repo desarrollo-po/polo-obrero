@@ -6,8 +6,8 @@
 }
 
 .imagenContainer {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
   img {
     width: 100%;
   }
@@ -16,13 +16,28 @@ justify-content: center;
 @include media(mobile) {
   .tapaSuplePolo {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a {
+      &.btnPDF {
+        text-align: center;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        margin: 10px auto;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 8px 15px;
+        gap: 5px;
+      }
+    }
   }
 }
 
 @include media(tablet) {
   .imagenContainer {
     img {
-    width: 100%;
-  }
+      width: 100%;
+    }
   }
 }
