@@ -2,8 +2,10 @@ import Head from "next/head";
 import React from "react";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import styles from "../styles/404.module.scss";
+import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
+import { getComunicadosPolo } from "../services/queries/PostsComunicados";
 
-const pageNotFound = () => {
+const pageNotFound = ({ comunicadosPolo }) => {
   return (
     <>
       <Head>
@@ -17,9 +19,20 @@ const pageNotFound = () => {
         <div className={styles.volver}>
           <a href="/">Volver a la página principal</a>
         </div>
+        <Comunicados comunicadosPolo={comunicadosPolo} />
       </MainContainer>
     </>
   );
 };
 
 export default pageNotFound;
+
+export async function getStaticProps() {
+  const comunicadosPolo = await getComunicadosPolo(4);
+
+  return {
+    props: {
+      comunicadosPolo: comunicadosPolo.comunicados,
+    },
+  };
+}
