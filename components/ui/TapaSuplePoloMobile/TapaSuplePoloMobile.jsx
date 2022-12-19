@@ -13,7 +13,7 @@ export const TapaSuplePolo = ({ tapaSuplePolo, slug }) => {
       <a
         className={styles.btnPDF}
         target="_blank"
-        href={`https://archivo.prensaobrera.com/wp-content/uploads/${slug}.pdf`}
+        href={`https://archivo.prensaobrera.com/wp-content/uploads/po${slug}.pdf`}
       >
         <IconPDF />
         <span>Descargá la versión PDF</span>
