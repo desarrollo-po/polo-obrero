@@ -41,7 +41,6 @@ export default function Home({
         <meta property="og:type" content="@polo.obrero.3" />
         <meta property="og:url" content="https://poloobrero.org.ar/" />
         <meta property="og:title" content="Polo Obrero" />
-        {/* <meta property="og:description" content={volanta} /> */}
         <meta
           property="og:image"
           itemProp="image"
@@ -53,13 +52,10 @@ export default function Home({
         <meta name="twitter:creator" content="@polo.obrero" />
         <meta property="twitter:url" content="https://poloobrero.org.ar/" />
         <meta property="twitter:title" content="Polo Obrero" />
-        {/* <meta property="twitter:description" content={volanta} /> */}
         <meta
           property="twitter:image"
           content="https://po-proyecto.tk/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-17-at-18.46.25.jpeg"
         />
-        {/* <meta property="description" content={volanta} /> */}
-        {/* <meta name="description" content={seo.metaDesc} /> */}
         <link rel="icon" content="favicon/favicon.ico" />
       </Head>
 

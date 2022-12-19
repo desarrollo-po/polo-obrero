@@ -21,40 +21,8 @@
     margin: auto;
 }
 
-.contactos {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    padding: 0;
-}
-
-.contactos ul {
-    list-style: none;
-    border-bottom: solid 0.5px rgb(161, 161, 161);
-    margin: 0;
-}
-
-.region {
-    font-weight: bold;
-    margin: 10px 0 10px 0;
-    font-size: 18px;
-}
-
-.telefono {
-    color: red;
-    font-size: 18px;
-}
-
-.telefono:hover {
-    text-decoration: underline;
-}
 
 @include media(mobile) {
-    .listaContactos {
-        font-size: 14px;
-        padding: 0;
-    }
-
     .contenedor {
         font-size: 15px;
 
@@ -67,31 +35,16 @@
     .p {
         margin: auto;
     }
-    .region {
-        font-size: 15px;
-    }
-    .telefono {
-        font-size: 15px;
-    }
 }
 
 @include media(tablet) {
-
-
-    .listaContactos {
-        font-size: 15px;
-        padding: 0;
-    }
-
     .contenedor {
         font-size: 15px;
-
         h3 {
         font-size: 17px;
         margin-bottom: 5px;
         }
     }
-
     .p {
         margin: auto;
     }
