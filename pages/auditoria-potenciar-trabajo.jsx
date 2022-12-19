@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from "react";
 import MainContainer from '../components/Containers/MainContainer/MainContainer';
-import { Contactos } from '../components/Regiones/Contactos/contactos';
+import { Contactos } from '../components/Regiones/Contactos/Contactos';
 import { BotonWsp } from '../components/ui/BotonWsp/BotonWsp';
 import { Footer } from '../components/ui/Footer/Footer';
 import styles from "../styles/Auditoria-potenciar-trabajo.module.scss";
