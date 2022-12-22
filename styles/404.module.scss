@@ -16,4 +16,29 @@
 
 .volver:hover {
     text-decoration: underline;
+    color: red;
+}
+
+@include media(mobile) {
+    .paginaNoEncontrada {
+        font-size: 20px;
+        text-align-last: center;
+        font-weight: 700;
+    }
+    .volver {
+        font-size: 15px;
+        text-align-last: center;
+    }
+}
+
+@include media(tablet) {
+    .paginaNoEncontrada {
+        font-size: 20px;
+        text-align-last: center;
+        font-weight: 700;
+    }
+    .volver {
+        font-size: 15px;
+        text-align-last: center;
+    }
 }
