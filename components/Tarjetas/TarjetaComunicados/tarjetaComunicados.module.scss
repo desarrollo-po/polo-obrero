@@ -5,10 +5,10 @@
     background-color: white;
     
 }
-.volanta {
+.date {
     position: absolute;
     z-index: 1;
-    background-color: #fff;
+    background-color: #FFF;
     padding: 2px 5px;
     font-size: .9rem;
     font-weight: 600;
@@ -41,10 +41,8 @@
         color: #000;
         margin: 10px 0 10px 0;
     }
-    p {
-        font-size: .9rem;
-        font-weight: 400;
-        color: #000;
-        margin: 0;
-    }
 }
+.data #volanta {
+            font-size: 0.8rem;
+            margin: 0;
+        }

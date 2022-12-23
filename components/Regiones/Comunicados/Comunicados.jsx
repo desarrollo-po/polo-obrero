@@ -7,24 +7,29 @@ export const Comunicados = ({ comunicadosPolo }) => {
   // const onShowComunicados = () => {
   //   setShowComunicados(!showComunicados);
   // };
+  console.log(comunicadosPolo);
   return (
     <>
       <h2 className={styles.h2}>Comunicados de prensa</h2>
       <section className={styles.containerComunicados}>
         {comunicadosPolo.nodes.map(
           ({
-              id,
-              title,
-              slug,
-              featuredImage: {
-                node: { sourceUrl },
-              },
+            id,
+            title,
+            slug,
+            date,
+            camposComunicados: { volanta },
+            featuredImage: {
+              node: { sourceUrl },
+            },
           }) => (
             <TarjetaComunicados
               key={id}
               titulo={title}
               imagen={sourceUrl}
               slug={slug}
+              date={date}
+              volanta={volanta}
             />
           )
         )}
