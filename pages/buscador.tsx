@@ -4,7 +4,8 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { GET_COMUNICADOS_BUSCADOR } from "../services/queries/buscadorComunicados";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
-import {Footer} from "../components/ui/Footer/Footer"
+import {Footer} from "../components/ui/Footer/Footer";
+import {TarjetaComunicados} from "../components/Tarjetas/TarjetaComunicados/TarjetaComunicados"
 
 interface SearchProps {
   value: string;
@@ -18,7 +19,7 @@ interface SearchProps {
         sourceUrl: string;
       };
     };
-    campos: {
+    campos_comunicados: {
       volanta: string;
     };
 }
@@ -34,12 +35,21 @@ export default function buscador({}) {
     },
   });
 
+  const handleClickSearch = (
+    event: React.FormEvent<HTMLFormElement> | React.FormEvent<HTMLButtonElement>
+  ) => {
+  event.preventDefault();
+    const inputValue = (
+      document.querySelector("#inputSearch") as HTMLInputElement
+    ).value;
+    settextInputSearch(inputValue);
+  }
+
   useEffect(() => {
     if (textoBusquedaUrl) {
       settextInputSearch(textoBusquedaUrl);
     }
   }, [textoBusquedaUrl]);
-
   return (
     <>
     <Head>
@@ -47,7 +57,7 @@ export default function buscador({}) {
     </Head>
     <MainContainer>
       <h2>Buscador de comunicados</h2>
-      <form>
+      <form onSubmit={handleClickSearch}>
       <div>
             <input
               id="inputSearch"
@@ -57,6 +67,7 @@ export default function buscador({}) {
               defaultValue={textoBusquedaUrl || textInputSearch}
             />
             <button
+            onClick={handleClickSearch}
             >
             BUSCAR
             </button>
@@ -67,6 +78,28 @@ export default function buscador({}) {
             </div>
           </div>
       </form>
+      {   <>
+      <div>
+          <div>
+                <p>Resultados: {data?.comunicados.pageInfo.offsetPagination.total}</p>
+          </div>
+          <article>
+                {data?.comunicados.edges.map(({ node }: SearchProps) => (
+                  <TarjetaComunicados
+                    titulo={node.title}
+                    slug={node.slug}
+                    date={node.date}
+                    imagen={
+                      node.featuredImage.node.sourceUrl
+                    }
+                    volanta={node.campos_comunicados.volanta}
+                  />
+                ))}
+              
+              </article>
+                 </div> 
+                 </>
+                }
     </MainContainer>
     <Footer />
     </>
