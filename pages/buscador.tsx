@@ -6,6 +6,7 @@ import { GET_COMUNICADOS_BUSCADOR } from "../services/queries/buscadorComunicado
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import {Footer} from "../components/ui/Footer/Footer";
 import {TarjetaComunicados} from "../components/Tarjetas/TarjetaComunicados/TarjetaComunicados"
+import LupaSearch from "../components/Iconos/LupaSearch";
 
 interface SearchProps {
   value: string;
@@ -19,7 +20,7 @@ interface SearchProps {
         sourceUrl: string;
       };
     };
-    campos_comunicados: {
+    camposComunicados: {
       volanta: string;
     };
 }
@@ -50,49 +51,46 @@ export default function buscador({}) {
       settextInputSearch(textoBusquedaUrl);
     }
   }, [textoBusquedaUrl]);
+
   return (
     <>
     <Head>
-      <title>🔎 Buscador de notas</title>
+      <title>🔎 Buscador</title>
     </Head>
     <MainContainer>
-      <h2>Buscador de comunicados</h2>
-      <form onSubmit={handleClickSearch}>
-      <div>
-            <input
+      <h2 className="titulo">Buscador de comunicados</h2>
+      
+      <div className="containerInput">
+       <form  className="formulario" onSubmit={handleClickSearch}>
+        <input
+              className="input"
               id="inputSearch"
               placeholder="Escribí aquí tu búsqueda. Usá comillas ' ' para coincidencia exacta de varias palabras."
               type="string"
               name="textSearch"
               defaultValue={textoBusquedaUrl || textInputSearch}
             />
-            <button
+            <button className="btnBuscar"
             onClick={handleClickSearch}
             >
-            BUSCAR
+            <LupaSearch width="25" height="25" />
             </button>
-          </div>
-          <div>
-            <div>
-              <p>Si los resultados son demasiado amplios, probá refinar tu búsqueda con estas opciones</p>
-            </div>
-          </div>
-      </form>
+        </form>
+      </div>
       {   <>
       <div>
           <div>
-                <p>Resultados: {data?.comunicados.pageInfo.offsetPagination.total}</p>
+                <p className="texto">Resultados: {data?.comunicados.pageInfo.offsetPagination.total}</p>
           </div>
-          <article>
+          <article className="containerResultados">
                 {data?.comunicados.edges.map(({ node }: SearchProps) => (
                   <TarjetaComunicados
                     titulo={node.title}
                     slug={node.slug}
                     date={node.date}
                     imagen={
-                      node.featuredImage.node.sourceUrl
-                    }
-                    volanta={node.campos_comunicados.volanta}
+                      node.featuredImage? node.featuredImage.node.sourceUrl : null}
+                    volanta={node.camposComunicados.volanta}
                   />
                 ))}
               
@@ -102,6 +100,50 @@ export default function buscador({}) {
                 }
     </MainContainer>
     <Footer />
+    <style jsx>{`
+      .containerResultados {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap:15px;
+        margin: 20px 0 ;
+      }
+
+      .formulario {
+        display: flex;
+        width:100%;
+      }
+
+      .input {
+        border-radius: 0;
+          border-bottom: 1px solid #ccc;
+          padding: 5px 0 5px 2px;
+          font-size: 1rem;
+          font-weight: 300;
+          color: #000;
+          width: 60%;
+          margin: 0 10px 0 0;
+      }
+
+      .titulo {
+        color: #FFF;
+      }
+      .texto {
+        color:#FFF;
+      }
+
+      .btnBuscar {
+        background: none;
+        border:none;
+        cursor:pointer;
+      }
+
+      {/* @include media(max-width: 480px) {
+    .containterResultados{
+      display: block;
+      article {margin-bottom: 10px}
+    } */}
+  }
+    `}</style>
     </>
   )
 };

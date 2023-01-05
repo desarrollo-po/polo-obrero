@@ -15,7 +15,7 @@ export const GET_COMUNICADOS_BUSCADOR = gql`
             sourceUrl(size: MEDIUM)
           }
         }
-        campos_comunicados {
+        camposComunicados {
           volanta
         }
       }
