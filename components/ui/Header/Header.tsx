@@ -7,6 +7,7 @@ import { LogoPoloObrero } from "../../Logos/LogoPoloObrero";
 import { useRouter } from "next/router";
 import LupaSearch from "../../Iconos/LupaSearch";
 import { Redes } from "../Redes/Redes";
+import LupaSearchMobile from "../../Iconos/LupaSearchMobile"
 
 
 export const Header = () => {
@@ -26,8 +27,8 @@ export const Header = () => {
         <header className={styles.header}>
           <div className={styles.menu}>
             <MenuPrincipal />
-            
           </div>
+        
           <form className={styles.buscador} onSubmit={handleClickSearch}>
             <div className={styles.containerBuscador}>
               <input
@@ -49,7 +50,9 @@ export const Header = () => {
               </a>
             </Link>
           </div>
-          
+          <div className={styles.buscadorMobile}>
+            <LupaSearchMobile color="white" width="20" height="20" />
+          </div>
           <div className={styles.btnSumate}>
             <BotonSumate />
           </div>
@@ -58,7 +61,7 @@ export const Header = () => {
           </div>
           
         </header>
-      </HeaderContainer>
+      </HeaderContainer> 
     </>
   );
 };
