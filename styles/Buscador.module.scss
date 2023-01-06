@@ -1,0 +1,44 @@
+@import "../styles/colors.scss";
+@import "../styles/breakpoints.scss";
+
+.containerResultados {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap:15px;
+  margin: 20px 0 ;
+}
+
+.formulario {
+  display: flex;
+  width:100%;
+}
+
+.input {
+    border-radius: 0;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #000;
+    width: 60%;
+    margin: 0 10px 0 0;
+    border:none;
+}
+
+.titulo {
+  color: #FFF;
+}
+.texto {
+  color:#FFF;
+}
+
+.btnBuscar {
+  background: none;
+  border:none;
+  cursor:pointer;
+}
+
+.containerInput {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

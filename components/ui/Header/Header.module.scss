@@ -10,19 +10,48 @@
     align-items: center;
     justify-content: space-between;
     .menu {
-        grid-column: span 2/span 2;
+        grid-column: span 1/span 1;
+    }
+    .buscador {
+        grid-column: span 2/ span 2;
+    }
+    .lupaHeader {
+        position: absolute;
+        top: 50%;
+        margin-left: 17px;
+        margin-top: 17px;
+        z-index: 1;
     }
     .logo {
-        grid-column: span 8/span 8;
+        grid-column: span 6/span 6;
         text-align: center;
     }
     .redes {
-        grid-column: span 2/span 2;
-        .btnRedes {
-            display: flex;
-            gap: 20px;
-        }
+        grid-column: span 1/span 1;
     }
+    .btnSumate {
+        grid-column: span 1/ span 1;
+        display: flex;
+        gap: 20px;
+    }
+    .btnBuscador {
+        border:none;
+        background: none;
+        cursor:pointer;
+        position: absolute;
+        top: 40%;
+        margin-left: 170px;
+        z-index: 1;
+    }
+    .buscadorHeader {
+        padding: 8px;
+        font-size:15px;
+      }
+    .containerBuscador {
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        }
 }
 
 @include media(mobile) {

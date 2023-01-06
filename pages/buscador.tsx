@@ -7,6 +7,7 @@ import MainContainer from "../components/Containers/MainContainer/MainContainer"
 import {Footer} from "../components/ui/Footer/Footer";
 import {TarjetaComunicados} from "../components/Tarjetas/TarjetaComunicados/TarjetaComunicados"
 import LupaSearch from "../components/Iconos/LupaSearch";
+import styles from "../styles/Buscador.module.scss";
 
 interface SearchProps {
   value: string;
@@ -58,31 +59,31 @@ export default function buscador({}) {
       <title>🔎 Buscador</title>
     </Head>
     <MainContainer>
-      <h2 className="titulo">Buscador de comunicados</h2>
+      <h2 className={styles.titulo}>Buscador de comunicados</h2>
       
-      <div className="containerInput">
-       <form  className="formulario" onSubmit={handleClickSearch}>
+      <div className={styles.containerInput}>
+       <form  className={styles.formulario} onSubmit={handleClickSearch}>
         <input
-              className="input"
+              className={styles.input}
               id="inputSearch"
               placeholder="Escribí aquí tu búsqueda. Usá comillas ' ' para coincidencia exacta de varias palabras."
               type="string"
               name="textSearch"
               defaultValue={textoBusquedaUrl || textInputSearch}
             />
-            <button className="btnBuscar"
+            <button className={styles.btnBuscar}
             onClick={handleClickSearch}
             >
-            <LupaSearch width="25" height="25" />
+            <LupaSearch color="white" width="25" height="25" />
             </button>
         </form>
       </div>
       {   <>
       <div>
           <div>
-                <p className="texto">Resultados: {data?.comunicados.pageInfo.offsetPagination.total}</p>
+                <p className={styles.texto}>Resultados: {data?.comunicados.pageInfo.offsetPagination.total}</p>
           </div>
-          <article className="containerResultados">
+          <article className={styles.containerResultados}>
                 {data?.comunicados.edges.map(({ node }: SearchProps) => (
                   <TarjetaComunicados
                     titulo={node.title}
@@ -93,57 +94,12 @@ export default function buscador({}) {
                     volanta={node.camposComunicados.volanta}
                   />
                 ))}
-              
               </article>
                  </div> 
                  </>
                 }
     </MainContainer>
     <Footer />
-    <style jsx>{`
-      .containerResultados {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap:15px;
-        margin: 20px 0 ;
-      }
-
-      .formulario {
-        display: flex;
-        width:100%;
-      }
-
-      .input {
-        border-radius: 0;
-          border-bottom: 1px solid #ccc;
-          padding: 5px 0 5px 2px;
-          font-size: 1rem;
-          font-weight: 300;
-          color: #000;
-          width: 60%;
-          margin: 0 10px 0 0;
-      }
-
-      .titulo {
-        color: #FFF;
-      }
-      .texto {
-        color:#FFF;
-      }
-
-      .btnBuscar {
-        background: none;
-        border:none;
-        cursor:pointer;
-      }
-
-      {/* @include media(max-width: 480px) {
-    .containterResultados{
-      display: block;
-      article {margin-bottom: 10px}
-    } */}
-  }
-    `}</style>
     </>
   )
 };

@@ -2,11 +2,11 @@ import Link from "next/link";
 import { BotonSumate } from "../BotonSumate/BotonSumate";
 import HeaderContainer from "../../Containers/HeaderContainer/HeaderContainer";
 import MenuPrincipal from "../MenuPrincipal/MenuPrincipal";
-import { Redes } from "../Redes/Redes";
 import styles from "./Header.module.scss";
 import { LogoPoloObrero } from "../../Logos/LogoPoloObrero";
 import { useRouter } from "next/router";
 import LupaSearch from "../../Iconos/LupaSearch";
+import { Redes } from "../Redes/Redes";
 
 
 export const Header = () => {
@@ -28,17 +28,17 @@ export const Header = () => {
             <MenuPrincipal />
             
           </div>
-          <form onSubmit={handleClickSearch}>
-            <div className="containerBuscador">
+          <form className={styles.buscador} onSubmit={handleClickSearch}>
+            <div className={styles.containerBuscador}>
               <input
-                className="buscadorHeader"
+                className={styles.buscadorHeader}
                 type="text"
                 name="textoBusqueda"
                 id="textoBusqueda"
                 placeholder="Buscar..."
               />
-              <button className="btnBuscador" onClick={handleClickSearch}>
-                <LupaSearch width="24" height="24" />
+              <button className={styles.btnBuscador} onClick={handleClickSearch}>
+                <LupaSearch color="#4f5b66" width="20" height="20" />
               </button>
             </div>
           </form>
@@ -49,30 +49,16 @@ export const Header = () => {
               </a>
             </Link>
           </div>
-          <div className={styles.redes}>
-            <div className={styles.btnRedes}>
-              <BotonSumate />
-              <Redes />
-            </div>
+          
+          <div className={styles.btnSumate}>
+            <BotonSumate />
           </div>
+          <div className={styles.redes}>  
+            <Redes />
+          </div>
+          
         </header>
       </HeaderContainer>
-
-      <style jsx> {`
-      .containerBuscador {
-        display: flex;
-        align-items:center;
-        justify-content: center;
-        }
-      .buscadorHeader {
-        padding: 8px;
-        font-size:15px;
-      }
-      .btnBuscador {
-        background: none;
-        cursor:pointer;
-      }
-      `}</style>
     </>
   );
 };
