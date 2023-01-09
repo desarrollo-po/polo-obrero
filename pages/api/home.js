@@ -7,7 +7,6 @@ import { getPostsSuplePolo } from "../../services/queries/PostsSuplePolo";
 export default async function handler(req, res) {
   const { edicion, notas } = req.query;
   const { activa } = req.body;
-  console.log(req.body.activa);
   const data = await getPostsSuplePolo("1655SP", 5);
   res.status(200).send({
     regiones: [

@@ -9,43 +9,92 @@
     padding: 1rem 0;
     align-items: center;
     justify-content: space-between;
-    .menu {
-        grid-column: span 2/span 2;
-    }
     .logo {
-        grid-column: span 8/span 8;
+        grid-column: span 6/ span 6;
         text-align: center;
     }
     .redes {
+        grid-column: span 1/ span 1;
+    }
+    .btnSumate {
         grid-column: span 2/span 2;
-        .btnRedes {
-            display: flex;
-            gap: 20px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    .buscador {
+        grid-column: span 2/span 2;
+        border:none;
+        background: none;
+        cursor:pointer;
+        .btnBuscador {
+        position: absolute;
+        top: 40%;
+        margin-left: 170px;
+        z-index: 1;
+        background: none;
+        border:none;
         }
+    }
+    .buscadorHeader {
+        padding: 8px;
+        font-size:15px;
+      }
+    .containerBuscador {
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        }
+    .buscadorMobile {
+        display:none;
     }
 }
 
 @include media(mobile) {
     .header {
-        
+        grid-template-columns: repeat(8, auto);
+        .buscadorMobile{
+            display: block;
+            grid-column: auto;
+        }
+        .menu {
+            grid-column: auto;
+        }
         .logo { 
             text-align: center;
+            grid-column: auto;
             svg {
                 width: 235px;
                 height: 40px; 
             }
-        }    
+        } 
+        .buscador {
+        display:none;
     }
     .redes {
         display: none;
+    }   
     }
+    
 }
 
 @include media(tablet) {
     .header {
-       
+        grid-template-columns: repeat(3, auto);
+        .menu {
+            grid-column: auto;
+        }
+    
+        .redes {
+            grid-column: auto;
+        }
+    
+        .buscador {
+            display:none;
+        }
         .logo { 
             text-align: center;
+            grid-column: auto;
         }    
     }
 }
