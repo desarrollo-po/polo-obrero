@@ -10,6 +10,19 @@ justify-content: center;
   img {
     width: 100%;
   }
+  cursor: pointer;
+}
+
+.texto {
+  background-color: rgb(225, 7, 7);
+  color: #FFF;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0;
+  font-family: "Roboto";
+}
+.texto:hover {
+  background-color: rgb(160, 8, 8);
 }
 
 @include media(mobile) {
@@ -23,5 +36,14 @@ justify-content: center;
     img {
     width: 100%;
   }
+  }
+  .texto {
+    display: block;
+    background-color: rgb(225, 7, 7);
+    color: #FFF;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0;
+    font-family: "Roboto";
   }
 }

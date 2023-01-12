@@ -6,16 +6,25 @@
 }
 
 .imagenContainer {
-display: flex;
-justify-content: center;
   img {
     width: 100%;
   }
 }
 
+.texto {
+  display: block;
+  background-color: rgb(225, 7, 7);
+  color: #FFF;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 0;
+  font-family: "Roboto";
+}
+
 @include media(mobile) {
   .bannerAuditoriasMobile {
-    display: flex;
+    display: block;
+    
   }
 }
 
@@ -24,5 +33,14 @@ justify-content: center;
     img {
     width: 100%;
   }
+  }
+  .texto {
+    display: block;
+    background-color: rgb(225, 7, 7);
+    color: #FFF;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0;
+    font-family: "Roboto";
   }
 }

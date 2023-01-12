@@ -20,6 +20,14 @@
     display: block;
     margin: auto;
 }
+.texto {
+  background-color: rgb(225, 7, 7);
+  color: #FFF;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0;
+  font-family: "Roboto";
+}
 
 
 @include media(mobile) {
@@ -35,6 +43,14 @@
     .p {
         margin: auto;
     }
+    .texto {
+  background-color: rgb(225, 7, 7);
+  color: #FFF;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0;
+  font-family: "Roboto";
+}
 }
 
 @include media(tablet) {
