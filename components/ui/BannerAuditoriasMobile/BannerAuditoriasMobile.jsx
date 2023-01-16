@@ -13,9 +13,6 @@ export const BannerAuditoriasMobile = () => {
           />
         </Link>
       </picture>
-      <Link href="/auditoria-potenciar-trabajo">
-        <p className={styles.texto}>TENÉS TIEMPO HASTA EL 15/1</p>
-      </Link>
     </section>
   );
 };
