@@ -19,7 +19,6 @@ const auditorias = () => {
           className={styles.banner}
           alt="Auditoria Potenciar Trabajo"
         />
-        <p className={styles.texto}>TENÉS TIEMPO HASTA EL 15/1</p>
         <div className={styles.contenedor}>
           <h3>Organizate para hacer la auditoría. Defendé tu plan</h3>
           <p>
