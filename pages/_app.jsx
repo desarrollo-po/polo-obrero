@@ -5,7 +5,6 @@ import { NotasGuardadasContextProvider } from "../context/NotasGuardadasProvider
 import Script from "next/script";
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
 
-
 export const client = new ApolloClient({
   connectToDevTools: true,
   uri: process.env.NEXT_PUBLIC_WORDPRESS_GRAPHQL,
@@ -30,20 +29,20 @@ function MyApp({ Component, pageProps }) {
       client={client}
     >
       <NotasGuardadasContextProvider>
-          <Script
-    src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-    strategy="afterInteractive"
-  />
-  <Script id="google-analytics" strategy="afterInteractive">
-    {`
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
       window.dataLayer = window.dataLayer || [];
       function gtag(){window.dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', '${GA_MEASUREMENT_ID}');
     `}
-  </Script>
+        </Script>
 
-        <Header/>
+        <Header />
         <Component {...pageProps} />
         <footer></footer>
       </NotasGuardadasContextProvider>

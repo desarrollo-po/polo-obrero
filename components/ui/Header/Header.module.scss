@@ -1,6 +1,10 @@
 @import "../../../styles/colors.scss";
 @import "../../../styles/breakpoints.scss";
-
+.menu {
+    display: flex;
+    gap: 40px;
+    grid-column: span 3/span 3;
+}
 .header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -9,43 +13,79 @@
     padding: 1rem 0;
     align-items: center;
     justify-content: space-between;
-    .menu {
-        grid-column: span 2/span 2;
-    }
     .logo {
-        grid-column: span 8/span 8;
+        grid-column: span 6/ span 6;
         text-align: center;
     }
     .redes {
+        grid-column: span 1/span 1;
+        align-items: center;
+        display: grid;
+        justify-content: flex-end;
+    }
+    .containerBtn {
         grid-column: span 2/span 2;
-        .btnRedes {
-            display: flex;
-            gap: 20px;
-        }
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .lupa {
+        justify-content: center;
+        display: grid;
+        align-items: center;
+        cursor:pointer;
+    }
+    .buscadorMobile {
+        display:none;
     }
 }
 
 @include media(mobile) {
     .header {
-        
+        grid-template-columns: repeat(8, auto);
+        .buscadorMobile{
+            display: block;
+            grid-column: auto;
+        }
+        .menu {
+            grid-column: auto;
+        }
         .logo { 
             text-align: center;
+            grid-column: auto;
             svg {
                 width: 235px;
                 height: 40px; 
             }
-        }    
+        } 
+        .buscador {
+        display:none;
     }
     .redes {
         display: none;
+    }   
     }
+    
 }
 
 @include media(tablet) {
     .header {
-       
+        grid-template-columns: repeat(3, auto);
+        .menu {
+            grid-column: auto;
+        }
+    
+        .redes {
+            grid-column: auto;
+        }
+    
+        .buscador {
+            display:none;
+        }
         .logo { 
             text-align: center;
+            grid-column: auto;
         }    
     }
 }
