@@ -56,3 +56,10 @@
 .link:hover{
   color: grey;
 }
+
+@include media(mobile) {
+  .containerResultados{
+    display: block;
+  }
+  
+}
