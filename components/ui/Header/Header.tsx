@@ -14,21 +14,23 @@ export const Header = () => {
     <>
       <HeaderContainer>
         <header className={styles.header}>
+
           <div className={styles.menu}>
             <MenuPrincipal />
           </div>
-          <div className={styles.logo}>
-            <Link href="/">
-              <a>
+
+          <Link href="/">
+            <div className={styles.logo}>
                 <LogoPoloObrero wsize="350" wheight="60" color="white" />
-              </a>
-            </Link>
-          </div>
-          <div className={styles.buscadorMobile}>
-            <Link href="/buscador">
+            </div>
+          </Link>
+
+          <Link href="/buscador">
+            <div className={styles.buscadorMobile}>
               <LupaSearchMobile color="white" width="20" height="20" />
-            </Link>
-          </div>
+            </div>
+          </Link>
+          
           <div className={styles.containerBtn}>
             <Link href="/buscador">
               <div className={styles.lupa}>
@@ -41,6 +43,7 @@ export const Header = () => {
           <div className={styles.redes}>
             <Redes />
           </div>
+          
         </header>
       </HeaderContainer>
     </>
