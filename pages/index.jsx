@@ -64,7 +64,8 @@ export default function Home({
         <MainContainer>
           <BannerAuditoriasWeb />
           <BannerAuditoriasMobile />
-          <SuplePolo notasSuplePolo={notasSuplePolo.edges[0].node.posts} />
+          <Comunicados comunicadosPolo={comunicadosPolo} />
+          <BotonMasComunicados />
           <BannerSumateMobile />
           <BannerSumateWeb />
           <TapaSuplePolo
@@ -74,8 +75,8 @@ export default function Home({
                 .sourceUrl
             }
           />
-          <Comunicados comunicadosPolo={comunicadosPolo} />
-          <BotonMasComunicados />
+          <SuplePolo notasSuplePolo={notasSuplePolo.edges[0].node.posts} />
+
           <ListaYouTube listaYouTube={listaYouTube} />
           <BotonMasVideos />
           <BannerLibroWeb />

@@ -2,7 +2,7 @@
 @import "../styles/breakpoints.scss";
 
 .paginaNoEncontrada {
-    font-size: 30px;
+    font-size: 40px;
     color: rgb(255, 255, 255);
     text-align-last: center;
     font-weight: 700;
@@ -12,11 +12,20 @@
     font-size: 15px;
     color: rgb(255, 255, 255);
     text-align-last: center;
+    margin-top:40px;
+    padding: 40px;
+    font-size: 25px;
 }
 
 .volver:hover {
     text-decoration: underline;
     color: red;
+}
+.texto {
+    font-size: 20px;
+    text-align-last: center;
+    color: #FFF;
+    margin-top: 30px;
 }
 
 @include media(mobile) {
@@ -26,8 +35,10 @@
         font-weight: 700;
     }
     .volver {
-        font-size: 15px;
+        font-size: 20px;
         text-align-last: center;
+        color: red;
+        text-decoration: underline;
     }
 }
 
@@ -38,7 +49,9 @@
         font-weight: 700;
     }
     .volver {
-        font-size: 15px;
+        font-size: 20px;
         text-align-last: center;
+        color: red;
+        text-decoration: underline;
     }
 }

@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useContext, useEffect } from "react";
 import MainContainer from "../../../components/Containers/MainContainer/MainContainer";
 import { ListaNotasGuardadas } from "../../../components/NotasGuardadas/ListaNotasGuardadas";
+import { Footer } from "../../../components/ui/Footer/Footer";
 import { NotasGuardadasContext } from "../../../context/NotasGuardadasContext";
 import { getAllComunicados } from "../../../services/queries/Comunicados";
 import { getPostsBySlugComunicado } from "../../../services/queries/PostBySlugComunicados";
@@ -102,6 +103,7 @@ const index = ({
           />
         </section>
       </MainContainer>
+      <Footer />
     </>
   );
 };
