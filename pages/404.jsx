@@ -15,11 +15,12 @@ const pageNotFound = ({ comunicadosPolo }) => {
       </Head>
       <MainContainer>
         <div className={styles.paginaNoEncontrada}>
-          <h3>404 - Página no encontrada</h3>
+          <h3>404 - Ouch! Página no encontrada. 😅</h3>
         </div>
         <div className={styles.volver}>
-          <a href="/">Volver a la página principal</a>
+          <a href="/">Volver a la página principal 🏠</a>
         </div>
+        <p className={styles.texto}>o quizás te interese leer...</p>
         <Comunicados comunicadosPolo={comunicadosPolo} />
       </MainContainer>
       <Footer />
