@@ -4,6 +4,7 @@ import MainContainer from "../components/Containers/MainContainer/MainContainer"
 import styles from "../styles/404.module.scss";
 import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
 import { getComunicadosPolo } from "../services/queries/PostsComunicados";
+import { Footer } from "../components/ui/Footer/Footer";
 
 const pageNotFound = ({ comunicadosPolo }) => {
   return (
@@ -21,6 +22,7 @@ const pageNotFound = ({ comunicadosPolo }) => {
         </div>
         <Comunicados comunicadosPolo={comunicadosPolo} />
       </MainContainer>
+      <Footer />
     </>
   );
 };
