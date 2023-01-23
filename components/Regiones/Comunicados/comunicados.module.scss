@@ -1,5 +1,6 @@
 @import "../../../styles/breakpoints.scss";
 @import "../../../styles/colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
 
 // .active {
 //     height: 300px;
@@ -13,16 +14,20 @@
   margin: 20px 0 ;
 }
 
-.titulo {
-  color: $color-secondary;
-  text-align: center;
-  padding: 40px 0 0 0;
+.containerTitulo {
+  display:flex;
+  justify-content: center;
 }
 
 .h2 {
-  color: $color-secondary;
+  color: #FFF;
   text-align: center;
-  padding: 20px 0 0 0;
+  padding: 10px;
+  width: 35%;
+  font-family: 'Kanit', sans-serif; 
+  font-size: 28px;
+  margin: 0;
+  background-color: rgba(0,0,0,0.20);
 }
 
 .active {
@@ -55,11 +60,21 @@
     display: block;
     article {margin-bottom: 10px}
     }
+    .h2 {
+      width: 60%;
+      font-size: 1.1rem;
+      background-color: rgba(0,0,0,0.20);
+    }
   }
 
 @include media(tablet) {
   .containerComunicados {
     display: block;
     article {margin-bottom: 10px}
+  }
+  .h2 {
+    width: 60%;
+    font-size: 1.1rem;
+    background-color: rgba(0,0,0,0.20);
   }
   }

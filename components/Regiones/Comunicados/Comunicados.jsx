@@ -10,7 +10,9 @@ export const Comunicados = ({ comunicadosPolo }) => {
   console.log(comunicadosPolo);
   return (
     <>
-      <h2 className={styles.h2}>Comunicados de prensa</h2>
+      <div className={styles.containerTitulo}>
+        <h2 className={styles.h2}>COMUNICADOS DE PRENSA</h2>
+      </div>
       <section className={styles.containerComunicados}>
         {comunicadosPolo.nodes.map(
           ({
