@@ -20,8 +20,13 @@
 }
 
 .telefono {
-    color: red;
     font-size: 18px;
+    gap: 5px;
+    display: flex;
+}
+
+.telefono a {
+    color: red;
 }
 
 .telefono:hover {
@@ -39,6 +44,11 @@
     .telefono {
         font-size: 15px;
     }
+    #santaCruz{
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 20px 10px 10px 5px 10px;
+    }
 }
 
 @include media(tablet) {
@@ -48,4 +58,9 @@
         font-size: 15px;
         padding: 0;
     }
+    #santaCruz{
+        display: grid;
+        gap: 10px;
+        grid-template-rows: 20px 10px 10px 5px 10px;
+        }
 }

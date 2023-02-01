@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import { Icon } from "@iconify/react";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import { Contactos } from "../components/Regiones/Contactos/Contactos";
 import { BotonWsp } from "../components/ui/BotonWsp/BotonWsp";
@@ -22,16 +23,29 @@ const auditorias = () => {
         <div className={styles.contenedor}>
           <h3>Organizate para hacer la auditoría. Defendé tu plan</h3>
           <p>
-          El gobierno pretende dar bajas masivas del programa Potenciar Trabajo. La auditoría a través de la aplicación Mi Argentina está dejando afuera alrededor 154 mil beneficiarios de planes Potenciar Trabajo, cuando hay desocupados que se encuentran sin los medios técnicos para poder hacerla. El Polo Obrero está en campaña para que ningún compañero ni compañera quede afuera. Por el momento, quienes no hayan podido realizarla, se encontraran con su plan suspendido y cobrara apenas el 50% de la ya miserable cifra que perciben. Si tenés dificultades, acercate a cualquiera de nuestras sedes y comedores para hacer la auditoría y organizarte con el Polo Obrero para luchar contra la baja de planes, por el reclamo de trabajo genuino, la defensa de los comedores populares y el acceso al alimento y por todos nuestros reclamos.
+            El gobierno pretende dar bajas masivas del programa Potenciar
+            Trabajo. La auditoría a través de la aplicación Mi Argentina está
+            dejando afuera alrededor 154 mil beneficiarios de planes Potenciar
+            Trabajo, cuando hay desocupados que se encuentran sin los medios
+            técnicos para poder hacerla. El Polo Obrero está en campaña para que
+            ningún compañero ni compañera quede afuera. Por el momento, quienes
+            no hayan podido realizarla, se encontraran con su plan suspendido y
+            cobrara apenas el 50% de la ya miserable cifra que perciben. Si
+            tenés dificultades, acercate a cualquiera de nuestras sedes y
+            comedores para hacer la auditoría y organizarte con el Polo Obrero
+            para luchar contra la baja de planes, por el reclamo de trabajo
+            genuino, la defensa de los comedores populares y el acceso al
+            alimento y por todos nuestros reclamos.
           </p>
           <h3>¿Qué sucede si no realizo la auditoria?</h3>
           <p className={styles.p}>
-            El gobierno dará de baja a las personas que no actualicen sus
-            datos mediante la aplicación.
+            El gobierno dará de baja a las personas que no actualicen sus datos
+            mediante la aplicación.
           </p>
           <h3>No llegué a actualizar mis datos a tiempo ¿Que puedo hacer?</h3>
           <p className={styles.p}>
-            Realizá igualmente la actualización para poder reclamar nuevamente el cobro el 100% del monto de tu plan social
+            Realizá igualmente la actualización para poder reclamar nuevamente
+            el cobro el 100% del monto de tu plan social
           </p>
           <h3>¿Dónde realizo la auditoria?</h3>
           <p className={styles.p}>
@@ -77,8 +91,8 @@ const auditorias = () => {
           </h3>
           <p>
             Comunicate con nosotros por whatsapp para que te ayudemos en tu
-            barrio o provincia y asi poder defender tu plan social. Hacé clic
-            en el número de teléfono.
+            barrio o provincia y asi poder defender tu plan social. Hacé clic en
+            el número de teléfono.
           </p>
 
           <Contactos />
