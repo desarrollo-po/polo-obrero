@@ -68,14 +68,14 @@ export default function Home({
           <BotonMasComunicados />
           <BannerSumateMobile />
           <BannerSumateWeb />
-          <TapaSuplePolo
+          {/* <TapaSuplePolo
             slug={notasSuplePolo.edges[0].node.slug}
             tapaSuplePolo={
               notasSuplePolo.edges[0].node.datosDePrensaNumero.imagenTapa
                 .sourceUrl
             }
           />
-          <SuplePolo notasSuplePolo={notasSuplePolo.edges[0].node.posts} />
+          <SuplePolo notasSuplePolo={notasSuplePolo.edges[0].node.posts} /> */}
 
           <ListaYouTube listaYouTube={listaYouTube} />
           <BotonMasVideos />
