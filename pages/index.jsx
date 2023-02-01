@@ -28,6 +28,7 @@ export default function Home({
   notasSuplePolo,
   notasMovPiquetero,
 }) {
+  console.log("ntasPolo", notasSuplePolo);
   return (
     <>
       <Head>
@@ -68,15 +69,23 @@ export default function Home({
           <BotonMasComunicados />
           <BannerSumateMobile />
           <BannerSumateWeb />
-          {/* <TapaSuplePolo
-            slug={notasSuplePolo.edges[0].node.slug}
+          <TapaSuplePolo
+            slug={notasSuplePolo.edges[1].node.slug}
             tapaSuplePolo={
-              notasSuplePolo.edges[0].node.datosDePrensaNumero.imagenTapa
-                .sourceUrl
+              notasSuplePolo.edges[1].node.datosDePrensaNumero.imagenTapa
+                ? notasSuplePolo.edges[1].node.datosDePrensaNumero.imagenTapa
+                    .sourceUrl
+                : notasSuplePolo.edges[0].node.datosDePrensaNumero.imagenTapa
+                    .sourceUrl
             }
           />
-          <SuplePolo notasSuplePolo={notasSuplePolo.edges[0].node.posts} /> */}
-
+          <SuplePolo
+            notasSuplePolo={
+              notasSuplePolo.edges[1].node.posts.length > 0
+                ? notasSuplePolo.edges[1].node.posts
+                : notasSuplePolo.edges[0].node.posts
+            }
+          />
           <ListaYouTube listaYouTube={listaYouTube} />
           <BotonMasVideos />
           <BannerLibroWeb />

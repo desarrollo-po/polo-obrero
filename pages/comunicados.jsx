@@ -7,7 +7,6 @@ import { getComunicadosPolo } from "../services/queries/PostsComunicados";
 import styles from "../styles/ComunicadosPrensa.module.scss";
 
 export default function PrensaComunicados({ comunicadosPolo }) {
-  console.log(comunicadosPolo, "COMUNICADOS")
   return (
     <>
       <Head>

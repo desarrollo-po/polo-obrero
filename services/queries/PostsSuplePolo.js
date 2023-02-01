@@ -6,7 +6,7 @@ export async function getPostsSuplePolo(notas) {
   const { data } = await clientPRENSA.query({
     query: gql`
       query PostsSuplePolo {
-        prensaNumeros(where: {nameLike: "SP"}, last: 1) {
+        prensaNumeros(where: {nameLike: "SP"}, last: 2) {
           edges {
             node {
               id
