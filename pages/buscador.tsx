@@ -62,7 +62,6 @@ export default function buscador({}) {
     </Head>
     <MainContainer>
       <h2 className={styles.titulo}>Buscador de comunicados</h2>
-      
       <div className={styles.containerInput}>
        <form  className={styles.formulario} onSubmit={handleClickSearch}>
         <input
