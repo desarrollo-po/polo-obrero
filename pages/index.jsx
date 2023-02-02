@@ -65,6 +65,7 @@ export default function Home({
         <MainContainer>
           <BannerAuditoriasWeb />
           <BannerAuditoriasMobile />
+          <SuplePolo notasSuplePolo={notasSuplePolo.edges[1].node.posts} />
           <Comunicados comunicadosPolo={comunicadosPolo} />
           <BotonMasComunicados />
           <BannerSumateMobile />
@@ -77,13 +78,6 @@ export default function Home({
                     .sourceUrl
                 : notasSuplePolo.edges[0].node.datosDePrensaNumero.imagenTapa
                     .sourceUrl
-            }
-          />
-          <SuplePolo
-            notasSuplePolo={
-              notasSuplePolo.edges[1].node.posts.length > 0
-                ? notasSuplePolo.edges[1].node.posts
-                : notasSuplePolo.edges[0].node.posts
             }
           />
           <ListaYouTube listaYouTube={listaYouTube} />
