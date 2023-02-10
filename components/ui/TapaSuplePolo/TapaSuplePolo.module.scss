@@ -1,0 +1,43 @@
+@import "../../../styles/breakpoints.scss";
+
+.tapaSuplePolo {
+  display: none;
+  margin: 20px 0 20px 0;
+}
+
+.imagenContainer {
+  display: flex;
+  justify-content: center;
+  img {
+    width: 100%;
+  }
+}
+
+@include media(mobile) {
+  .tapaSuplePolo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    a {
+      &.btnPDF {
+        text-align: center;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        margin: 10px auto;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 8px 15px;
+        gap: 5px;
+      }
+    }
+  }
+}
+
+@include media(tablet) {
+  .imagenContainer {
+    img {
+      width: 100%;
+    }
+  }
+}

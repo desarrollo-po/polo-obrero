@@ -1,7 +1,6 @@
 import Head from "next/head";
 import MainContainer from "../components/Containers/MainContainer/MainContainer";
 import { Footer } from "../components/ui/Footer/Footer";
-import { Banners } from "../components/ui/Banners/Banners";
 import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
 import { getComunicadosPolo } from "../services/queries/PostsComunicados";

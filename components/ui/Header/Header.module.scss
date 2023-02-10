@@ -68,24 +68,3 @@
     }
     
 }
-
-@include media(tablet) {
-    .header {
-        grid-template-columns: repeat(3, auto);
-        .menu {
-            grid-column: auto;
-        }
-    
-        .redes {
-            grid-column: auto;
-        }
-    
-        .buscador {
-            display:none;
-        }
-        .logo { 
-            text-align: center;
-            grid-column: auto;
-        }    
-    }
-}

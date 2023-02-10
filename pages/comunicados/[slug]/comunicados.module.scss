@@ -99,3 +99,36 @@
     width: 100%;
   }
 }
+
+@include media(tablet){
+  .titulo {
+    font-size: 20px;
+  }
+  .bajada {
+    font-size: 13px;
+  }
+  .picture {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    float: none;
+    display: block;
+    img {
+      max-width: 100%;
+    }
+  }
+  .epigrafe {
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+  .content {
+    font-size: 15px;
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  .twitter-tweet {
+    width: 100%;
+  }
+}
