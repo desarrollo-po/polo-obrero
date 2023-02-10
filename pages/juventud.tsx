@@ -46,7 +46,7 @@ export default function Juventud({ notasTagJuventud }) {
 }
 
 export async function getStaticProps() {
-  const notasTagJuventud = await getPostsByTag("juventud-del-polo", 6);
+  const notasTagJuventud = await getPostsByTag("juventud-del-polo");
   return {
     props: {
       notasTagJuventud: notasTagJuventud.posts,
