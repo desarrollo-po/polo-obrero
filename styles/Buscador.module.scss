@@ -1,6 +1,23 @@
 @import "../styles/colors.scss";
 @import "../styles/breakpoints.scss";
 
+.containerTitulo {
+  display:flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.titulo {
+  color: #FFF;
+  text-align: center;
+  padding: 10px;
+  width: 35%;
+  font-family: 'Kanit', sans-serif; 
+  font-size: 23px;
+  margin: 0;
+  border-bottom: solid 1px;
+  letter-spacing: 1px;
+}
+
 .containerResultados {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
