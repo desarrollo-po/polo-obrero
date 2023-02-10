@@ -14,7 +14,9 @@ export default function Congreso({ notasCongreso }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainContainer>
-            <h1 className={styles.titulo}>Congreso del Polo Obrero</h1>
+                <div className={styles.containerTitulo}>
+                <h1 className={styles.titulo}>Congreso del Polo Obrero</h1>
+                </div>
                 <div className={styles.containerNota}>
                     {notasCongreso.edges.map(({
                          node: {

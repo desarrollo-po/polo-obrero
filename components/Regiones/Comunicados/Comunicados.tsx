@@ -11,7 +11,7 @@ export const Comunicados = ({ comunicadosPolo }) => {
   return (
     <>
       <div className={styles.containerTitulo}>
-        <h2 className={styles.h2}>COMUNICADOS DE PRENSA</h2>
+        <h2 className={styles.h2}>Comunicados de prensa</h2>
       </div>
       <section className={styles.containerComunicados}>
         {comunicadosPolo.nodes.map(

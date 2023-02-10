@@ -14,7 +14,9 @@ export default function Juventud({ notasTagJuventud }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainContainer>
+        <div className={styles.containerTitulo}>
         <h1 className={styles.titulo}>Juventud del Polo Obrero</h1>
+        </div>
         <div className={styles.containerNota}>
           {notasTagJuventud.edges.map(
             ({

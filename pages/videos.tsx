@@ -18,7 +18,9 @@ export default function Medios({
       </Head>
       <main>
         <MainContainer>
+          <div className={styles.containerTitulo}>
           <h1 className={styles.titulo}>Nuestros videos</h1>
+          </div>
           <ListaYouTube listaYouTube={listaYouTube} />
         </MainContainer>
       </main>
