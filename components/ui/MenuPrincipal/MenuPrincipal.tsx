@@ -33,19 +33,6 @@ const MenuPrincipal = () => {
             </li>
             <li>
             <details className={styles.item}>
-                <summary>
-                  <span>
-                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none">
-                    <path d="M1 1L5 5.06544L1.12966 9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                  </span>
-                  <Link className={styles.link} href="/auditoria-potenciar-trabajo">AUDITORIAS</Link>
-                  </summary>
-              </details>   
-            <hr className={styles.linea}></hr>
-            </li>
-            <li>
-            <details className={styles.item}>
                 <summary >
                   <span>
                   <svg width="6" height="10" viewBox="0 0 6 10" fill="none">
