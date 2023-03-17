@@ -62,8 +62,6 @@ export default function Home({
       {/* <VideoHome /> */}
       <main>
         <MainContainer>
-          <BannerAuditoriasWeb />
-          <BannerAuditoriasMobile />
           <SuplePolo notasSuplePolo={notasSuplePolo.edges[1].node.posts} />
           <Comunicados comunicadosPolo={comunicadosPolo} />
           <BotonMasComunicados />
