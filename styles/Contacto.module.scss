@@ -2,20 +2,24 @@
 @import "./breakpoints.scss";
 
 .titulo {
-  color: $color-secondary;
+  color: #FFF;
   text-align: center;
+  padding: 10px;
+  font-family: 'Kanit', sans-serif; 
+  font-size: 23px;
+  margin: 0;
+  letter-spacing: 1px;
 }
 .texto{
   color: $color-secondary;
 }
-
+.form {
+  width: 100%;
+  height: 500px;
+  border:none;}
+  
 @include media(mobile) {
   .titulo {
-    color: $color-primary;
-    text-align: center;
-    font-size: 20px;
-    margin: 0 0 10px 0;
-    padding: 12px;
-    background-color: $color-secondary;
+    font-size: 1rem;
 }
 }
