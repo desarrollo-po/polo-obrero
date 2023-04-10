@@ -10,21 +10,21 @@ export default function Medios({
   console.log( listaYouTube );
   return (
     <>
+
       <main>
         <MainContainer>
           <div className={styles.containerTitulo}>
           <h1 className={styles.titulo}>Nuestros videos</h1>
           </div>
           <ListaYouTube listaYouTube={listaYouTube} />
-          
-        <style jsx>{`
-        .HeaderContainer_container__txJg0 {
-            display: none;
-        }
-        `}</style>
 
         </MainContainer>
       </main>
+      <style jsx global>{`
+        header {
+          display: none !important;
+        }
+      `}</style>
     </>
   );
 }
