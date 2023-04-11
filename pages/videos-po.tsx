@@ -25,26 +25,27 @@ export default function Medios({
   return (
     <>
 
-    <main>
-    <MainContainer>
+  <main>
+    
+    <div className="container">
+      <Box sx={{ width: 'auto', typography: 'body1', padding: '10px', height: 'auto', }}>
+        <TabContext value={value}>
+          <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
+            <TabList onChange={handleChange} centered aria-label="lab API tabs example">
+              <Tab label="📺 El PO en los medios" value="1" />
+              <Tab label="📰 Prensa Obrera" value="2" />
+              <Tab label="🏛️ Congreso Nacional" value="3" />
+            </TabList>
+          </Box>
+          <TabPanel value="1"> <ListaYouTube listaYouTube={listaYouTube} /> </TabPanel>
+          <TabPanel value="2"> <ListaYouTube listaYouTube={listaYouTube1} /> </TabPanel>
+          <TabPanel value="3"> <ListaYouTube listaYouTube={listaYouTube2} /> </TabPanel>
+        </TabContext>
+      </Box>
+    </div>
 
-    <Box sx={{ width: '105%', typography: 'body1', padding: '10px', height: '100%', }}>
-      <TabContext value={value}>
-        <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
-          <TabList onChange={handleChange} centered aria-label="lab API tabs example">
-            <Tab label="📺 El PO en los medios" value="1" />
-            <Tab label="📰 Prensa Obrera" value="2" />
-            <Tab label="🏛️ Congreso Nacional" value="3" />
-          </TabList>
-        </Box>
-        <TabPanel value="1"> <ListaYouTube listaYouTube={listaYouTube} /> </TabPanel>
-        <TabPanel value="2"> <ListaYouTube listaYouTube={listaYouTube1} /> </TabPanel>
-        <TabPanel value="3"> <ListaYouTube listaYouTube={listaYouTube2} /> </TabPanel>
-      </TabContext>
-    </Box>
-
-    </MainContainer>
-    </main>
+  
+  </main>
 
       <style jsx global>{`
         header {
@@ -53,6 +54,15 @@ export default function Medios({
         main {
           background-color: white;
         }
+        .container {
+          width: 51%;
+          height: 51%;
+          margin-left: 24%;
+          
+        }
+
+
+
       `}</style>
     </>
   );
