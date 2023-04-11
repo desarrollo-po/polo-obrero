@@ -54,15 +54,7 @@ export default function Medios({
         main {
           background-color: white;
         }
-        .container {
-          width: 51%;
-          height: 51%;
-          margin-left: 24%;
-          
-        }
-
-
-
+        
       `}</style>
     </>
   );
