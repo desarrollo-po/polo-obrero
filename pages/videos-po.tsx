@@ -16,7 +16,7 @@ import '@fontsource/roboto/700.css';
 export default function Medios({
   listaYouTube,listaYouTube1,listaYouTube2,
 }) {
-  console.log( listaYouTube );
+  console.log( listaYouTube, listaYouTube1, listaYouTube2);
 
   const [value, setValue] = React.useState('1');
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
@@ -28,7 +28,7 @@ export default function Medios({
     <main>
     <MainContainer>
 
-    <Box sx={{ width: '100%', typography: 'body1' }}>
+    <Box sx={{ width: '105%', typography: 'body1', padding: '10px', height: '100%', }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
           <TabList onChange={handleChange} centered aria-label="lab API tabs example">
