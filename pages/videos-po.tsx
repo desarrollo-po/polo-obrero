@@ -46,7 +46,7 @@ export default function Medios({
       </Box>
         
         <Stack direction="row" spacing={2} justifyContent="center">
-          <Button variant="outlined" color="error" href="https://www.youtube.com/@partidoobrero" target="_blank">Ver mas videos</Button>
+          <Button variant="outlined" color="error" margin-bottom="10px" href="https://www.youtube.com/@partidoobrero" target="_blank">Ver mas videos</Button>
         </Stack>
       
     </div>
@@ -60,6 +60,9 @@ export default function Medios({
         }
         main {
           background-color: white;
+        }
+        .MuiButton-root	{
+          margin-bottom: 15px
         }
       `}</style>
     </>
