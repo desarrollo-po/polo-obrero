@@ -1,7 +1,7 @@
 import React from 'react'
 import MainContainer from '../components/Containers/MainContainer/MainContainer'
 import styles from "../styles/Medios.module.scss"
-import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
+import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube-po";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
@@ -12,6 +12,8 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 export default function Medios({
   listaYouTube,listaYouTube1,listaYouTube2,
@@ -28,7 +30,7 @@ export default function Medios({
   <main>
     
     <div className="container">
-      <Box sx={{ width: 'auto', typography: 'body1', padding: '10px', height: 'auto', }}>
+      <Box sx={{ width: 'auto', typography: 'body1', padding: '5px', height: 'auto', }}>
         <TabContext value={value}>
           <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
             <TabList onChange={handleChange} centered aria-label="lab API tabs example">
@@ -42,6 +44,11 @@ export default function Medios({
           <TabPanel value="3"> <ListaYouTube listaYouTube={listaYouTube2} /> </TabPanel>
         </TabContext>
       </Box>
+        
+        <Stack direction="row" spacing={2}>
+          <Button variant="outlined" color="error" href="https://www.youtube.com/@partidoobrero" target="_blank">Ver mas videos</Button>
+        </Stack>
+      
     </div>
 
   
@@ -54,7 +61,10 @@ export default function Medios({
         main {
           background-color: white;
         }
-        
+        .css-e53awj-MuiStack-root {
+          color: red;
+          justify-content: center;
+        }
       `}</style>
     </>
   );

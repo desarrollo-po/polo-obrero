@@ -1,0 +1,22 @@
+@import " ../../../../../styles/breakpoints.scss";
+
+.listaYouTube {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 60px 0 20px 100px;
+}
+
+@include media(mobile) {
+  .listaYouTube {
+    display: block;
+  }
+}
+
+@include media(tablet) {
+  .listaYouTube {
+    display: block;
+  }
+}
