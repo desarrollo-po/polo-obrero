@@ -28,8 +28,7 @@ export default function Medios({
     <>
 
   <main>
-    
-    <div className="container">
+    <MainContainer>
       <Box sx={{ width: 'auto', typography: 'body1', padding: '5px', height: 'auto', }}>
         <TabContext value={value}>
           <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
@@ -39,19 +38,18 @@ export default function Medios({
               <Tab label="🏛️ Congreso Nacional" value="3" />
             </TabList>
           </Box>
+          
           <TabPanel value="1"> <ListaYouTube listaYouTube={listaYouTube} /> </TabPanel>
           <TabPanel value="2"> <ListaYouTube listaYouTube={listaYouTube1} /> </TabPanel>
           <TabPanel value="3"> <ListaYouTube listaYouTube={listaYouTube2} /> </TabPanel>
+
         </TabContext>
       </Box>
         
-        <Stack direction="row" spacing={2} justifyContent="center">
+        <Stack direction="row" spacing={1} justifyContent="center">
           <Button variant="outlined" color="error"  href="https://www.youtube.com/@partidoobrero" target="_blank">Ver mas videos</Button>
         </Stack>
-      
-    </div>
-
-  
+    </MainContainer>  
   </main>
 
       <style jsx global>{`
