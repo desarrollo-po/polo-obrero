@@ -45,7 +45,7 @@ export default function Medios({
         </TabContext>
       </Box>
         
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={2} justifyContent="center">
           <Button variant="outlined" color="error" href="https://www.youtube.com/@partidoobrero" target="_blank">Ver mas videos</Button>
         </Stack>
       
@@ -60,10 +60,6 @@ export default function Medios({
         }
         main {
           background-color: white;
-        }
-        .css-e53awj-MuiStack-root {
-          color: red;
-          justify-content: center;
         }
       `}</style>
     </>
