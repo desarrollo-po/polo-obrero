@@ -10,7 +10,7 @@ export const IframeVideo = ({ url, videoId,}) => {
         <iframe
           className={styles.video}
           width="100%"
-          height="300"
+          height="250"
           src={`https://www.youtube.com/embed/${videoId}`}
           
           frameBorder="0"
@@ -24,7 +24,7 @@ export const IframeVideo = ({ url, videoId,}) => {
         >
           
           <IconPlayVideo />
-          <img height="300  " src={url} alt="" />
+          <img height="250  " src={url} alt="" />
         </article>
       )}
     </>
