@@ -14,6 +14,10 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import Container from '@mui/material/Container';
+
+
+
 
 export default function Medios({
   listaYouTube,listaYouTube1,listaYouTube2,
@@ -27,18 +31,17 @@ export default function Medios({
   return (
     <>
 
-  <main>
-    <MainContainer>
-      <Box sx={{ width: 'auto', typography: 'body1', padding: '5px', height: 'auto', }}>
+    <main>
+    
+      <Box sx={{ width: '100%', typography: 'body1', padding: '10px', height: 'auto', }}>
         <TabContext value={value}>
-          <Box sx={{ borderBottom: 2, borderColor: 'divider' }}>
-            <TabList onChange={handleChange} centered aria-label="lab API tabs example">
-              <Tab label="📺 El PO en los medios" value="1" />
-              <Tab label="📰 Prensa Obrera" value="2" />
-              <Tab label="🏛️ Congreso Nacional" value="3" />
-            </TabList>
-          </Box>
-          
+            <Box sx={{ borderBottom: 1 , borderColor: 'divider',}}>
+              <TabList onChange={handleChange} centered variant="scrollable" scrollButtons allowScrollButtonsMobile aria-label="lista de videos">
+                <Tab label="📺 El PO en los medios" value="1" />
+                <Tab label="📰 Prensa Obrera" value="2" />
+                <Tab label="🏛️ Congreso Nacional" value="3" />
+              </TabList>
+            </Box>
           <TabPanel value="1"> <ListaYouTube listaYouTube={listaYouTube} /> </TabPanel>
           <TabPanel value="2"> <ListaYouTube listaYouTube={listaYouTube1} /> </TabPanel>
           <TabPanel value="3"> <ListaYouTube listaYouTube={listaYouTube2} /> </TabPanel>
@@ -49,8 +52,8 @@ export default function Medios({
         <Stack direction="row" spacing={1} justifyContent="center">
           <Button variant="outlined" color="error"  href="https://www.youtube.com/@partidoobrero" target="_blank">Ver mas videos</Button>
         </Stack>
-    </MainContainer>  
-  </main>
+    
+    </main>
 
       <style jsx global>{`
         header {
@@ -61,6 +64,42 @@ export default function Medios({
         }
         .MuiButton-root	{
           margin-bottom: 20px
+        }
+        html,body {
+          background-color: white !important;
+        }
+        .css-69z67c-MuiTabs-scroller {
+          left: auto;
+          display: flex;
+          justify-content: center;
+        }
+
+        @media only screen and (max-width: 740px) {
+          header {
+            display: none !important;
+          }
+          main {
+            background-color: white !important;
+            width: 100%;
+          }
+          .MuiButton-root	{
+            margin-bottom: 20px;
+            left: 1%;
+          }
+          .ListaYouTube-po_listaYouTube__nKWDq {
+            margin: auto !important;
+        }
+        .MuiTabs-flexContainer.MuiTabs-centered.css-1wf8b0h-MuiTabs-flexContainer {
+          justify-content: center;
+          gap: 0px;
+        }
+        html,body {
+          background-color: white !important;
+        }
+        .css-13xfq8m-MuiTabPanel-root {
+        
+        }
+
         }
       `}</style>
     </>
