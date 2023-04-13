@@ -73,6 +73,10 @@ export default function Medios({
           display: flex;
           justify-content: center;
         }
+        .MuiTabs-flexContainer.css-k008qs {
+        align-items: center;
+        justify-content: center;
+        }
 
         @media only screen and (max-width: 740px) {
           header {
