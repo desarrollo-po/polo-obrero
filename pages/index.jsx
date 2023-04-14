@@ -3,11 +3,9 @@ import MainContainer from "../components/Containers/MainContainer/MainContainer"
 import { Footer } from "../components/ui/Footer/Footer";
 import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
-import { getComunicadosPolo } from "../services/queries/PostsComunicados";
 import { Comunicados } from "../components/Regiones/Comunicados/Comunicados";
 import { getPostsSuplePolo } from "../services/queries/PostsSuplePolo";
 import { SuplePolo } from "../components/Regiones/SuplePolo/SuplePolo";
-import { NotasMovPiquetero } from "../components/Regiones/NotasMovPiquetero/NotasMovPiquetero";
 import { getPostsCategoriaPrensa } from "../services/queries/PostsCategoriaPrensa";
 import { BotonMasComunicados } from "../components/ui/BotonMasComunicados/BotonMasComunicados";
 import { BotonMasVideos } from "../components/ui/BotonMasVideos/BotonMasVideos";
@@ -18,16 +16,15 @@ import { BannerLibroMobile } from "../components/ui/BannerLibroMobile/BannerLibr
 import { BannerLibroWeb } from "../components/ui/BannerLibroWeb/BannerLibroWeb";
 // import VideoHome from "../components/Regiones/VideoHome/VideoHome";
 import { TapaSuplePolo } from "../components/ui/TapaSuplePoloMobile/TapaSuplePoloMobile";
-import { BannerAuditoriasMobile } from "../components/ui/BannerAuditoriasMobile/BannerAuditoriasMobile";
-import { BannerAuditoriasWeb } from "../components/ui/BannerAuditoriasWeb/BannerAuditoriasWeb";
+import { useQuery } from "@apollo/client";
+import { Icon } from '@iconify/react';
+import { GET_COMUNICADOS_POLO_HOME } from "../services/queries/ComunicadosPoloHome"
 
 export default function Home({
-  comunicadosPolo,
   listaYouTube,
   notasSuplePolo,
-  notasMovPiquetero,
 }) {
-  console.log("ntasPolo", notasSuplePolo);
+  const { data, loading, error } = useQuery(GET_COMUNICADOS_POLO_HOME);
   return (
     <>
       <Head>
@@ -63,7 +60,11 @@ export default function Home({
       <main>
         <MainContainer>
           <SuplePolo notasSuplePolo={notasSuplePolo.edges[1].node.posts} />
-          <Comunicados comunicadosPolo={comunicadosPolo} />
+          {
+            loading ? (<div className="loading"><Icon icon="eos-icons:bubble-loading" color="white" width="50" hFlip={true} /></div>) : 
+            <Comunicados comunicadosPolo={data.comunicados} />
+          }
+
           <BotonMasComunicados />
           <BannerSumateMobile />
           <BannerSumateWeb />
@@ -85,7 +86,14 @@ export default function Home({
         </MainContainer>
       </main>
       <Footer />
-    </>
+
+    <style jsx>{`
+      .loading{
+          display:flex;
+          justify-content:center;
+      }
+    `}</style>
+  </>
   );
 }
 
@@ -95,7 +103,6 @@ export async function getStaticProps() {
     3
   );
   const notasSuplePolo = await getPostsSuplePolo(5);
-  const comunicadosPolo = await getComunicadosPolo(4);
   const notasMovPiquetero = await getPostsCategoriaPrensa(
     "movimiento-piquetero",
     3
@@ -103,10 +110,10 @@ export async function getStaticProps() {
 
   return {
     props: {
-      comunicadosPolo: comunicadosPolo.comunicados,
       listaYouTube,
       notasSuplePolo: notasSuplePolo.prensaNumeros,
       notasMovPiquetero: notasMovPiquetero.posts,
     },
   };
 }
+
