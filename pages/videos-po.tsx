@@ -36,7 +36,7 @@ export default function Medios({
       <Box sx={{ width: '100%', typography: 'body1', padding: '10px', height: 'auto', }}>
         <TabContext value={value}>
             <Box sx={{ borderBottom: 1 , borderColor: 'divider',}}>
-              <TabList onChange={handleChange} centered variant="scrollable" scrollButtons allowScrollButtonsMobile aria-label="lista de videos">
+              <TabList onChange={handleChange} variant="scrollable" scrollButtons allowScrollButtonsMobile aria-label="lista de videos">
                 <Tab label="📺 El PO en los medios" value="1" />
                 <Tab label="📰 Prensa Obrera" value="2" />
                 <Tab label="🏛️ Congreso Nacional" value="3" />
@@ -78,7 +78,7 @@ export default function Medios({
         justify-content: center;
         }
 
-        @media only screen and (max-width: 740px) {
+        @media only screen and (max-width: 700px) {
           header {
             display: none !important;
           }
@@ -103,7 +103,9 @@ export default function Medios({
         .css-13xfq8m-MuiTabPanel-root {
         
         }
-
+        .MuiTabs-flexContainer.css-k008qs {
+        width: max-content;
+        }
         }
       `}</style>
     </>
