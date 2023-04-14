@@ -7,7 +7,6 @@ export const Comunicados = ({ comunicadosPolo }) => {
   // const onShowComunicados = () => {
   //   setShowComunicados(!showComunicados);
   // };
-  console.log(comunicadosPolo);
   return (
     <>
       <div className={styles.containerTitulo}>
