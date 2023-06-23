@@ -6,8 +6,8 @@
     grid-column: span 3/span 3;
 }
 .header {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
+    justify-content: space-around;
     background-color: $color-primary;
     color: $color-secondary;
     padding: 1rem 0;
