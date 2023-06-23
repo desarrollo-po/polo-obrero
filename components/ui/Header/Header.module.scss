@@ -6,8 +6,8 @@
     grid-column: span 3/span 3;
 }
 .header {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     background-color: $color-primary;
     color: $color-secondary;
     padding: 1rem 0;
@@ -43,7 +43,8 @@
 
 @include media(mobile) {
     .header {
-        grid-template-columns: repeat(8, auto);
+        display:flex;
+        justify-content: space-around;
         .buscadorMobile{
             display: block;
             grid-column: auto;
