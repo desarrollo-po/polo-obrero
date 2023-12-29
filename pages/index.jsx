@@ -41,7 +41,7 @@ export default function Home({
         <meta
           property="og:image"
           itemProp="image"
-          content="https://po-proyecto.tk/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-17-at-18.46.25.jpeg"
+          content="https://ujspo.ar/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-17-at-18.46.25.jpeg"
         />
 
         {/* Twitter */}
@@ -51,7 +51,7 @@ export default function Home({
         <meta property="twitter:title" content="Polo Obrero" />
         <meta
           property="twitter:image"
-          content="https://po-proyecto.tk/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-17-at-18.46.25.jpeg"
+          content="https://ujspo.ar/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-17-at-18.46.25.jpeg"
         />
         <link rel="icon" content="favicon/favicon.ico" />
       </Head>

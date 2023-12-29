@@ -6,7 +6,7 @@ export const BannerLibroWeb = () => {
     <section className={styles.bannerLibro}>
       <picture className={styles.imagenContainer}>
         <a href="https://revistaedm.com/producto/preventa-una-historia-del-movimiento-piquetero/">
-          <img src="https://po-proyecto.tk/wp-content/uploads/2022/10/BANNER-HDMP-WEB.png" />
+          <img src="https://ujspo.ar/wp-content/uploads/2022/10/BANNER-HDMP-WEB.png" />
         </a>
       </picture>
     </section>

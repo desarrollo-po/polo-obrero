@@ -16,7 +16,7 @@ const auditorias = () => {
       </Head>
       <MainContainer>
         <img
-          src="https://po-proyecto.tk/wp-content/uploads/2022/12/banners-polo-auditorias_corregido_1200-x-200.jpg"
+          src="https://ujspo.ar/wp-content/uploads/2022/12/banners-polo-auditorias_corregido_1200-x-200.jpg"
           className={styles.banner}
           alt="Auditoria Potenciar Trabajo"
         />

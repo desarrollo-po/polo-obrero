@@ -13,7 +13,7 @@ yarn dev
 En el archivo .env.local se deben agregar las siguientes variables de entorno según el proyecto de wordpress:
 
 ```bash
-NEXT_PUBLIC_WORDPRESS_GRAPHQL=https://po-proyecto.tk/graphql
+NEXT_PUBLIC_WORDPRESS_GRAPHQL=https://ujspo.ar/graphql
 NEXT_PUBLIC_WORDPRESS_API_URL=https://admin.prensaobrera.com/
 NEXT_PUBLIC_WORDPRESS_API_POSTS=/wp-json/wp/v2/posts
 ```

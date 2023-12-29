@@ -8,7 +8,7 @@ export const BannerAuditoriasWeb = () => {
       <picture className={styles.imagenContainer}>
         <Link href="auditoria-potenciar-trabajo">
           <img
-            src="https://po-proyecto.tk/wp-content/uploads/2022/12/banners-polo-auditorias_1200-x-480.jpg"
+            src="https://ujspo.ar/wp-content/uploads/2022/12/banners-polo-auditorias_1200-x-480.jpg"
             alt="auditoría potenciar trabajo preguntas consultas dudas datos"
           />
         </Link>
