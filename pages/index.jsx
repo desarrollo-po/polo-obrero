@@ -96,7 +96,7 @@ export default function Home({
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const listaYouTube = await getVideosByPlayList(
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
