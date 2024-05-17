@@ -1,10 +1,10 @@
 import { TarjetaSuplePolo } from "../../Tarjetas/TarjetaSuplePolo/TarjetaSuplePolo";
 import styles from "./SuplePolo.module.scss";
 
-export const SuplePolo = ({ notasSuplePolo }) => {
+export const SuplePolo = ({ notasMovPiquetero }) => {
   return (
     <section className={styles.suplePolo}>
-      {notasSuplePolo.edges
+      {notasMovPiquetero.edges
         // .filter((nota) => nota.node.title !== "NOTIPOLO")
         .map(
           ({

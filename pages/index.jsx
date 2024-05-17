@@ -17,12 +17,13 @@ import { BannerLibroWeb } from "../components/ui/BannerLibroWeb/BannerLibroWeb";
 // import VideoHome from "../components/Regiones/VideoHome/VideoHome";
 import { TapaSuplePolo } from "../components/ui/TapaSuplePoloMobile/TapaSuplePoloMobile";
 import { useQuery } from "@apollo/client";
-import { Icon } from '@iconify/react';
-import { GET_COMUNICADOS_POLO_HOME } from "../services/queries/ComunicadosPoloHome"
+import { Icon } from "@iconify/react";
+import { GET_COMUNICADOS_POLO_HOME } from "../services/queries/ComunicadosPoloHome";
 
 export default function Home({
   listaYouTube,
   notasSuplePolo,
+  notasMovPiquetero,
 }) {
   const { data, loading, error } = useQuery(GET_COMUNICADOS_POLO_HOME);
   return (
@@ -59,25 +60,23 @@ export default function Home({
       {/* <VideoHome /> */}
       <main>
         <MainContainer>
-          <SuplePolo notasSuplePolo={notasSuplePolo.edges[1].node.posts} />
-          {
-            loading ? (<div className="loading"><Icon icon="eos-icons:bubble-loading" color="white" width="50" hFlip={true} /></div>) : 
+          <SuplePolo notasMovPiquetero={notasMovPiquetero} />
+          {loading ? (
+            <div className="loading">
+              <Icon
+                icon="eos-icons:bubble-loading"
+                color="white"
+                width="50"
+                hFlip={true}
+              />
+            </div>
+          ) : (
             <Comunicados comunicadosPolo={data.comunicados} />
-          }
+          )}
 
           <BotonMasComunicados />
           <BannerSumateMobile />
           <BannerSumateWeb />
-          <TapaSuplePolo
-            slug={notasSuplePolo.edges[1].node.slug}
-            tapaSuplePolo={
-              notasSuplePolo.edges[1].node.datosDePrensaNumero.imagenTapa
-                ? notasSuplePolo.edges[1].node.datosDePrensaNumero.imagenTapa
-                    .sourceUrl
-                : notasSuplePolo.edges[0].node.datosDePrensaNumero.imagenTapa
-                    .sourceUrl
-            }
-          />
           <ListaYouTube listaYouTube={listaYouTube} />
           <BotonMasVideos />
           <BannerLibroWeb />
@@ -87,13 +86,13 @@ export default function Home({
       </main>
       <Footer />
 
-    <style jsx>{`
-      .loading{
-          display:flex;
-          justify-content:center;
-      }
-    `}</style>
-  </>
+      <style jsx>{`
+        .loading {
+          display: flex;
+          justify-content: center;
+        }
+      `}</style>
+    </>
   );
 }
 
@@ -105,7 +104,7 @@ export async function getStaticProps() {
   const notasSuplePolo = await getPostsSuplePolo(5);
   const notasMovPiquetero = await getPostsCategoriaPrensa(
     "movimiento-piquetero",
-    3
+    5
   );
 
   return {
@@ -116,4 +115,3 @@ export async function getStaticProps() {
     },
   };
 }
-
