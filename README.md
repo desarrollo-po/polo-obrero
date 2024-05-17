@@ -8,16 +8,6 @@ npm run dev
 yarn dev
 ```
 
-## Variables de entorno
-
-En el archivo .env.local se deben agregar las siguientes variables de entorno según el proyecto de wordpress:
-
-```bash
-NEXT_PUBLIC_WORDPRESS_GRAPHQL=https://ujspo.ar/graphql
-NEXT_PUBLIC_WORDPRESS_API_URL=https://admin.prensaobrera.com/
-NEXT_PUBLIC_WORDPRESS_API_POSTS=/wp-json/wp/v2/posts
-```
-
 ## Colores
 
 Los colores del sitio se encuentran en el archivo `src/styles/colors.scss`
