@@ -20,11 +20,7 @@ import { useQuery } from "@apollo/client";
 import { Icon } from "@iconify/react";
 import { GET_COMUNICADOS_POLO_HOME } from "../services/queries/ComunicadosPoloHome";
 
-export default function Home({
-  listaYouTube,
-  notasSuplePolo,
-  notasMovPiquetero,
-}) {
+export default function Home({ listaYouTube, notasMovPiquetero }) {
   const { data, loading, error } = useQuery(GET_COMUNICADOS_POLO_HOME);
   return (
     <>

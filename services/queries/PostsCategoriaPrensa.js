@@ -13,6 +13,7 @@ export async function getPostsCategoriaPrensa(categoria, notas) {
           edges {
             node {
               ${tarjetaNota}
+              link
             }
           }
         }
