@@ -2,7 +2,7 @@ import { TarjetaSuplePolo } from "../../Tarjetas/TarjetaSuplePolo/TarjetaSuplePo
 import styles from "./SuplePolo.module.scss";
 
 export const SuplePolo = ({ notasMovPiquetero }) => {
-  console.log(notasMovPiquetero, "NOTAS");
+
   return (
     <section className={styles.suplePolo}>
       {notasMovPiquetero.edges

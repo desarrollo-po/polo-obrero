@@ -14,14 +14,16 @@ import { BannerSumateWeb } from "../components/ui/BannerSumateWeb/BannerSumateWe
 import { BotonWsp } from "../components/ui/BotonWsp/BotonWsp";
 import { BannerLibroMobile } from "../components/ui/BannerLibroMobile/BannerLibroMobile";
 import { BannerLibroWeb } from "../components/ui/BannerLibroWeb/BannerLibroWeb";
-// import VideoHome from "../components/Regiones/VideoHome/VideoHome";
 import { TapaSuplePolo } from "../components/ui/TapaSuplePoloMobile/TapaSuplePoloMobile";
 import { useQuery } from "@apollo/client";
 import { Icon } from "@iconify/react";
 import { GET_COMUNICADOS_POLO_HOME } from "../services/queries/ComunicadosPoloHome";
+import { getComunicadosPO } from "../services/queries/GetComunicadosPO";
+import { ComunicadosPO } from "../components/Regiones/ComunicadosPO/ComunicadosPO"
 
-export default function Home({ listaYouTube, notasMovPiquetero }) {
+export default function Home({ listaYouTube, notasMovPiquetero, comunicadosPO }) {
   const { data, loading, error } = useQuery(GET_COMUNICADOS_POLO_HOME);
+  
   return (
     <>
       <Head>
@@ -57,6 +59,11 @@ export default function Home({ listaYouTube, notasMovPiquetero }) {
       <main>
         <MainContainer>
           <SuplePolo notasMovPiquetero={notasMovPiquetero} />
+          
+          <ComunicadosPO comunicadosPO={comunicadosPO}/>
+
+          <BannerSumateMobile />
+          <BannerSumateWeb />
           {loading ? (
             <div className="loading">
               <Icon
@@ -69,10 +76,8 @@ export default function Home({ listaYouTube, notasMovPiquetero }) {
           ) : (
             <Comunicados comunicadosPolo={data.comunicados} />
           )}
-
+          
           <BotonMasComunicados />
-          <BannerSumateMobile />
-          <BannerSumateWeb />
           <ListaYouTube listaYouTube={listaYouTube} />
           <BotonMasVideos />
           <BannerLibroWeb />
@@ -102,12 +107,14 @@ export async function getServerSideProps() {
     "movimiento-piquetero",
     5
   );
-
+  const comunicadosPO = await getComunicadosPO("polo-obrero", 4);
+  
   return {
     props: {
       listaYouTube,
       notasSuplePolo: notasSuplePolo.prensaNumeros,
       notasMovPiquetero: notasMovPiquetero.posts,
+      comunicadosPO: comunicadosPO.posts,
     },
   };
 }
