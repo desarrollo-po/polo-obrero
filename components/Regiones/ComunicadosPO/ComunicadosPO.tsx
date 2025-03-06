@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { TarjetaComunicados } from "../../Tarjetas/TarjetaComunicados/TarjetaComunicados";
 import styles from "./comunicadosPO.module.scss";
 
-export const ComunicadosPO = ({comunicadosPO}) => {
-  console.log(comunicadosPO, "AVERRR");
+export const ComunicadosPO = ({ comunicadosPO }) => {
   return (
     <>
       <div className={styles.containerTitulo}>
@@ -13,15 +12,15 @@ export const ComunicadosPO = ({comunicadosPO}) => {
         {comunicadosPO.edges.map(
           ({
             node: {
-            id,
-            title,
-            slug,
-            date,
-            featuredImage: {
-              node: { sourceUrl },
+              id,
+              title,
+              slug,
+              date,
+              featuredImage: {
+                node: { sourceUrl },
+              },
+              campos: { volanta },
             },
-            campos: { volanta },
-          },
           }) => (
             <TarjetaComunicados
               key={id}
