@@ -1,15 +1,12 @@
-import Head from 'next/head'
-import React from 'react'
-import MainContainer from '../components/Containers/MainContainer/MainContainer'
-import { Footer } from '../components/ui/Footer/Footer'
-import styles from "../styles/Medios.module.scss"
+import Head from "next/head";
+import React from "react";
+import MainContainer from "../components/Containers/MainContainer/MainContainer";
+import { Footer } from "../components/ui/Footer/Footer";
+import styles from "../styles/Medios.module.scss";
 import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
 
-export default function Medios({
-  listaYouTube,
-}) {
-  console.log( listaYouTube );
+export default function Medios({ listaYouTube }) {
   return (
     <>
       <Head>
@@ -19,7 +16,7 @@ export default function Medios({
       <main>
         <MainContainer>
           <div className={styles.containerTitulo}>
-          <h1 className={styles.titulo}>Nuestros videos</h1>
+            <h1 className={styles.titulo}>Nuestros videos</h1>
           </div>
           <ListaYouTube listaYouTube={listaYouTube} />
         </MainContainer>
