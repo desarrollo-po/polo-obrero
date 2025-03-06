@@ -19,6 +19,17 @@ export default function Medios({ listaYouTubeJudies }) {
         >
           <ListaYouTube listaYouTube={listaYouTubeJudies} />{" "}
         </Box>
+
+        <Stack direction="row" spacing={1} justifyContent="center">
+          <Button
+            variant="outlined"
+            color="error"
+            href="https://www.youtube.com/@JudiesxPalestina"
+            target="_blank"
+          >
+            Ver más videos
+          </Button>
+        </Stack>
       </main>
 
       <style jsx global>{`
@@ -28,14 +39,19 @@ export default function Medios({ listaYouTubeJudies }) {
         main {
           background-color: white;
         }
+        .MuiButton-root {
+          margin-bottom: 20px;
+          background-color: black;
+          color: white;
+          border-radius: 10px;
+        }
+        .MuiButton-root:hover {
+          background-color: black;
+          color: white;
+        }
         html,
         body {
           background-color: white !important;
-        }
-        .css-69z67c-MuiTabs-scroller {
-          left: auto;
-          display: flex;
-          justify-content: center;
         }
 
         @media only screen and (max-width: 700px) {
