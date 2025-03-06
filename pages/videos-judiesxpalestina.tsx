@@ -28,9 +28,6 @@ export default function Medios({ listaYouTubeJudies }) {
         main {
           background-color: white;
         }
-        .MuiButton-root {
-          margin-bottom: 20px;
-        }
         html,
         body {
           background-color: white !important;
@@ -38,10 +35,6 @@ export default function Medios({ listaYouTubeJudies }) {
         .css-69z67c-MuiTabs-scroller {
           left: auto;
           display: flex;
-          justify-content: center;
-        }
-        .MuiTabs-flexContainer.css-k008qs {
-          align-items: center;
           justify-content: center;
         }
 
@@ -53,25 +46,12 @@ export default function Medios({ listaYouTubeJudies }) {
             background-color: white !important;
             width: 100%;
           }
-          .MuiButton-root {
-            margin-bottom: 20px;
-            left: 1%;
-          }
           .ListaYouTube-po_listaYouTube__nKWDq {
             margin: auto !important;
-          }
-          .MuiTabs-flexContainer.MuiTabs-centered.css-1wf8b0h-MuiTabs-flexContainer {
-            justify-content: center;
-            gap: 0px;
           }
           html,
           body {
             background-color: white !important;
-          }
-          .css-13xfq8m-MuiTabPanel-root {
-          }
-          .MuiTabs-flexContainer.css-k008qs {
-            width: max-content;
           }
         }
       `}</style>
