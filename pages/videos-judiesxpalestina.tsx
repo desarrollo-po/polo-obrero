@@ -19,17 +19,6 @@ export default function Medios({ listaYouTubeJudies }) {
         >
           <ListaYouTube listaYouTube={listaYouTubeJudies} />{" "}
         </Box>
-
-        <Stack direction="row" spacing={1} justifyContent="center">
-          <Button
-            variant="outlined"
-            color="error"
-            href="https://www.youtube.com/@JudiesxPalestina"
-            target="_blank"
-          >
-            Ver mas videos
-          </Button>
-        </Stack>
       </main>
 
       <style jsx global>{`
