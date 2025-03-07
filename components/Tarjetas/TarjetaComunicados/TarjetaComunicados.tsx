@@ -11,7 +11,7 @@ const formatDate = (date) => {
 export const TarjetaComunicados = ({ titulo, imagen, slug, volanta, date }) => {
   return (
     <article className={styles.tarjetaComunicados}>
-      <Link href={`/comunicados/${slug}`}>
+      <Link href={`http://po.org.ar/comunicados/${slug}`}>
         <a>
           <div className={styles.date}>
             <span>{formatDate(date)}</span>
