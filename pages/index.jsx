@@ -21,7 +21,7 @@ import { GET_COMUNICADOS_POLO_HOME } from "../services/queries/ComunicadosPoloHo
 import { getComunicadosPO } from "../services/queries/GetComunicadosPO";
 import { ComunicadosPO } from "../components/Regiones/ComunicadosPO/ComunicadosPO"
 
-export default function Home({ listaYouTube, notasMovPiquetero, comunicadosPO }) {
+export default function Home({ listaYouTube, listaYouTube1, notasMovPiquetero, comunicadosPO }) {
   const { data, loading, error } = useQuery(GET_COMUNICADOS_POLO_HOME);
   
   return (
@@ -80,6 +80,8 @@ export default function Home({ listaYouTube, notasMovPiquetero, comunicadosPO })
           <BotonMasComunicados />
           <ListaYouTube listaYouTube={listaYouTube} />
           <BotonMasVideos />
+          <ListaYouTube listaYouTube={listaYouTube1} />
+          <BotonMasVideos />
           <BannerLibroWeb />
           <BannerLibroMobile />
           <BotonWsp />
@@ -102,6 +104,10 @@ export async function getServerSideProps() {
     "PLcZulwVPWcU11toaBlOAHkjsRtgkg8Y-y",
     3
   );
+  const listaYouTube1 = await getVideosByPlayList(
+    "PLMxlm23AqeDKnrXPJA3absawM07PSXwMA&si=pE5HLRLEdvfpyeaU",
+    3
+  );
   const notasSuplePolo = await getPostsSuplePolo(5);
   const notasMovPiquetero = await getPostsCategoriaPrensa(
     "movimiento-piquetero",
@@ -112,6 +118,7 @@ export async function getServerSideProps() {
   return {
     props: {
       listaYouTube,
+      listaYouTube1,
       notasSuplePolo: notasSuplePolo.prensaNumeros,
       notasMovPiquetero: notasMovPiquetero.posts,
       comunicadosPO: comunicadosPO.posts,
