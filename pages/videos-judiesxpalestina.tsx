@@ -19,58 +19,8 @@ export default function Medios({ listaYouTubeJudies }) {
         >
           <ListaYouTube listaYouTube={listaYouTubeJudies} />{" "}
         </Box>
-
-        <Stack direction="row" spacing={1} justifyContent="center">
-          <Button
-            variant="outlined"
-            color="error"
-            href="https://www.youtube.com/@JudiesxPalestina"
-            target="_blank"
-          >
-            Ver más videos
-          </Button>
-        </Stack>
       </main>
 
-      <style jsx global>{`
-        header {
-          display: none !important;
-        }
-        main {
-          background-color: white;
-        }
-        .MuiButton-root {
-          margin-bottom: 20px;
-          background-color: black;
-          color: white;
-          border-radius: 10px;
-        }
-        .MuiButton-root:hover {
-          background-color: black;
-          color: white;
-        }
-        html,
-        body {
-          background-color: white !important;
-        }
-
-        @media only screen and (max-width: 700px) {
-          header {
-            display: none !important;
-          }
-          main {
-            background-color: white !important;
-            width: 100%;
-          }
-          .ListaYouTube-po_listaYouTube__nKWDq {
-            margin: auto !important;
-          }
-          html,
-          body {
-            background-color: white !important;
-          }
-        }
-      `}</style>
     </>
   );
 }
