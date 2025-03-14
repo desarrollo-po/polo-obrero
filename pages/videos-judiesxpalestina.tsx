@@ -1,9 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import { ListaYouTube } from "../components/ui/ListaYouTube/ListaYouTube";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
-import { Button } from "@mui/material";
+import { ListaYouTubeJudies } from "../components/ui/ListaYouTube/ListaYouTube-judies";
 
 export default function Medios({ listaYouTubeJudies }) {
   return (
@@ -17,7 +15,7 @@ export default function Medios({ listaYouTubeJudies }) {
             height: "auto",
           }}
         >
-          <ListaYouTube listaYouTube={listaYouTubeJudies} />{" "}
+          <ListaYouTubeJudies listaYouTubeJudies={listaYouTubeJudies} />{" "}
         </Box>
       </main>
       <style jsx global>{`
@@ -81,7 +79,7 @@ export default function Medios({ listaYouTubeJudies }) {
 export async function getServerSideProps() {
   const listaYouTubeJudies = await getVideosByPlayList(
     "PLOkpVI5EeEoISMAqiOP0z9oXGId118qTY",
-    3
+    4
   );
   return {
     props: {

@@ -1,0 +1,21 @@
+@import " ../../../../../styles/breakpoints.scss";
+
+.listaYouTubeJudies {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@include media(mobile) {
+  .listaYouTubeJudies {
+    display: block;
+  }
+}
+
+@include media(tablet) {
+  .listaYouTubeJudies {
+    display: block;
+  }
+}
