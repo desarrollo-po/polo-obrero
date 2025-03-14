@@ -77,7 +77,7 @@ export default function Medios({ listaYouTubeJudies }) {
 
 export async function getServerSideProps() {
   const listaYouTubeJudies = await getVideosByPlayList(
-    "PLOkpVI5EeEoKyLAMSQJdykOClsSnA-Spz",
+    "PLOkpVI5EeEoISMAqiOP0z9oXGId118qTY",
     3
   );
   return {
