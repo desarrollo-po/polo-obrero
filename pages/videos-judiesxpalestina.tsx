@@ -2,10 +2,14 @@ import React from "react";
 import Box from "@mui/material/Box";
 import { getVideosByPlayList } from "../services/queries/GetVideosByPlayList";
 import { ListaYouTubeJudies } from "../components/ui/ListaYouTube/ListaYouTube-judies";
+import Head from "next/head";
 
 export default function Medios({ listaYouTubeJudies }) {
   return (
     <>
+    <Head>        
+      <meta name="robots" content="noindex, nofollow" />
+    </Head>
       <main>
         <Box
           sx={{

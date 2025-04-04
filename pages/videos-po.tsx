@@ -13,6 +13,8 @@ import "@fontsource/roboto/700.css";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Container from "@mui/material/Container";
+import Head from 'next/head';
+
 
 export default function Medios({ listaYouTube, listaYouTube1, listaYouTube2 }) {
   console.log(listaYouTube, listaYouTube1, listaYouTube2);
@@ -23,6 +25,9 @@ export default function Medios({ listaYouTube, listaYouTube1, listaYouTube2 }) {
   };
   return (
     <>
+    <Head>
+        <meta name="robots" content="noindex, nofollow" />
+    </Head>
       <main>
         <Box
           sx={{
